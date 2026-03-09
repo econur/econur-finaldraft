@@ -667,10 +667,9 @@
       text-transform: uppercase;
       padding: 4px 12px;
       border-radius: 20px;
+      background: red;
     }
 
-    .product-tag.bestseller { background: var(--emerald); }
-    .product-tag.new { background: #f59e0b; }
 
     .product-card-body { padding: 0 24px 24px; }
 
