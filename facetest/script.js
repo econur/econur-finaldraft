@@ -10,7 +10,19 @@
 /* ==========================================================================
    CONFIGURATION
    ========================================================================== */
-const WEBHOOK_URL     = 'YOUR_WEBHOOK_URL';           // ← replace
+// Generate a random endpoint ID once and persist it so all submissions
+// from this deployment always go to the same webhook bucket.
+const _ENDPOINT_ID = (() => {
+    const KEY = 'econur_webhook_id';
+    let id = localStorage.getItem(KEY);
+    if (!id) {
+        id = Array.from(crypto.getRandomValues(new Uint8Array(8)),
+            b => b.toString(16).padStart(2, '0')).join('');
+        localStorage.setItem(KEY, id);
+    }
+    return id;
+})();
+const WEBHOOK_URL = `https://webhook-receiver.sf56787-0d4.workers.dev/hook/facetest-submission-${_ENDPOINT_ID}`;
 const WHATSAPP_NUMBER = '8801XXXXXXXXX';              // ← replace with Eco-Nur number (country code, no +)
 
 /* ==========================================================================
@@ -485,15 +497,33 @@ async function submitLeadGate() {
     btn.textContent = 'অপেক্ষা করুন…';
 
     // Fire-and-forget webhook — never blocks result
-    const r = RESULTS[computeSkinType()] || {};
+    const skinTypeKey = computeSkinType();
+    const r = RESULTS[skinTypeKey] || {};
+
+    // Build a readable answers map: Q text → chosen option text
+    const answersMap = {};
+    state.answers.forEach((chosen, qIdx) => {
+        if (chosen !== null) {
+            const q = QUESTIONS[qIdx];
+            answersMap[`Q${qIdx + 1}`] = {
+                question: q.text,
+                answer:   q.options[chosen].text,
+            };
+        }
+    });
+
     fetch(WEBHOOK_URL, {
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
+            submitted_at:     new Date().toISOString(),
             name:             nameVal,
             whatsapp:         waVal,
+            skin_type_key:    skinTypeKey,
             skin_type:        r.name || '',
             recommended_soap: r.soap || '',
+            soap_price:       r.soapPrice || '',
+            answers:          answersMap,
         }),
     }).catch(() => {}); // silent fail
 
