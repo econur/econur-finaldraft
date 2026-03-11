@@ -671,6 +671,30 @@
   isolation: isolate;
 }
 
+.link-tag {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  background: var(--pale);
+  color: var(--forest);
+  border-radius: 50%;
+  display: grid;
+  place-items: center; /* stronger centering */
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.link-tag::before {
+  content: "↗";
+  font-size: 16px;
+  line-height: 1;
+  transform: translateY(-1px); /* micro-adjust if needed */
+}
+
+
+
 .product-tag::after {
   content: '';
   position: absolute;

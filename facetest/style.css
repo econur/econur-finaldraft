@@ -1,0 +1,1090 @@
+/* ==========================================================================
+   Eco-Nur Skin Quiz — style.css
+   Mobile-first · Glassmorphism · Eco Green Palette
+   ========================================================================== */
+
+/* ==========================================================================
+   1. DESIGN TOKENS (CSS Custom Properties)
+   ========================================================================== */
+:root {
+    /* Brand Colors */
+    --c-forest:       #1e5c3a;
+    --c-primary:      #2d6a4f;
+    --c-primary-mid:  #40916c;
+    --c-accent:       #52b788;
+    --c-accent-light: #74c69d;
+    --c-pale-1:       #95d5b2;
+    --c-pale-2:       #b7e4c7;
+    --c-pale-3:       #d8f3dc;
+    --c-bg:           #f0faf4;
+    --c-surface:      #f8fdf9;
+
+    /* Text */
+    --c-text:         #152318;
+    --c-text-mid:     #3d5e44;
+    --c-text-muted:   #5a7a61;
+    --c-text-light:   #7a9c82;
+
+    /* WhatsApp */
+    --c-wa:           #25d366;
+    --c-wa-dark:      #128c7e;
+
+    /* Glass */
+    --glass-bg:       rgba(255, 255, 255, 0.72);
+    --glass-border:   rgba(255, 255, 255, 0.92);
+    --glass-shadow:   0 8px 40px rgba(45, 106, 79, 0.12), 0 2px 8px rgba(45, 106, 79, 0.06);
+    --glass-blur:     blur(18px);
+
+    /* Radii */
+    --r-xs:  8px;
+    --r-sm:  14px;
+    --r-md:  20px;
+    --r-lg:  28px;
+    --r-xl:  40px;
+    --r-pill: 9999px;
+
+    /* Spacing scale */
+    --sp-1: 4px;
+    --sp-2: 8px;
+    --sp-3: 12px;
+    --sp-4: 16px;
+    --sp-5: 20px;
+    --sp-6: 24px;
+    --sp-8: 32px;
+    --sp-10: 40px;
+    --sp-12: 48px;
+
+    /* Typography */
+    --ff-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    --ff-body:    'Hind Siliguri', 'Segoe UI', sans-serif;
+
+    /* Motion */
+    --ease-out:  cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+    --dur-fast:  180ms;
+    --dur-mid:   320ms;
+    --dur-slow:  480ms;
+
+    /* Transitions */
+    --t-base:    var(--dur-mid) var(--ease-out);
+    --t-fast:    var(--dur-fast) var(--ease-out);
+}
+
+/* ==========================================================================
+   2. RESET & BASE
+   ========================================================================== */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+body {
+    font-family: var(--ff-body);
+    background-color: var(--c-bg);
+    color: var(--c-text);
+    min-height: 100vh;
+    overflow-x: hidden;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    color: var(--c-primary);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    font-family: var(--ff-body);
+}
+
+input, button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* ==========================================================================
+   3. AMBIENT BACKGROUND
+   ========================================================================== */
+.bg-ambient {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(70px);
+    opacity: 0.22;
+}
+
+.orb-1 {
+    width: 520px;
+    height: 520px;
+    background: radial-gradient(circle at center, #52b788, #2d6a4f);
+    top: -180px;
+    right: -120px;
+    animation: driftOrb1 18s ease-in-out infinite alternate;
+}
+
+.orb-2 {
+    width: 420px;
+    height: 420px;
+    background: radial-gradient(circle at center, #95d5b2, #40916c);
+    bottom: -120px;
+    left: -100px;
+    animation: driftOrb2 22s ease-in-out infinite alternate;
+}
+
+.orb-3 {
+    width: 260px;
+    height: 260px;
+    background: radial-gradient(circle at center, #d8f3dc, #b7e4c7);
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: driftOrb3 14s ease-in-out infinite alternate;
+}
+
+.leaf-pattern {
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(circle 1px at 20% 25%, rgba(82,183,136,0.15) 0%, transparent 100%),
+        radial-gradient(circle 1px at 75% 60%, rgba(45,106,79,0.1) 0%, transparent 100%),
+        radial-gradient(circle 1px at 50% 85%, rgba(116,198,157,0.12) 0%, transparent 100%);
+}
+
+@keyframes driftOrb1 {
+    from { transform: translate(0, 0) scale(1); }
+    to   { transform: translate(-40px, 30px) scale(1.08); }
+}
+
+@keyframes driftOrb2 {
+    from { transform: translate(0, 0) scale(1); }
+    to   { transform: translate(50px, -40px) scale(1.06); }
+}
+
+@keyframes driftOrb3 {
+    from { transform: translateX(-50%) scale(1); }
+    to   { transform: translateX(-50%) scale(1.15) translateY(-20px); }
+}
+
+/* ==========================================================================
+   4. LAYOUT SHELL
+   ========================================================================== */
+.quiz-shell {
+    position: relative;
+    z-index: 1;
+    max-width: 620px;
+    margin: 0 auto;
+    padding: var(--sp-6) var(--sp-4) var(--sp-4);
+    min-height: 100vh;
+}
+
+/* ==========================================================================
+   5. SECTIONS — Show/Hide
+   ========================================================================== */
+.sec {
+    display: none;
+    animation: secFadeIn var(--dur-slow) var(--ease-out) forwards;
+}
+
+.sec.active {
+    display: block;
+}
+
+@keyframes secFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================================================
+   6. GLASS CARD
+   ========================================================================== */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1.5px solid var(--glass-border);
+    border-radius: var(--r-lg);
+    box-shadow: var(--glass-shadow);
+    padding: var(--sp-8) var(--sp-6);
+    margin-bottom: var(--sp-5);
+    overflow: hidden;
+    position: relative;
+}
+
+/* Subtle top accent line on all cards */
+.glass-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--c-primary), var(--c-accent), var(--c-pale-1));
+    border-radius: var(--r-lg) var(--r-lg) 0 0;
+    opacity: 0.6;
+}
+
+/* ==========================================================================
+   7. LANDING SECTION
+   ========================================================================== */
+.card-landing {
+    text-align: center;
+    padding: var(--sp-10) var(--sp-8);
+}
+
+/* Brand strip */
+.brand-strip {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--sp-2);
+    background: var(--c-pale-3);
+    border: 1px solid var(--c-pale-2);
+    color: var(--c-primary);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: var(--r-pill);
+    margin-bottom: var(--sp-6);
+    letter-spacing: 0.3px;
+}
+
+.brand-leaf { font-size: 15px; }
+.brand-name { font-weight: 700; }
+.brand-tag  {
+    color: var(--c-text-muted);
+    font-weight: 400;
+    border-left: 1px solid var(--c-pale-1);
+    padding-left: var(--sp-2);
+}
+
+/* Headline */
+.landing-h1 {
+    font-family: var(--ff-heading);
+    font-size: clamp(24px, 6vw, 36px);
+    font-weight: 700;
+    color: var(--c-text);
+    line-height: 1.35;
+    margin-bottom: var(--sp-5);
+}
+
+.landing-h1 em {
+    color: var(--c-primary);
+    font-style: italic;
+}
+
+.landing-desc {
+    font-size: 15px;
+    color: var(--c-text-muted);
+    line-height: 1.8;
+    margin-bottom: var(--sp-6);
+}
+
+.landing-desc strong { color: var(--c-primary); }
+
+/* Trust row */
+.trust-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--sp-2);
+    margin-bottom: var(--sp-8);
+}
+
+.trust-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--c-pale-3);
+    border: 1px solid var(--c-pale-2);
+    color: var(--c-primary);
+    font-size: 12.5px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: var(--r-pill);
+    white-space: nowrap;
+}
+
+/* Fine print */
+.landing-fine {
+    font-size: 11.5px;
+    color: var(--c-text-light);
+    margin-top: var(--sp-4);
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   8. FORM FIELDS
+   ========================================================================== */
+.field-group {
+    margin-bottom: var(--sp-4);
+    text-align: left;
+}
+
+.field-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--c-text-mid);
+    margin-bottom: 8px;
+}
+
+.field-optional {
+    font-weight: 400;
+    color: var(--c-text-light);
+    font-size: 12px;
+}
+
+.field-input {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid var(--c-pale-2);
+    border-radius: var(--r-md);
+    background: rgba(255, 255, 255, 0.88);
+    font-family: var(--ff-body);
+    font-size: 16px;
+    color: var(--c-text);
+    outline: none;
+    transition: border-color var(--t-fast), box-shadow var(--t-fast);
+}
+
+.field-input::placeholder {
+    color: var(--c-text-light);
+}
+
+.field-input:focus {
+    border-color: var(--c-accent);
+    box-shadow: 0 0 0 4px rgba(82, 183, 136, 0.18);
+}
+
+.field-input-wa:focus {
+    border-color: var(--c-wa);
+    box-shadow: 0 0 0 4px rgba(37, 211, 102, 0.18);
+}
+
+/* ==========================================================================
+   9. BUTTONS
+   ========================================================================== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--sp-2);
+    padding: 13px 22px;
+    border: none;
+    border-radius: var(--r-md);
+    font-family: var(--ff-body);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    white-space: nowrap;
+    transition:
+        background var(--t-fast),
+        transform var(--t-fast),
+        box-shadow var(--t-fast),
+        opacity var(--t-fast);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Ripple shimmer on hover */
+.btn::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.18) 60%, transparent 70%);
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+}
+.btn:hover::after { transform: translateX(100%); }
+
+/* Primary */
+.btn-primary {
+    background: linear-gradient(135deg, var(--c-primary), var(--c-primary-mid));
+    color: #fff;
+    box-shadow: 0 4px 18px rgba(45, 106, 79, 0.30);
+}
+
+.btn-primary:hover:not(:disabled) {
+    background: linear-gradient(135deg, var(--c-primary-mid), var(--c-accent));
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(45, 106, 79, 0.38);
+}
+
+.btn-primary:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.btn-primary:disabled {
+    opacity: 0.42;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+/* Ghost */
+.btn-ghost {
+    background: transparent;
+    color: var(--c-text-muted);
+    border: 1.5px solid var(--c-pale-2);
+}
+
+.btn-ghost:hover {
+    background: var(--c-pale-3);
+    border-color: var(--c-accent-light);
+    color: var(--c-primary);
+}
+
+/* WhatsApp */
+.btn-whatsapp {
+    background: linear-gradient(135deg, var(--c-wa), var(--c-wa-dark));
+    color: #fff;
+    box-shadow: 0 4px 18px rgba(37, 211, 102, 0.28);
+}
+
+.btn-whatsapp:hover {
+    filter: brightness(1.08);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(37, 211, 102, 0.36);
+}
+
+.btn-website {
+    background: transparent;
+    color: var(--c-primary);
+    border: 2px solid var(--c-pale-1);
+    box-shadow: none;
+    margin-top: var(--sp-3);
+}
+
+.btn-website:hover {
+    background: var(--c-pale-3);
+    border-color: var(--c-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(45, 106, 79, 0.12);
+    filter: none;
+}
+
+/* XL size */
+.btn-xl {
+    padding: 16px 28px;
+    font-size: 16px;
+    width: 100%;
+    border-radius: var(--r-md);
+}
+
+.btn-icon { font-size: 18px; }
+
+/* Retake button */
+.btn-retake {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: var(--sp-3);
+    font-size: 14px;
+    color: var(--c-text-light);
+}
+
+/* ==========================================================================
+   10. QUIZ TOPBAR
+   ========================================================================== */
+.quiz-topbar {
+    margin-bottom: var(--sp-5);
+}
+
+.progress-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.progress-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--c-text-mid);
+}
+
+.progress-pct {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--c-primary);
+}
+
+.progress-track {
+    width: 100%;
+    height: 9px;
+    background: var(--c-pale-3);
+    border-radius: var(--r-pill);
+    overflow: visible;
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--c-primary), var(--c-accent));
+    border-radius: var(--r-pill);
+    transition: width 0.5s var(--ease-out);
+    position: relative;
+}
+
+/* Progress dot */
+.progress-fill::after {
+    content: '';
+    position: absolute;
+    right: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    background: white;
+    border: 3px solid var(--c-accent);
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(82, 183, 136, 0.45);
+    transition: right 0.5s var(--ease-out);
+}
+
+/* ==========================================================================
+   11. QUESTION CARD
+   ========================================================================== */
+.card-question {
+    transition: opacity var(--dur-mid) var(--ease-out), transform var(--dur-mid) var(--ease-out);
+}
+
+.card-question.is-exiting {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+.card-question.is-entering {
+    opacity: 0;
+    transform: translateX(20px);
+}
+
+/* Question badge */
+.q-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--c-primary), var(--c-accent));
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    margin-bottom: var(--sp-4);
+    box-shadow: 0 4px 12px rgba(45, 106, 79, 0.25);
+}
+
+.q-hint {
+    font-size: 13px;
+    color: var(--c-text-light);
+    font-style: italic;
+    margin-bottom: var(--sp-3);
+    line-height: 1.65;
+    padding: 10px 14px;
+    background: var(--c-pale-3);
+    border-radius: var(--r-sm);
+    border-left: 3px solid var(--c-accent-light);
+}
+
+.q-text {
+    font-family: var(--ff-heading);
+    font-size: clamp(17px, 4.5vw, 21px);
+    font-weight: 500;
+    color: var(--c-text);
+    line-height: 1.5;
+    margin-bottom: var(--sp-6);
+}
+
+/* ==========================================================================
+   12. OPTIONS
+   ========================================================================== */
+.options-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: var(--sp-6);
+}
+
+.opt {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 16px;
+    border: 2px solid var(--c-pale-2);
+    border-radius: var(--r-md);
+    background: rgba(255, 255, 255, 0.65);
+    cursor: pointer;
+    transition:
+        border-color var(--t-fast),
+        background var(--t-fast),
+        transform var(--t-fast),
+        box-shadow var(--t-fast);
+    position: relative;
+    overflow: hidden;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Hover shimmer layer */
+.opt::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, rgba(216, 243, 220, 0.5), transparent);
+    opacity: 0;
+    transition: opacity var(--t-fast);
+}
+
+.opt:hover {
+    border-color: var(--c-accent-light);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 18px rgba(82, 183, 136, 0.16);
+}
+
+.opt:hover::before { opacity: 1; }
+
+.opt.is-selected {
+    border-color: var(--c-primary);
+    background: rgba(82, 183, 136, 0.07);
+    box-shadow: 0 4px 20px rgba(45, 106, 79, 0.14);
+}
+
+.opt.is-selected::before { opacity: 1; }
+
+/* Radio circle */
+.opt-radio {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    border: 2px solid var(--c-pale-1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color var(--t-fast), background var(--t-fast);
+    position: relative;
+    z-index: 1;
+}
+
+.opt.is-selected .opt-radio {
+    border-color: var(--c-primary);
+    background: var(--c-primary);
+}
+
+.opt-radio-dot {
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity var(--t-fast), transform var(--t-fast) var(--ease-spring);
+}
+
+.opt.is-selected .opt-radio-dot {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Letter badge */
+.opt-letter {
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: var(--r-xs);
+    background: var(--c-pale-3);
+    color: var(--c-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    transition: background var(--t-fast), color var(--t-fast);
+    position: relative;
+    z-index: 1;
+}
+
+.opt.is-selected .opt-letter {
+    background: var(--c-primary);
+    color: #fff;
+}
+
+.opt-text {
+    flex: 1;
+    font-size: 14.5px;
+    color: var(--c-text);
+    line-height: 1.55;
+    position: relative;
+    z-index: 1;
+}
+
+/* ==========================================================================
+   13. QUIZ NAV
+   ========================================================================== */
+.q-nav {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+#btn-prev {
+    flex-shrink: 0;
+}
+
+#btn-next {
+    flex: 1;
+}
+
+/* ==========================================================================
+   14. RESULT SECTION
+   ========================================================================== */
+.card-result { padding: var(--sp-8) var(--sp-6); }
+
+/* Result header */
+.result-head {
+    text-align: center;
+    padding-bottom: var(--sp-6);
+    border-bottom: 1px solid var(--c-pale-3);
+    margin-bottom: var(--sp-6);
+}
+
+.result-emoji {
+    font-size: 52px;
+    line-height: 1;
+    margin-bottom: var(--sp-4);
+    display: block;
+    animation: bounceIn 0.6s var(--ease-spring) both;
+}
+
+@keyframes bounceIn {
+    from { transform: scale(0.5); opacity: 0; }
+    to   { transform: scale(1);   opacity: 1; }
+}
+
+.result-headline {
+    font-family: var(--ff-heading);
+    font-size: clamp(19px, 5vw, 26px);
+    font-weight: 700;
+    color: var(--c-text);
+    line-height: 1.4;
+    margin-bottom: var(--sp-4);
+}
+
+.skin-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--c-primary), var(--c-accent));
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 9px 26px;
+    border-radius: var(--r-pill);
+    box-shadow: 0 4px 18px rgba(45, 106, 79, 0.28);
+    letter-spacing: 0.3px;
+}
+
+/* Result blocks */
+.result-sections { margin-bottom: var(--sp-6); }
+
+.r-block {
+    margin-bottom: var(--sp-5);
+    padding: var(--sp-4) var(--sp-5);
+    background: rgba(216, 243, 220, 0.3);
+    border-radius: var(--r-sm);
+    border: 1px solid var(--c-pale-3);
+}
+
+.r-block-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--c-primary);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.r-block-text {
+    font-size: 14.5px;
+    color: var(--c-text-muted);
+    line-height: 1.8;
+}
+
+/* ==========================================================================
+   15. SOAP RECOMMENDATION CARD
+   ========================================================================== */
+.soap-card {
+    border: 2px solid var(--c-pale-2);
+    border-radius: var(--r-md);
+    padding: var(--sp-6);
+    background: linear-gradient(135deg, rgba(216,243,220,0.45), rgba(183,228,199,0.25));
+    position: relative;
+    overflow: hidden;
+    margin-top: var(--sp-2);
+}
+
+/* Decorative top bar */
+.soap-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--c-forest), var(--c-primary), var(--c-accent));
+    border-radius: 0;
+}
+
+.soap-card-eyebrow {
+    margin-bottom: var(--sp-4);
+}
+
+.soap-ribbon {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    color: var(--c-primary);
+    background: rgba(82, 183, 136, 0.15);
+    padding: 4px 12px;
+    border-radius: var(--r-pill);
+    border: 1px solid var(--c-pale-2);
+}
+
+.soap-card-body {
+    display: flex;
+    gap: var(--sp-5);
+    align-items: flex-start;
+    margin-bottom: var(--sp-5);
+}
+
+.soap-emoji {
+    font-size: 46px;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.soap-details { flex: 1; }
+
+.soap-name {
+    font-family: var(--ff-heading);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--c-text);
+    margin-bottom: 4px;
+    line-height: 1.3;
+}
+
+.soap-price {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--c-primary);
+    margin-bottom: 10px;
+}
+
+.soap-why {
+    font-size: 13.5px;
+    color: var(--c-text-muted);
+    line-height: 1.75;
+}
+
+.soap-order-btn { border-radius: var(--r-md); }
+
+/* ==========================================================================
+   16. LEAD CAPTURE CARD
+   ========================================================================== */
+.card-lead {
+    text-align: center;
+    padding: var(--sp-8) var(--sp-6);
+}
+
+.lead-icon {
+    font-size: 44px;
+    margin-bottom: var(--sp-4);
+    display: block;
+}
+
+.lead-title {
+    font-family: var(--ff-heading);
+    font-size: clamp(18px, 4.5vw, 22px);
+    font-weight: 700;
+    color: var(--c-text);
+    line-height: 1.4;
+    margin-bottom: var(--sp-3);
+}
+
+.lead-desc {
+    font-size: 14px;
+    color: var(--c-text-muted);
+    line-height: 1.8;
+    margin-bottom: var(--sp-6);
+}
+
+/* Lead message */
+.lead-msg {
+    margin-top: var(--sp-4);
+    padding: 12px 16px;
+    border-radius: var(--r-sm);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    display: none;
+    text-align: left;
+}
+
+.lead-msg.is-ok {
+    background: rgba(37, 211, 102, 0.1);
+    color: #0a6b40;
+    border: 1px solid rgba(37, 211, 102, 0.25);
+    display: block;
+}
+
+.lead-msg.is-err {
+    background: rgba(220, 53, 69, 0.08);
+    color: #8b1a25;
+    border: 1px solid rgba(220, 53, 69, 0.2);
+    display: block;
+}
+
+/* ==========================================================================
+   17. DISCLAIMER
+   ========================================================================== */
+.disclaimer {
+    background: rgba(255, 193, 7, 0.07);
+    border: 1px solid rgba(255, 193, 7, 0.25);
+    border-radius: var(--r-sm);
+    padding: var(--sp-4) var(--sp-5);
+    margin-bottom: var(--sp-4);
+}
+
+.disclaimer p {
+    font-size: 12px;
+    color: #6b5500;
+    line-height: 1.75;
+}
+
+/* ==========================================================================
+   18. FOOTER
+   ========================================================================== */
+.site-footer {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: var(--sp-6) var(--sp-4) var(--sp-8);
+    font-size: 13px;
+    color: var(--c-text-light);
+}
+
+.site-footer a {
+    color: var(--c-primary);
+    font-weight: 600;
+}
+
+.footer-sub {
+    margin-top: 5px;
+    font-size: 11.5px;
+    opacity: 0.65;
+}
+
+/* ==========================================================================
+   19. RESPONSIVE ADJUSTMENTS
+   ========================================================================== */
+
+/* Small phones */
+@media (max-width: 380px) {
+    .glass-card {
+        padding: var(--sp-6) var(--sp-4);
+        border-radius: var(--r-md);
+    }
+
+    .card-landing {
+        padding: var(--sp-8) var(--sp-5);
+    }
+
+    .brand-tag {
+        display: none;
+    }
+
+    .soap-card-body {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .soap-why { text-align: left; }
+}
+
+/* Tablets and up */
+@media (min-width: 540px) {
+    .quiz-shell {
+        padding: var(--sp-8) var(--sp-6) var(--sp-6);
+    }
+
+    .trust-row {
+        gap: var(--sp-3);
+    }
+
+    .trust-chip {
+        font-size: 13px;
+        padding: 7px 16px;
+    }
+
+    .q-nav {
+        justify-content: flex-end;
+    }
+
+    #btn-next {
+        flex: 0 1 auto;
+        min-width: 200px;
+    }
+
+    #btn-prev {
+        margin-right: auto;
+    }
+}
+
+/* Large screens */
+@media (min-width: 700px) {
+    .quiz-shell {
+        padding-top: var(--sp-10);
+    }
+}
+
+/* ==========================================================================
+   20. REDUCED MOTION
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
