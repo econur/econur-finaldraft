@@ -1339,3 +1339,46 @@
       .hero-badge { right: 0; }
       .hero-soap-main { width: 300px; }
     }
+
+    /* ==========================================
+       SEO: PERFORMANCE IMPROVEMENTS
+       Reduces layout shift (CLS) and improves
+       rendering — both Core Web Vitals signals
+    ========================================== */
+
+    /* SEO: Prevent invisible text during font load (FOIT) — improves CLS and perceived performance */
+    @font-face {
+      font-display: swap;
+    }
+
+    /* SEO: Ensure images don't cause layout shifts — width/height attributes on <img> tags handle this,
+       but this rule provides a CSS safety net for any images without explicit dimensions */
+    img {
+      height: auto;
+    }
+
+    /* SEO: Explicit focus styles improve accessibility score (Lighthouse), which correlates with rankings */
+    :focus-visible {
+      outline: 3px solid var(--emerald);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    /* SEO: Respect user motion preferences — improves accessibility score and reduces reflow */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    /* SEO: Print styles prevent Google from seeing garbled print layouts in page rendering;
+       also helps if Google ever renders for print-based evaluation */
+    @media print {
+      #preloader, #backToTop, .bubble-container, .scroll-hint { display: none !important; }
+      #mainNav { position: static; background: white; box-shadow: none; }
+      body { background: white; color: #000; }
+      .glass-card { box-shadow: none; border: 1px solid #ccc; }
+    }

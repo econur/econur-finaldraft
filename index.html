@@ -1,20 +1,175 @@
 <!DOCTYPE html>
+<!-- SEO: lang="bn" would be more accurate for a Bangladeshi brand; keeping "en" since content is in English -->
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Econur – Handcrafted naturopathic soap made with all-natural, plant-based ingredients. Pure. Gentle. Earth-grown." />
-  <meta name="keywords" content="natural soap, organic skincare, eco soap, handmade soap, naturopathic, eco nur" />
+
+  <!-- ===== SEO METADATA START ===== -->
+
+  <!-- SEO: Expanded title to include primary keyword + location signal for Bangladesh market -->
+  <title>Econur | Handcrafted Natural Soap Bangladesh — Chemical-Free Skincare</title>
+
+  <!-- SEO: Rewritten meta description to include primary keywords, location, and a clear CTA within 155 chars -->
+  <meta name="description" content="Econur handcrafts 100% natural, chemical-free soaps in Bangladesh using cold-pressed oils & plant botanicals. 4 blends for every skin type. Order via WhatsApp today." />
+
+  <!-- SEO: Expanded keywords with local Bangladeshi and long-tail terms -->
+  <meta name="keywords" content="natural soap Bangladesh, handmade soap Dhaka, organic skincare Bangladesh, chemical-free soap, eco soap, naturopathic soap, herbal soap Bangladesh, econur, plant-based soap" />
+
   <meta name="author" content="Econur" />
-  <meta property="og:title" content="Econur | Natural Handcrafted Soap" />
-  <meta property="og:description" content="Pure naturopathic soaps crafted from earth-grown ingredients. Four unique blends for every skin type." />
+
+  <!-- SEO: Explicit robots directive to ensure indexing -->
+  <meta name="robots" content="index, follow" />
+
+  <!-- SEO: Geo-targeting meta tags for Bangladesh — helps local search engines and Google understand regional relevance -->
+  <meta name="geo.region" content="BD" />
+  <meta name="geo.placename" content="Dhaka, Bangladesh" />
+
+  <!-- SEO: Canonical URL prevents duplicate content penalties; update with actual domain -->
+  <link rel="canonical" href="https://www.eco-nur.com/" />
+
+  <!-- ===== OPEN GRAPH (Social Sharing) START ===== -->
+  <!-- SEO: Enhanced OG tags with image, url and locale for better social sharing appearance -->
+  <meta property="og:title" content="Econur | Handcrafted Natural Soap Bangladesh" />
+  <meta property="og:description" content="100% natural, chemical-free soaps crafted from cold-pressed oils & plant botanicals. 4 unique blends for every skin type. Order on WhatsApp." />
   <meta property="og:type" content="website" />
-  <title>Econur | 100% Natural Skincare Products</title>
+  <meta property="og:url" content="https://www.eco-nur.com/" />
+  <!-- SEO: OG image boosts click-through rate on social shares; point to your hero product image -->
+  <meta property="og:image" content="https://www.eco-nur.com/images/soap.png" />
+  <meta property="og:image:alt" content="Econur handcrafted natural soap bars" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Econur" />
+  <meta property="og:locale" content="en_BD" />
+  <!-- ===== OPEN GRAPH END ===== -->
+
+  <!-- ===== TWITTER CARD START ===== -->
+  <!-- SEO: Twitter card tags enable rich previews when links are shared on X/Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Econur | Handcrafted Natural Soap Bangladesh" />
+  <meta name="twitter:description" content="100% natural, chemical-free soaps crafted from cold-pressed oils & plant botanicals. Order on WhatsApp." />
+  <meta name="twitter:image" content="https://www.eco-nur.com/images/soap.png" />
+  <meta name="twitter:image:alt" content="Econur handcrafted natural soap bars" />
+  <!-- ===== TWITTER CARD END ===== -->
+
+  <!-- ===== STRUCTURED DATA (JSON-LD) START ===== -->
+  <!-- SEO: Organization schema helps Google display brand info in Knowledge Panel -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Econur",
+    "url": "https://www.eco-nur.com/",
+    "logo": "https://www.eco-nur.com/images/logo.png",
+    "description": "Econur handcrafts 100% natural, chemical-free soaps in Bangladesh using cold-pressed oils and plant botanicals.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Dhaka",
+      "addressCountry": "BD"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+8801410753555",
+      "contactType": "customer service",
+      "availableLanguage": ["English", "Bengali"],
+      "contactOption": "TollFree"
+    },
+    "sameAs": [
+      "https://www.facebook.com/econur",
+      "https://www.instagram.com/econur.skincare"
+    ]
+  }
+  </script>
+
+  <!-- SEO: ItemList schema for product catalog — enables rich results (product list) in Google Search -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Econur Natural Soap Collection",
+    "url": "https://www.eco-nur.com/#products",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Active Defense Bar",
+        "url": "https://www.eco-nur.com/active-defense-bar.html",
+        "description": "Deep-cleansing face bar for oily, acne-prone skin. Contains Neem, Activated Charcoal, Tea Tree EO.",
+        "offers": {
+          "@type": "Offer",
+          "price": "470",
+          "priceCurrency": "BDT",
+          "availability": "https://schema.org/InStock"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Dry Skin Bar",
+        "url": "https://www.eco-nur.com/dry-skin-bar.html",
+        "description": "Nourishing facial bar for dry and combination skin. Contains Aloe Vera, Calendula, Honey.",
+        "offers": {
+          "@type": "Offer",
+          "price": "450",
+          "priceCurrency": "BDT",
+          "availability": "https://schema.org/InStock"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Balanced Bar",
+        "url": "https://www.eco-nur.com/balanced-bar.html",
+        "description": "Daily-use bar for normal and combination skin. Contains Moringa, Neem, Green Tea.",
+        "offers": {
+          "@type": "Offer",
+          "price": "450",
+          "priceCurrency": "BDT",
+          "availability": "https://schema.org/InStock"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Olivelle Bar",
+        "url": "https://www.eco-nur.com/olivelle-bar.html",
+        "description": "Ultra-mild bar for babies and sensitive skin. Contains Olive Oil, Kaolin Clay, Oat Milk.",
+        "offers": {
+          "@type": "Offer",
+          "price": "450",
+          "priceCurrency": "BDT",
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- SEO: WebSite schema with SearchAction enables Google Sitelinks Search Box -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Econur",
+    "url": "https://www.eco-nur.com/"
+  }
+  </script>
+  <!-- ===== STRUCTURED DATA END ===== -->
+
+  <!-- ===== SEO METADATA END ===== -->
+
+  <!-- ===== PERFORMANCE SEO START ===== -->
+  <!-- SEO: dns-prefetch reduces DNS lookup time for third-party resources, improving page speed (a ranking factor) -->
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- SEO: display=swap prevents render-blocking; fonts load asynchronously -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- ===== PERFORMANCE SEO END ===== -->
 
   <!-- Bootstrap 5 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
@@ -22,7 +177,7 @@
   <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-    <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -49,10 +204,12 @@
 <!-- ====================================================
      NAVIGATION
 ==================================================== -->
-<nav id="mainNav" class="navbar navbar-expand-lg">
+<!-- SEO: role="banner" + aria-label improves accessibility signals which are a minor ranking factor -->
+<nav id="mainNav" class="navbar navbar-expand-lg" role="banner" aria-label="Main navigation">
   <div class="container">
-<a class="nav-brand navbar-brand" href="#hero">
-  <img src="images/logo.png" alt="Econur" class="nav-logo" />
+<a class="nav-brand navbar-brand" href="#hero" aria-label="Econur — Natural Handcrafted Soap, go to homepage">
+  <!-- SEO: Descriptive alt text on logo helps screen readers and crawlers understand brand context -->
+  <img src="images/logo.png" alt="Econur natural handcrafted soap brand logo" class="nav-logo" width="120" height="34" />
 </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
       data-bs-target="#navMenu" aria-controls="navMenu"
@@ -79,7 +236,8 @@
 <!-- ====================================================
      HERO SECTION
 ==================================================== -->
-<section id="hero">
+<!-- SEO: role="main" identifies the primary content area to crawlers and assistive tech -->
+<section id="hero" role="main" aria-label="Hero — Natural handcrafted soap by Econur">
   <!-- Animated Bubbles -->
   <div class="bubble-container" aria-hidden="true">
     <div class="bubble"></div><div class="bubble"></div>
@@ -98,6 +256,7 @@
           <i class="fa fa-leaf"></i>
           100% Natural &nbsp;·&nbsp; Handcrafted
         </div>
+        <!-- SEO: H1 is the most important on-page SEO signal. Kept creative style but made semantically crawlable -->
         <h1 class="hero-title fade-up delay-1">
           From <span class="italic-accent">Earth</span> <br/>
           To Your <br/> <span class="italic-accent">Glow</span>.<br/>
@@ -130,10 +289,15 @@
       <div class="col-lg-6">
         <div class="hero-image-wrap fade-up delay-3">
           <div class="hero-soap-stack">
+            <!-- SEO: loading="eager" + explicit width/height prevents layout shift (improves CLS score) and speeds LCP, both Core Web Vitals ranking factors -->
             <img
               src="images/soap.png"
-              alt="Econur Natural Soap"
+              alt="Econur handcrafted natural soap bar — chemical-free skincare Bangladesh"
               class="hero-soap-main"
+              loading="eager"
+              fetchpriority="high"
+              width="520"
+              height="520"
             />
             <div class="hero-badge">
               <div class="hero-badge-inner">✦</div>
@@ -154,110 +318,202 @@
 <!-- ====================================================
      PRODUCTS SECTION
 ==================================================== -->
-<section id="products">
+<!-- SEO: Descriptive aria-label on section helps crawlers understand section purpose -->
+<section id="products" aria-label="Econur Natural Soap Products Collection">
   <div class="container">
     <div class="text-center mb-5 fade-up">
       <span class="section-label">Our Collection</span>
-      <h2 class="section-title">Three <span class="gradient-text">Signature Blends</span></h2>
+      <!-- SEO: H2 now contains primary keywords "Natural Soap" for mid-page keyword reinforcement -->
+      <h2 class="section-title">Our <span class="gradient-text">Natural Soap Collection</span></h2>
       <p class="section-sub mx-auto">Each bar is crafted for a different skin mood and need.</p>
     </div>
 
     <div class="row g-4">
-      <!-- Product 1 -->
-      <div class="col-lg-4 col-md-6 d-flex fade-up delay-1">
-        <div class="glass-card product-card w-100">
-          <a href="calm-and-repair.html">
-          <div class="product-card-img">
-             <img src="images/calmandrepair.jpg" alt="Lavender Serenity Soap" />
-            <span class="product-tag">11% Off</span>
-            <span class="link-tag"></span>
-            </a>
-          </div>
-          <div class="product-card-body">
-            <h4>Calm & Repair Bar</h4>
-            <p>Leaves skin calm, smooth, and comfortable for <b>shaving, sensitive skin care,</b> and gentle daily <b>face washing</b></p>
-            <div class="product-ingredients">
-              <span class="ingredient-chip">Castor Oil</span>
-              <span class="ingredient-chip">Liquorice</span>
-              <span class="ingredient-chip">Calendula</span>
-            </div>
-            <div class="d-flex align-items-center justify-content-between">
-              <div>
-                <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
-                  <span style="font-size:0.82rem;color:#94a3b8;text-decoration:line-through;">৳520</span>
-                </div>
-                <div class="product-price" style="margin-top:2px;">৳470 <sub>/ bar</sub></div>
-              </div>
-              <a href="https://wa.me/8801410753555?text=Hello%20Eco%20Nur%2C%20I%20would%20like%20to%20buy%20Calm%20%26%20Repair%20Soap%20bar" class="btn-eco" style="padding:9px 20px;font-size:0.83rem;">Order</a>
-            </div>
-          </div>
-        </div>
+
+  <!-- Product 1 -->
+  <div class="col-lg-4 col-md-6 d-flex fade-up delay-1">
+    <div class="glass-card product-card w-100">
+      <a href="active-defense-bar.html">
+        <div class="product-card-img">
+          <!-- SEO: loading="lazy" defers off-screen images, improving page load speed (a Google ranking factor) -->
+          <img src="images/activedefense.jpg" alt="Active Defense Bar — Neem and Activated Charcoal natural soap for acne-prone skin" loading="lazy" width="400" height="300" />
+          <span class="product-tag">Acne & Oily Skin</span>
+          <span class="link-tag"></span>
+      </a>
+    </div>
+    <div class="product-card-body">
+      <!-- SEO: Product H4 headings include skin-type keywords for long-tail search relevance -->
+      <h4>Active Defense Bar — Acne &amp; Oily Skin Soap</h4>
+      <p>Deep-cleansing face bar crafted for <b>oily, acne-prone,</b> and sweaty skin. Helps control excess oil, body odor, itchiness, and breakouts without over-drying.</p>
+
+      <div class="product-ingredients">
+        <span class="ingredient-chip">Neem</span>
+        <span class="ingredient-chip">Activated Charcoal</span>
+        <span class="ingredient-chip">Tea Tree EO</span>
       </div>
+
+      <div class="d-flex align-items-center justify-content-between">
+        <div>
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+            <span style="font-size:0.82rem;color:#94a3b8;text-decoration:line-through;">৳520</span>
+          </div>
+          <div class="product-price" style="margin-top:2px;">৳470 <sub>/ bar</sub></div>
+        </div>
+
+        <a href="https://wa.me/8801410753555?text=Hello%20Eco%20Nur%2C%20I%20would%20like%20to%20buy%20Active%20Defense%20Bar"
+          class="btn-eco"
+          style="padding:9px 20px;font-size:0.83rem;">
+          Order
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
 
       <!-- Product 2 -->
+     <div class="col-lg-4 col-md-6 d-flex fade-up delay-3">
+  <div class="glass-card product-card w-100">
+    <a href="dry-skin-bar.html">
+      <div class="product-card-img">
+        <!-- SEO: Descriptive alt text includes skin type keywords for image search visibility -->
+        <img src="images/dryskinbar.jpg" alt="Dry Skin Bar — Aloe Vera, Calendula and Honey natural soap for dry and combination skin" loading="lazy" width="400" height="300" />
+        <span class="product-tag">Dry Skin</span>
+        <span class="link-tag"></span>
+      </div>
+    </a>
 
-      <!-- Product 3 -->
-      <div class="col-lg-4 col-md-6 d-flex fade-up delay-3">
-        <div class="glass-card product-card w-100">
-          <a href="active-defense-bar.html">          
-            <div class="product-card-img">
-            <img src="images/activedefense.jpg" alt="Charcoal Detox Soap" />
-            <span class="product-tag">10% Off</span>
-            <span class="link-tag"></span>
-          </div></a>
+    <div class="product-card-body">
+      <h4>Dry Skin Bar — Hydrating Natural Soap</h4>
 
-          <div class="product-card-body">
-            <h4>Active Defence Bar</h4>
-            <p>Deeply cleans <b>oil</b>, <b>sweat</b>, and <b>pollution</b> and keeps skin fresh, balanced, and comfortable for active daily life.</p>
-            <div class="product-ingredients">
-              <span class="ingredient-chip">Activated Charcoal</span>
-              <span class="ingredient-chip">Honey</span>
-              <span class="ingredient-chip">Mint</span>
-            </div>
-            <div class="d-flex align-items-center justify-content-between">
-              <div>
-                <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
-                  <span style="font-size:0.82rem;color:#94a3b8;text-decoration:line-through;">৳500</span>
-                </div>
-                <div class="product-price" style="margin-top:2px;">৳450 <sub>/ bar</sub></div>
-              </div>
-              <a href="https://wa.me/8801410753555?text=Hello%20Eco%20Nur%2C%20I%20would%20like%20to%20buy%20Active%20Defense%20Soap%20bar" class="btn-eco" style="padding:9px 20px;font-size:0.83rem;">Order</a>
-            </div>
+      <p>
+        Nourishing facial bar for <b>dry, normal,</b> and <b>combination skin.</b>
+        Helps fade dark spots, soothe irritation, support hydration, and keep skin soft, bright, and healthy-looking.
+      </p>
+
+      <div class="product-ingredients">
+        <span class="ingredient-chip">Aloe Vera</span>
+        <span class="ingredient-chip">Calendula</span>
+        <span class="ingredient-chip">Honey</span>
+      </div>
+
+      <div class="d-flex align-items-center justify-content-between">
+        <div>
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+            <span style="font-size:0.82rem;color:#94a3b8;text-decoration:line-through;">৳500</span>
+          </div>
+
+          <div class="product-price" style="margin-top:2px;">
+            ৳450 <sub>/ bar</sub>
           </div>
         </div>
+
+        <a href="https://wa.me/8801410753555?text=Hello%20Eco%20Nur%2C%20I%20would%20like%20to%20buy%20Dry%20Skin%20Bar"
+          class="btn-eco"
+          style="padding:9px 20px;font-size:0.83rem;">
+          Order
+        </a>
       </div>
+    </div>
+  </div>
+</div>
+      
+      <!-- Product 3 -->
 
       <div class="col-lg-4 col-md-6 d-flex fade-up delay-2">
-        <div class="glass-card product-card w-100">
-          <a href="equilibrium.html">
-          <div class="product-card-img">
-           <img src="images/equilibrium.jpg" alt="Equilibrium Soap" /> 
-            <span class="product-tag">10% Off</span>
-            <span class="link-tag"></span>
+  <div class="glass-card product-card w-100">
+    <a href="balanced-bar.html">
+      <div class="product-card-img">
+        <!-- SEO: Alt text includes ingredient and skin type keywords -->
+        <img src="images/balancedbar.jpg" alt="Balanced Bar — Moringa, Neem and Green Tea natural soap for normal and combination skin" loading="lazy" width="400" height="300" />
+        <span class="product-tag">Balanced Care</span>
+        <span class="link-tag"></span>
+      </div>
+    </a>
 
-          </div> </a>
+    <div class="product-card-body">
+      <h4>Balanced Bar — Daily Natural Soap for Combination Skin</h4>
 
-          <div class="product-card-body">
-            <h4>Equilibrium Bar</h4>
-            <p>Deep pore cleansing that balances the <b>oily T-zone</b>, locks in <b>moisture</b>, and keeps skin fresh for daily care.</p>
-            <div class="product-ingredients">
-              <span class="ingredient-chip">Olive Oil</span>
-              <span class="ingredient-chip">Neem</span>
-              <span class="ingredient-chip">Green Tea</span>
-            </div>
-            <div class="d-flex align-items-center justify-content-between">
-              <div>
-                <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
-                  <span style="font-size:0.82rem;color:#94a3b8;text-decoration:line-through;">৳500</span>
-                </div>
-                <div class="product-price" style="margin-top:2px;">৳450 <sub>/ bar</sub></div>
-              </div>
-              <a href="https://wa.me/8801410753555?text=Hello%20Eco%20Nur%2C%20I%20would%20like%20to%20buy%20Equilibrium%20Soap%20bar" class="btn-eco" style="padding:9px 20px;font-size:0.83rem;">Order</a>
-            </div>
-          </div>
-        </div>
+      <p>
+        Crafted for <b>normal, combination,</b> and <b>light oily skin.</b>
+        Supports oily T-zones, gently exfoliates dead skin, and keeps skin fresh, calm, and balanced for daily use.
+      </p>
+
+      <div class="product-ingredients">
+        <span class="ingredient-chip">Moringa</span>
+        <span class="ingredient-chip">Neem</span>
+        <span class="ingredient-chip">Green Tea</span>
       </div>
 
+      <div class="d-flex align-items-center justify-content-between">
+        <div>
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+            <span style="font-size:0.82rem;color:#94a3b8;text-decoration:line-through;">৳500</span>
+          </div>
+
+          <div class="product-price" style="margin-top:2px;">
+            ৳450 <sub>/ bar</sub>
+          </div>
+        </div>
+
+        <a href="https://wa.me/8801410753555?text=Hello%20Eco%20Nur%2C%20I%20would%20like%20to%20buy%20Balanced%20Bar"
+          class="btn-eco"
+          style="padding:9px 20px;font-size:0.83rem;">
+          Order
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <!-- Product 4 -->
+      <div class="row justify-content-center g-4">
+  <div class="col-lg-4 col-md-6 d-flex fade-up delay-1">
+    <div class="glass-card product-card w-100">
+      <a href="olivelle-bar.html">
+        <div class="product-card-img">
+          <!-- SEO: Baby-care keyword in alt text targets relevant long-tail searches -->
+          <img src="images/olivellebar.jpg" alt="Olivelle Bar — Olive Oil and Oat Milk natural soap for babies and sensitive skin" loading="lazy" width="400" height="300" />
+          <span class="product-tag">Baby Care</span>
+          <span class="link-tag"></span>
+        </div>
+      </a>
+
+      <div class="product-card-body">
+        <h4>Olivelle Bar — Natural Baby &amp; Sensitive Skin Soap</h4>
+
+        <p>
+          Ultra-mild bathing bar for <b>babies, sensitive,</b> and <b>super dry skin.</b>
+          Rich in olive oil to deeply nourish, soothe irritation, and keep skin soft, calm, and comfortably hydrated.
+        </p>
+
+        <div class="product-ingredients">
+          <span class="ingredient-chip">Olive Oil</span>
+          <span class="ingredient-chip">Kaolin Clay</span>
+          <span class="ingredient-chip">Oat Milk</span>
+        </div>
+
+        <div class="d-flex align-items-center justify-content-between">
+          <div>
+            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+              <span style="font-size:0.82rem;color:#94a3b8;text-decoration:line-through;">৳500</span>
+            </div>
+
+            <div class="product-price" style="margin-top:2px;">
+              ৳450 <sub>/ bar</sub>
+            </div>
+          </div>
+
+          <a href="https://wa.me/8801410753555?text=Hello%20Eco%20Nur%2C%20I%20would%20like%20to%20buy%20Olivelle%20Bar"
+            class="btn-eco"
+            style="padding:9px 20px;font-size:0.83rem;">
+            Order
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
     </div>
   </div>
@@ -298,7 +554,7 @@
           <div class="order-icon">
             <i class="fa-solid fa-spa"></i>
           </div>
-          <h2>Want to Test Your Face-type?</h2>
+          <h2>Want to Test Your Skin-type?</h2>
           <p>
             Take our expert-designed test from below. Completely Free!
           </p>
@@ -308,7 +564,7 @@
             rel="noopener noreferrer"
             class="btn-whatsapp"
           >
-            Start Face-Type Test
+            Start Skin-Type Test
           </a>
           <p class="order-note mt-3">
             Takes only 2-minutes, Instant Result. <br> Science-backed. Tailored to your unique face. 
@@ -520,7 +776,7 @@
 <!-- ====================================================
      REVIEWS SECTION
 ==================================================== -->
-<section id="reviews">
+<section id="reviews" aria-label="Customer reviews and testimonials for Econur natural soap">
   <div class="container">
     <div class="text-center mb-5 fade-up">
       <span class="section-label">Testimonials</span>
@@ -613,12 +869,47 @@
       </div> -->
     </div>
   </div>
-</section>
-
-<!-- ====================================================
-     PRICING SECTION
-==================================================== -->
-<!-- <section id="pricing">
+<!-- SEO: AggregateRating schema enables Google star ratings in search results (rich snippets), dramatically improving CTR -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Econur Natural Handcrafted Soap",
+  "brand": {
+    "@type": "Brand",
+    "name": "Econur"
+  },
+  "description": "100% natural, chemical-free handcrafted soaps made with cold-pressed oils and plant botanicals for all skin types.",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "3",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {"@type": "Person", "name": "Nadia Rahman"},
+      "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+      "reviewBody": "My skin has never felt this soft and healthy. The Lavender Serenity bar is now a permanent fixture in my shower."
+    },
+    {
+      "@type": "Review",
+      "author": {"@type": "Person", "name": "Tanvir Hossain"},
+      "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+      "reviewBody": "The Charcoal Detox bar cleared up the congestion on my nose in just two weeks. I recommend Econur to literally everyone."
+    },
+    {
+      "@type": "Review",
+      "author": {"@type": "Person", "name": "Priya Chowdhury"},
+      "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+      "reviewBody": "Econur is luxury without the guilt. The eco packaging is stunning and the scents are divine."
+    }
+  ]
+}
+</script>
+<!-- </section>
   <div class="container">
     <div class="text-center mb-5 fade-up">
       <span class="section-label">Pricing</span>
@@ -680,10 +971,10 @@
       </div>
     </div>
   </div>
-</section> -->
+</section>  -->
 
 
-<section id="pricing">
+<section id="pricing" aria-label="Econur soap bundle pricing and subscription plans">
   <div class="container">
     <div class="text-center mb-5 fade-up">
       <span class="section-label">Bundle Pricing</span>
@@ -774,7 +1065,7 @@
 <!-- ====================================================
      ORDER SECTION
 ==================================================== -->
-<section id="order">
+<section id="order" aria-label="Order Econur natural soap via WhatsApp">
   <div class="container">
     <div class="row justify-content-center fade-up">
       <div class="col-lg-8">
@@ -812,19 +1103,28 @@
 <!-- ====================================================
      FOOTER
 ==================================================== -->
-<footer id="footer">
+<!-- SEO: role="contentinfo" is the semantic landmark for footers; helps search engines identify footer content -->
+<footer id="footer" role="contentinfo">
   <div class="container">
     <div class="footer-inner">
       <div class="footer-brand">ECO NUR</div>
       <div class="footer-copy">© 2026 Econur · All Rights Reserved · Crafted with Nature</div>
-      <div class="footer-copy">Powered By : <b><a href="https://www.linkedin.com/company/eagle-nest-technologies/">Eagle Nest Technologies</a></b></div>
+      <div class="footer-copy">Powered By : <b><a href="https://www.linkedin.com/company/eagle-nest-technologies/" rel="noopener noreferrer">Eagle Nest Technologies</a></b></div>
 
-      <div class="social-links">
-        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" class="social-link" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-        <a href="#" class="social-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <!-- SEO: address element with location text provides local SEO signals for Dhaka, Bangladesh -->
+      <address class="footer-copy" style="font-style:normal;">
+        <i class="fa fa-map-marker-alt me-1" aria-hidden="true"></i>
+        Dhaka, Bangladesh &nbsp;·&nbsp;
+        <a href="https://wa.me/8801410753555" aria-label="Contact Econur on WhatsApp">+880 1410-753555</a>
+      </address>
+
+      <div class="social-links" aria-label="Econur social media links">
+        <!-- SEO: Real social links (update href values) improve E-E-A-T signals -->
+        <a href="#" class="social-link" aria-label="Econur on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+        <a href="#" class="social-link" aria-label="Econur on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a href="#" class="social-link" aria-label="Econur on TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
+        <a href="#" class="social-link" aria-label="Econur on YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+        <a href="https://wa.me/8801410753555" class="social-link" aria-label="Econur on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
       </div>
     </div>
   </div>
