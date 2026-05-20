@@ -1,0 +1,193 @@
+{
+  "_comment": "Eco-Nur Product Catalog. To add a product: add a new key under 'products'. To edit price/name/why: edit here only — no JS changes needed. Prices are placeholders — fill in before deploying.",
+
+  "products": {
+
+    "active-defense": {
+      "id": "active-defense",
+      "name": { "bn": "Active Defense Bar", "en": "Active Defense Bar" },
+      "emoji": "🖤",
+      "price": { "bn": "মূল্য জানতে WhatsApp করুন", "en": "Contact us for pricing" },
+      "tagline": {
+        "bn": "তৈলাক্ত ও ব্রণপ্রবণ ত্বকের জন্য বিশেষভাবে তৈরী",
+        "en": "Specially formulated for oily and acne-prone skin"
+      },
+      "keyIngredients": {
+        "bn": ["অ্যাক্টিভেটেড চারকোল", "নিম", "তুলসি", "Tea Tree EO", "নারিকেল তেল", "অলিভ অয়েল", "ক্যাস্টর অয়েল", "বিফ ট্যালো"],
+        "en": ["Activated Charcoal", "Neem", "Tulsi", "Tea Tree EO", "Coconut Oil", "Olive Oil", "Castor Oil", "Beef Tallow"]
+      },
+      "whyText": {
+        "bn": "চারকোল লোমকূপের গভীর থেকে অতিরিক্ত তেল শোষণ করে ও পোরস পরিষ্কার করে। নিম ও তুলসির শক্তিশালী এন্টি-মাইক্রোবিয়াল উপাদান ব্রণ সৃষ্টিকারী ব্যাকটেরিয়া ধ্বংস করে। Tea Tree ফাংগাল একনি ও প্রদাহ কমায়। নারিকেল তেলের ৬৭ ক্লিনজিং ভ্যালু ভালো পরিষ্কার নিশ্চিত করে, আর অলিভ অয়েল ত্বককে শুষ্ক না করেই আর্দ্র রাখে।",
+        "en": "Charcoal absorbs excess oil deep within pores and keeps them clear. Neem and Tulsi's powerful antimicrobial properties destroy acne-causing bacteria. Tea Tree reduces fungal acne and inflammation. Coconut oil with its high cleansing value ensures thorough cleansing, while olive oil keeps skin moisturized without over-drying."
+      },
+      "suitableFor": ["O", "A"],
+      "notSuitableFor": ["D", "S"],
+      "isCustom": false,
+      "bundle": null,
+      "testimonials": [
+        {
+          "text": {
+            "bn": "Active Defense ব্যবহার শুরুর ২ সপ্তাহের মধ্যে ব্রণ অনেকটা কমে গেছে। সত্যিই অবাক হয়েছি — আগে ভাবিনি প্রাকৃতিক সাবানে এত কাজ হবে!",
+            "en": "Within 2 weeks of using Active Defense, my acne reduced significantly. Truly surprised — I didn't think a natural soap could work this well!"
+          },
+          "name": "রাফি",
+          "location": { "bn": "ঢাকা", "en": "Dhaka" }
+        },
+        {
+          "text": {
+            "bn": "সারাদিন মুখ তেলতেলে থাকত, সন্ধ্যায় ঘরে ফিরলেই মুখ চকচক করত। এখন অনেকটা নিয়ন্ত্রণে আছে। বালিশও আর তৈলাক্ত হয় না!",
+            "en": "My face used to be oily all day. After using this, things are much more under control. Even my pillowcase isn't oily anymore!"
+          },
+          "name": "সাদিয়া",
+          "location": { "bn": "চট্টগ্রাম", "en": "Chittagong" }
+        }
+      ]
+    },
+
+    "olivelle": {
+      "id": "olivelle",
+      "name": { "bn": "Olivelle Bar", "en": "Olivelle Bar" },
+      "emoji": "🫒",
+      "price": { "bn": "মূল্য জানতে WhatsApp করুন", "en": "Contact us for pricing" },
+      "tagline": {
+        "bn": "সুপার ড্রাই ও সংবেদনশীল ত্বকের জন্য বিশেষভাবে তৈরী",
+        "en": "Specially formulated for super dry and sensitive skin"
+      },
+      "keyIngredients": {
+        "bn": ["অলিভ অয়েল (৮০%+)", "নারিকেল তেল", "ক্যাস্টর অয়েল", "বিফ ট্যালো", "কেওলিন ক্লে", "ওটস মিল্ক"],
+        "en": ["Olive Oil (80%+)", "Coconut Oil", "Castor Oil", "Beef Tallow", "Kaolin Clay", "Oat Milk"]
+      },
+      "whyText": {
+        "bn": "৮০% এরও বেশি অলিভ অয়েল ত্বকে গভীর আর্দ্রতা দেয় এবং skin barrier শক্তিশালী করে। কোনো সুগন্ধি নেই বলে সংবেদনশীল ও শিশুর ত্বকেও সম্পূর্ণ নিরাপদ। কেওলিন ক্লে অত্যন্ত মৃদুভাবে পরিষ্কার করে ও সিল্কি অনুভূতি দেয়। ওটস মিল্ক চুলকানি ও প্রদাহ প্রশমিত করে।",
+        "en": "Over 80% olive oil delivers deep moisture and strengthens the skin barrier. Completely fragrance-free, making it safe for sensitive and baby skin. Kaolin clay cleanses very gently with a silky feel. Oat milk calms itching and reduces inflammation."
+      },
+      "suitableFor": ["S", "D"],
+      "notSuitableFor": ["O", "A"],
+      "isCustom": false,
+      "bundle": null,
+      "testimonials": [
+        {
+          "text": {
+            "bn": "আমার ত্বক এত শুষ্ক যে শীতকালে ফেটে যেত। Olivelle Bar ব্যবহারের পর থেকে আর হয় না। ত্বক এখন নরম ও আরামদায়ক লাগে।",
+            "en": "My skin was so dry it used to crack in winter. Since using Olivelle Bar, that hasn't happened. My skin now feels soft and comfortable."
+          },
+          "name": "নাসরিন",
+          "location": { "bn": "রাজশাহী", "en": "Rajshahi" }
+        },
+        {
+          "text": {
+            "bn": "সংবেদনশীল ত্বকের জন্য এত মৃদু ও কার্যকর সাবান আগে পাইনি। ব্যবহারের পর কোনো জ্বালাপোড়া নেই, শুধু নরমলতা আছে।",
+            "en": "I haven't found such a gentle and effective soap for sensitive skin before. No burning after use — just softness."
+          },
+          "name": "তামান্না",
+          "location": { "bn": "সিলেট", "en": "Sylhet" }
+        }
+      ]
+    },
+
+    "dry-skin": {
+      "id": "dry-skin",
+      "name": { "bn": "Dry Skin Bar", "en": "Dry Skin Bar" },
+      "emoji": "🌿",
+      "price": { "bn": "মূল্য জানতে WhatsApp করুন", "en": "Contact us for pricing" },
+      "tagline": {
+        "bn": "নরমাল, মিশ্র ও ড্রাই ত্বকের পরিচর্যায়",
+        "en": "For normal, combination and dry skin care"
+      },
+      "keyIngredients": {
+        "bn": ["অলিভ অয়েল", "নারিকেল তেল", "ক্যাস্টর অয়েল", "বিফ ট্যালো", "অ্যালোভেরা", "ক্যালেন্ডুলা", "কেওলিন ক্লে", "বড়ই পাতা", "লিকোরিস", "মধু"],
+        "en": ["Olive Oil", "Coconut Oil", "Castor Oil", "Beef Tallow", "Aloe Vera", "Calendula", "Kaolin Clay", "Jujube Leaf", "Licorice", "Honey"]
+      },
+      "whyText": {
+        "bn": "অ্যালোভেরা ও মধু ত্বকে গভীর আর্দ্রতা এনে উজ্জ্বলতা বাড়ায়। লিকোরিস পিগমেন্টেশন ও কালো ছোপ কমায়। ক্যালেন্ডুলা র‌্যাশ ও প্রদাহ প্রশমিত করে। বড়ই পাতা মৃদুভাবে মৃত কোষ সরিয়ে ত্বক তাজা রাখে এবং অ্যান্টিঅক্সিডেন্ট হিসেবে কাজ করে।",
+        "en": "Aloe vera and honey bring deep moisture and restore radiance. Licorice reduces pigmentation and dark spots. Calendula soothes rash and inflammation. Jujube leaf gently exfoliates dead cells and acts as an antioxidant for fresh, bright skin."
+      },
+      "suitableFor": ["D", "N", "C", "X"],
+      "notSuitableFor": ["O", "A", "S"],
+      "isCustom": false,
+      "bundle": null,
+      "testimonials": [
+        {
+          "text": {
+            "bn": "মুখের কালো দাগ নিয়ে অনেক চিন্তায় ছিলাম। Dry Skin Bar দেড় মাস ব্যবহার করে পার্থক্য নিজেই বুঝতে পারছি। ত্বক আগের চেয়ে অনেক উজ্জ্বল।",
+            "en": "I was really worried about dark spots on my face. After using Dry Skin Bar for six weeks, I can see the difference myself. Skin is much brighter now."
+          },
+          "name": "মিম",
+          "location": { "bn": "ময়মনসিংহ", "en": "Mymensingh" }
+        },
+        {
+          "text": {
+            "bn": "ত্বক নরম ও আর্দ্র থাকে সারাদিন। কোনো কৃত্রিম গন্ধ নেই — একদম প্রাকৃতিক অনুভূতি।",
+            "en": "Skin stays soft and moisturized all day. No artificial fragrance — completely natural feel."
+          },
+          "name": "সুমাইয়া",
+          "location": { "bn": "কুমিল্লা", "en": "Comilla" }
+        }
+      ]
+    },
+
+    "balanced": {
+      "id": "balanced",
+      "name": { "bn": "Balanced Bar", "en": "Balanced Bar" },
+      "emoji": "⚖️",
+      "price": { "bn": "মূল্য জানতে WhatsApp করুন", "en": "Contact us for pricing" },
+      "tagline": {
+        "bn": "নরমাল, মিশ্র ও হালকা তৈলাক্ত ত্বকের জন্য বিশেষভাবে তৈরী",
+        "en": "Specially formulated for normal, combination and mildly oily skin"
+      },
+      "keyIngredients": {
+        "bn": ["আমন্ড অয়েল", "অলিভ অয়েল", "নারিকেল তেল", "ক্যাস্টর অয়েল", "বিফ ট্যালো", "মরিঙ্গা", "নিম", "গ্রিন টি", "ওটস"],
+        "en": ["Almond Oil", "Olive Oil", "Coconut Oil", "Castor Oil", "Beef Tallow", "Moringa", "Neem", "Green Tea", "Oats"]
+      },
+      "whyText": {
+        "bn": "মরিঙ্গা ত্বকে ভিটামিন ও পুষ্টি জোগায়। গ্রিন টির এন্টিমাইক্রোবিয়াল বৈশিষ্ট্য ব্যাকটেরিয়া ধ্বংস করে। নিম T-Zone-এর অতিরিক্ত তেল নিয়ন্ত্রণ করে। ওটস মৃদু এক্সফোলিয়েশন করে ও soothing এজেন্ট হিসেবে ত্বক মসৃণ রাখে।",
+        "en": "Moringa provides essential vitamins and nutrients. Green tea's antimicrobial properties fight bacteria. Neem controls excess oil in the T-zone. Oats exfoliate gently and act as a soothing agent for smooth skin."
+      },
+      "suitableFor": ["N", "C"],
+      "notSuitableFor": ["S"],
+      "isCustom": false,
+      "bundle": null,
+      "testimonials": [
+        {
+          "text": {
+            "bn": "T-Zone তৈলাক্ত আর গাল শুষ্ক — এই সমস্যা বহু বছর ধরে ছিল। Balanced Bar এখন পর্যন্ত সবচেয়ে ভালো কাজ করছে। প্রথম সপ্তাহ থেকেই ভালো লাগছে।",
+            "en": "Oily T-zone and dry cheeks — a problem I've had for years. Balanced Bar has worked the best so far. I could feel the difference from the first week."
+          },
+          "name": "রুমানা",
+          "location": { "bn": "খুলনা", "en": "Khulna" }
+        },
+        {
+          "text": {
+            "bn": "ত্বকে একটা সুন্দর ভারসাম্য এনেছে এই সাবান। মুখ তেলতেলে লাগে না, আবার শুষ্কও না। অনেকদিন ধরে এরকম কিছু খুঁজছিলাম।",
+            "en": "This soap has brought a wonderful balance to my skin. Not oily, not dry either. I'd been looking for something like this for a long time."
+          },
+          "name": "আরিফ",
+          "location": { "bn": "বরিশাল", "en": "Barisal" }
+        }
+      ]
+    },
+
+    "custom": {
+      "_comment": "Fallback product. Shown when no standard bar is a strong match. isCustom:true triggers a different CTA (consultation instead of order).",
+      "id": "custom",
+      "name": { "bn": "কাস্টম বার", "en": "Custom Bar" },
+      "emoji": "✨",
+      "price": { "bn": "WhatsApp-এ আলোচনা করুন", "en": "Discuss on WhatsApp" },
+      "tagline": {
+        "bn": "আপনার ত্বকের জন্য বিশেষভাবে তৈরী ফর্মুলা",
+        "en": "A formula specially crafted for your unique skin"
+      },
+      "keyIngredients": { "bn": [], "en": [] },
+      "whyText": {
+        "bn": "আপনার ত্বকের বৈশিষ্ট্য অনুযায়ী Eco-Nur একটি কাস্টম ফর্মুলা তৈরি করতে পারে। WhatsApp-এ যোগাযোগ করুন এবং আমাদের জানান আপনার ত্বকের সমস্যাগুলো — আমরা আপনার জন্য সেরা সমাধান তৈরি করব।",
+        "en": "Eco-Nur can create a custom formula tailored to your skin's specific characteristics. Contact us on WhatsApp and tell us about your skin concerns — we'll craft the best solution for you."
+      },
+      "suitableFor": [],
+      "notSuitableFor": [],
+      "isCustom": true,
+      "bundle": null,
+      "testimonials": []
+    }
+
+  }
+}

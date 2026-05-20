@@ -1,0 +1,406 @@
+{
+  "_comment": "Eco-Nur Skin Type Profiles. Each entry defines a skin type's display content. The 'insightTemplate' is the personalized paragraph shown on the result page — it supports {{name}} and {{secondaryInsight}} interpolation. The 'meaning' field is kept as editorial context but is NOT rendered directly; the insightTemplate replaces it. To edit result copy: edit here only — no JS changes needed.",
+
+  "skinTypes": {
+
+    "O": {
+      "key": "O",
+      "name": { "bn": "তৈলাক্ত ত্বক", "en": "Oily Skin" },
+      "emoji": "✨",
+      "meaning": {
+        "_comment": "Editorial context only — not rendered on result page. Used as background reference.",
+        "bn": "আপনার ত্বক প্রয়োজনের চেয়ে বেশি সিবাম (তেল) তৈরি করে। বাংলাদেশের আর্দ্র ও গরম আবহাওয়ায় এটি খুবই সাধারণ এবং আসলে ত্বকের একটি প্রাকৃতিক সুরক্ষা ব্যবস্থা।",
+        "en": "Your skin produces more sebum than needed. In Bangladesh's humid climate this is very common and is actually a natural protective mechanism."
+      },
+      "insightTemplate": {
+        "bn": "{{name}}, আপনার উত্তরগুলো থেকে স্পষ্ট বোঝা যাচ্ছে আপনার ত্বক মূলত তৈলাক্ত প্রকৃতির।{{secondaryInsight}} বাংলাদেশের গরম ও আর্দ্র আবহাওয়ায় এই ত্বকের জন্য সঠিক ক্লেনজিং সবচেয়ে জরুরি — অতিরিক্ত তেল না কমালে লোমকূপ বন্ধ হয়ে সমস্যা বাড়ে।",
+        "en": "{{name}}, your answers clearly indicate oily skin.{{secondaryInsight}} In Bangladesh's hot and humid climate, proper cleansing is most crucial for this skin type — without controlling excess oil, clogged pores become a bigger problem."
+      },
+      "secondaryInsights": {
+        "A": {
+          "bn": " আপনার ব্রণের প্রবণতাও লক্ষ্য করা গেছে — তাই গভীর পরিষ্কার এবং এন্টি-ব্যাকটেরিয়াল যত্ন আরও বেশি গুরুত্বপূর্ণ।",
+          "en": " Acne-prone tendencies were also noticed — deep cleansing and antibacterial care are even more important for you."
+        },
+        "S": {
+          "bn": " তবে আপনার ত্বকে কিছুটা সংবেদনশীলতাও আছে — তাই হার্শ উপাদান এড়িয়ে মৃদু পদ্ধতিতে তেল নিয়ন্ত্রণ করুন।",
+          "en": " Some sensitivity was also detected — control oiliness gently, avoiding harsh ingredients."
+        },
+        "X": {
+          "bn": " কালো দাগ বা নিস্তেজতার লক্ষণও আছে — তেল নিয়ন্ত্রণের পাশাপাশি অ্যান্টিঅক্সিডেন্ট উপাদান উজ্জ্বলতা ফেরাতে সাহায্য করবে।",
+          "en": " Signs of dark spots or dullness were also noted — alongside oil control, antioxidant ingredients will help restore brightness."
+        }
+      },
+      "problems": {
+        "bn": [
+          "সারাদিন মুখ চকচকে থাকে",
+          "লোমকূপ বড় ও স্পষ্ট দেখায়",
+          "ব্ল্যাকহেড ও হোয়াইটহেড জমে",
+          "মেকআপ বেশিক্ষণ থাকে না",
+          "ঘামের সাথে ধুলো দ্রুত জমে"
+        ],
+        "en": [
+          "Face stays shiny throughout the day",
+          "Pores appear large and visible",
+          "Blackheads and whiteheads accumulate",
+          "Makeup doesn't last long",
+          "Dust and sweat accumulate quickly"
+        ]
+      },
+      "advice": {
+        "bn": [
+          "দিনে দুইবার মুখ ধুন — বেশি নয়, বেশি ধুলে ত্বক আরও তেল তৈরি করে",
+          "হালকা, অয়েল-ফ্রি ময়েশ্চারাইজার ব্যবহার করুন",
+          "মুখে বারবার হাত দেওয়া এড়িয়ে চলুন",
+          "সপ্তাহে একবার ক্লে মাস্ক ব্যবহার করুন"
+        ],
+        "en": [
+          "Wash your face twice daily — no more, overwashing triggers more oil",
+          "Use a light, oil-free moisturizer",
+          "Avoid touching your face frequently",
+          "Use a clay mask once a week"
+        ]
+      }
+    },
+
+    "D": {
+      "key": "D",
+      "name": { "bn": "শুষ্ক ত্বক", "en": "Dry Skin" },
+      "emoji": "💧",
+      "meaning": {
+        "_comment": "Editorial context only — not rendered.",
+        "bn": "আপনার ত্বক পর্যাপ্ত প্রাকৃতিক তেল তৈরি করতে পারে না এবং আর্দ্রতা ধরে রাখার ক্ষমতা কম।",
+        "en": "Your skin doesn't produce enough natural oil and has limited moisture retention."
+      },
+      "insightTemplate": {
+        "bn": "{{name}}, আপনার উত্তরগুলো থেকে বোঝা যাচ্ছে আপনার ত্বক শুষ্ক প্রকৃতির।{{secondaryInsight}} আর্দ্রতা ধরে রাখা এবং ত্বকের প্রতিরক্ষা স্তর (skin barrier) শক্তিশালী করাই আপনার প্রথম লক্ষ্য হওয়া উচিত।",
+        "en": "{{name}}, your answers indicate dry skin.{{secondaryInsight}} Retaining moisture and strengthening your skin barrier should be your primary goals."
+      },
+      "secondaryInsights": {
+        "S": {
+          "bn": " সাথে সংবেদনশীলতার লক্ষণও দেখা গেছে — সুগন্ধিমুক্ত ও অত্যন্ত মৃদু উপাদান বেছে নেওয়া আপনার জন্য সবচেয়ে নিরাপদ।",
+          "en": " Sensitivity signs were also noted — fragrance-free and very gentle ingredients are the safest choice for you."
+        },
+        "X": {
+          "bn": " কালো দাগ বা নিস্তেজতাও আপনার চিন্তার কারণ — আর্দ্রতার পাশাপাশি ব্রাইটেনিং উপাদান দরকার।",
+          "en": " Dark spots or dullness are also a concern — you need brightening ingredients alongside deep moisture."
+        },
+        "A": {
+          "bn": " কিছুটা ব্রণের প্রবণতাও দেখা গেছে — শুষ্ক ত্বকে ব্রণ ভিন্নভাবে আসে, মৃদু ক্লেনজিং এখানে চাবিকাঠি।",
+          "en": " Some acne tendency was also detected — acne in dry skin behaves differently, so gentle cleansing is the key."
+        }
+      },
+      "problems": {
+        "bn": [
+          "মুখ ধোয়ার পর টানটান অনুভূতি",
+          "ফ্লেকি ও খসখসে টেক্সচার",
+          "শীতকালে বেশি কষ্ট",
+          "সূক্ষ্ম রেখা তাড়াতাড়ি দেখা দেয়",
+          "মেকআপ ড্রাই প্যাচে জমে যায়"
+        ],
+        "en": [
+          "Tight feeling after washing",
+          "Flaky and rough texture",
+          "Extra discomfort in winter",
+          "Fine lines appear earlier",
+          "Makeup settles into dry patches"
+        ]
+      },
+      "advice": {
+        "bn": [
+          "ভেজা ত্বকেই ময়েশ্চারাইজার লাগান — শুকানোর আগেই",
+          "ঠান্ডা বা কুসুম গরম পানি ব্যবহার করুন, গরম পানি এড়িয়ে চলুন",
+          "ফোমিং বা সালফেট-ভিত্তিক ক্লেনজার এড়িয়ে চলুন",
+          "প্রতিদিন অন্তত ৮ গ্লাস পানি পান করুন"
+        ],
+        "en": [
+          "Apply moisturizer on damp skin — before it fully dries",
+          "Use cool or lukewarm water, avoid hot water",
+          "Avoid foaming or sulfate-based cleansers",
+          "Drink at least 8 glasses of water daily"
+        ]
+      }
+    },
+
+    "C": {
+      "key": "C",
+      "name": { "bn": "মিশ্র ত্বক", "en": "Combination Skin" },
+      "emoji": "⚖️",
+      "meaning": {
+        "_comment": "Editorial context only — not rendered.",
+        "bn": "আপনার T-Zone তৈলাক্ত কিন্তু গাল স্বাভাবিক বা শুষ্ক। এটি সবচেয়ে সাধারণ ত্বকের ধরন।",
+        "en": "Your T-zone is oily but cheeks are normal or dry. This is the most common skin type."
+      },
+      "insightTemplate": {
+        "bn": "{{name}}, আপনার উত্তরগুলো দেখে স্পষ্ট বোঝা যাচ্ছে আপনার ত্বক মিশ্র প্রকৃতির।{{secondaryInsight}} T-Zone ও গালের আলাদা চাহিদা বুঝে মৃদু ও ভারসাম্যকারী যত্ন নেওয়াই এই ত্বকের চাবিকাঠি।",
+        "en": "{{name}}, your answers clearly indicate combination skin.{{secondaryInsight}} Understanding the different needs of your T-zone and cheeks and using balanced, gentle care is the key to managing this skin type."
+      },
+      "secondaryInsights": {
+        "O": {
+          "bn": " আপনার T-Zone-এ তেলের পরিমাণ তুলনামূলক বেশি — সেই অংশে বিশেষ মনোযোগ দেওয়া দরকার।",
+          "en": " Your T-zone tends toward the oilier side — extra attention to that area is needed."
+        },
+        "A": {
+          "bn": " ব্রণের প্রবণতাও দেখা গেছে, বিশেষত T-Zone-এ — এন্টি-ব্যাকটেরিয়াল উপাদান সেখানে বেশি কাজ করবে।",
+          "en": " Acne-prone tendency was also noted, especially in the T-zone — antibacterial ingredients will be most effective there."
+        },
+        "X": {
+          "bn": " কিছুটা নিস্তেজতাও লক্ষ্য করা গেছে — ব্রাইটেনিং ও ভারসাম্যকারী উপাদান একসাথে দরকার।",
+          "en": " Some dullness was also noted — both brightening and balancing ingredients are needed."
+        }
+      },
+      "problems": {
+        "bn": [
+          "একই পণ্য পুরো মুখে সমানভাবে কাজ করে না",
+          "T-Zone-এ বড় লোমকূপ ও ব্ল্যাকহেড",
+          "ঋতু পরিবর্তনে ত্বক বেশি পরিবর্তিত হয়",
+          "সঠিক পণ্য খুঁজে পাওয়া কঠিন"
+        ],
+        "en": [
+          "Same product doesn't work evenly across the face",
+          "Large pores and blackheads in T-zone",
+          "Skin changes more with seasons",
+          "Hard to find products that work for both zones"
+        ]
+      },
+      "advice": {
+        "bn": [
+          "মৃদু, ব্যালেন্সিং ক্লেনজার ব্যবহার করুন",
+          "T-Zone-এ কম ময়েশ্চারাইজার, গালে বেশি দিন",
+          "সপ্তাহে একবার T-Zone-এ মৃদু ক্লে মাস্ক ব্যবহার করুন",
+          "সানস্ক্রিন প্রতিদিনের রুটিনে রাখুন"
+        ],
+        "en": [
+          "Use a gentle, balancing cleanser",
+          "Apply less moisturizer on T-zone, more on cheeks",
+          "Use a gentle clay mask on T-zone once a week",
+          "Keep sunscreen in your daily routine"
+        ]
+      }
+    },
+
+    "S": {
+      "key": "S",
+      "name": { "bn": "সংবেদনশীল ত্বক", "en": "Sensitive Skin" },
+      "emoji": "🌸",
+      "meaning": {
+        "_comment": "Editorial context only — not rendered.",
+        "bn": "আপনার ত্বকের প্রতিরক্ষা স্তর পাতলা বা দুর্বল, তাই পরিবেশ বা নতুন উপাদানে দ্রুত প্রতিক্রিয়া দেখায়।",
+        "en": "Your skin's protective layer is thin or weak, causing it to react quickly to environmental factors or new products."
+      },
+      "insightTemplate": {
+        "bn": "{{name}}, আপনার উত্তরগুলো স্পষ্টভাবে দেখাচ্ছে আপনার ত্বক সংবেদনশীল।{{secondaryInsight}} আপনার ত্বকের জন্য সবচেয়ে জরুরি — মৃদু, সুগন্ধিমুক্ত এবং প্রাকৃতিক উপাদান। কঠোর কিছু ব্যবহার না করলে এই ত্বক অনেক সুন্দর ও আরামদায়ক থাকতে পারে।",
+        "en": "{{name}}, your answers clearly indicate sensitive skin.{{secondaryInsight}} The most important things for your skin are gentle, fragrance-free, and natural ingredients. With the right approach, this skin type can be wonderfully comfortable and clear."
+      },
+      "secondaryInsights": {
+        "D": {
+          "bn": " শুষ্কতার লক্ষণও দেখা গেছে — সংবেদনশীল ও শুষ্ক এই দুটো একসাথে থাকলে অত্যন্ত মৃদু ও গভীর আর্দ্রতাকারী উপাদান দরকার।",
+          "en": " Dryness signs were also noted — sensitive and dry together require extra gentle and deeply moisturizing ingredients."
+        },
+        "A": {
+          "bn": " কিছুটা ব্রণের প্রবণতাও দেখা গেছে — সংবেদনশীল ত্বকে কঠোর এন্টি-একনি উপাদান এড়িয়ে মৃদু পদ্ধতিতে ব্রণ নিয়ন্ত্রণ করুন।",
+          "en": " Some acne tendency was also noted — avoid harsh anti-acne ingredients in sensitive skin and opt for gentle approaches."
+        },
+        "X": {
+          "bn": " কালো দাগের বিষয়টিও আছে — সংবেদনশীল ত্বকে ব্রাইটেনিং সাবধানে করতে হয়, শুধু মৃদু উপাদান দিয়ে।",
+          "en": " Dark spots are also a concern — brightening must be done carefully in sensitive skin, using only gentle ingredients."
+        }
+      },
+      "problems": {
+        "bn": [
+          "নতুন পণ্যে জ্বালা বা র‌্যাশ",
+          "রোদ বা ঠান্ডায় লালভাব",
+          "সুগন্ধি ও রাসায়নিকে অ্যালার্জি",
+          "ত্বক সহজেই লাল বা উত্তেজিত হয়ে পড়ে"
+        ],
+        "en": [
+          "Burning or rash from new products",
+          "Redness in sun or cold",
+          "Allergy to fragrances and chemicals",
+          "Skin easily becomes red or irritated"
+        ]
+      },
+      "advice": {
+        "bn": [
+          "যেকোনো নতুন পণ্য কানের পেছনে প্যাচ টেস্ট করুন",
+          "সুগন্ধিমুক্ত ও হাইপোঅ্যালার্জেনিক পণ্য বেছে নিন",
+          "মুখ কখনো ঘষবেন না — আলতো করে চাপ দিয়ে মুছুন",
+          "পর্যাপ্ত ঘুম ও পানি ত্বকের প্রতিরক্ষা শক্তিশালী করে"
+        ],
+        "en": [
+          "Patch test any new product behind your ear",
+          "Choose fragrance-free and hypoallergenic products",
+          "Never scrub — gently pat your face dry",
+          "Adequate sleep and water strengthen your skin's defences"
+        ]
+      }
+    },
+
+    "A": {
+      "key": "A",
+      "name": { "bn": "ব্রণপ্রবণ ত্বক", "en": "Acne-Prone Skin" },
+      "emoji": "🛡️",
+      "meaning": {
+        "_comment": "Editorial context only — not rendered.",
+        "bn": "আপনার লোমকূপ সহজেই তেল, মৃত কোষ ও ব্যাকটেরিয়া দিয়ে বন্ধ হয়ে যায়।",
+        "en": "Your pores easily become clogged with oil, dead cells, and bacteria."
+      },
+      "insightTemplate": {
+        "bn": "{{name}}, আপনার উত্তরগুলো দেখে বোঝা গেছে আপনার ত্বক ব্রণপ্রবণ।{{secondaryInsight}} ব্রণ একটি অত্যন্ত সাধারণ সমস্যা এবং সঠিক যত্নে এটি নিয়ন্ত্রণ করা সম্ভব। গভীর পরিষ্কার ও এন্টি-মাইক্রোবিয়াল যত্নই এই ত্বকের জন্য সবচেয়ে কার্যকর পদ্ধতি।",
+        "en": "{{name}}, your answers indicate acne-prone skin.{{secondaryInsight}} Acne is extremely common and can be controlled with the right care. Deep cleansing and antimicrobial care are the most effective approaches for your skin type."
+      },
+      "secondaryInsights": {
+        "O": {
+          "bn": " সাথে তৈলাক্ততাও বেশি — সিবাম নিয়ন্ত্রণ করলে ব্রণও উল্লেখযোগ্যভাবে কমবে।",
+          "en": " Oiliness is also high — controlling sebum production will significantly reduce acne."
+        },
+        "S": {
+          "bn": " কিছুটা সংবেদনশীলতাও দেখা গেছে — এন্টি-একনি উপাদান বেছে নেওয়ার সময় মৃদুতার বিষয়টিও মাথায় রাখুন।",
+          "en": " Some sensitivity was also noted — keep gentleness in mind when selecting anti-acne ingredients."
+        },
+        "X": {
+          "bn": " ব্রণের কালো দাগও একটি সমস্যা — ব্রণ নিয়ন্ত্রণের পাশাপাশি ব্রাইটেনিং যত্নও দরকার।",
+          "en": " Post-acne dark marks are also a concern — alongside acne control, brightening care is also needed."
+        }
+      },
+      "problems": {
+        "bn": [
+          "বারবার পিম্পল ও ব্ল্যাকহেড",
+          "ব্রণের পরে কালো দাগ পড়া",
+          "হরমোন-সম্পর্কিত breakout",
+          "সারাদিন তৈলাক্ততা ও চকচকে ভাব"
+        ],
+        "en": [
+          "Recurring pimples and blackheads",
+          "Dark marks left after breakouts",
+          "Hormonal breakouts",
+          "Oiliness and shine throughout the day"
+        ]
+      },
+      "advice": {
+        "bn": [
+          "ব্রণ কখনো ফাটাবেন না — দাগ গভীর ও স্থায়ী হয়",
+          "দিনে দুইবার মুখ ধুন — বেশি নয়",
+          "প্রতিদিন বালিশের কভার পরিষ্কার রাখুন",
+          "প্রচুর পানি পান করুন ও চিনিযুক্ত খাবার কমান"
+        ],
+        "en": [
+          "Never pop pimples — it leads to deeper, permanent marks",
+          "Wash your face twice daily — no more",
+          "Keep your pillowcase clean every day",
+          "Drink plenty of water and reduce sugary food intake"
+        ]
+      }
+    },
+
+    "N": {
+      "key": "N",
+      "name": { "bn": "স্বাভাবিক ত্বক", "en": "Normal Skin" },
+      "emoji": "✅",
+      "meaning": {
+        "_comment": "Editorial context only — not rendered.",
+        "bn": "আপনার ত্বক সুষম — সিবাম উৎপাদন, আর্দ্রতা ও pH সবকিছু মোটামুটি সঠিক মাত্রায়।",
+        "en": "Your skin is balanced — sebum, moisture and pH are all at relatively healthy levels."
+      },
+      "insightTemplate": {
+        "bn": "{{name}}, আপনার উত্তরগুলো দেখে মনে হচ্ছে আপনার ত্বক স্বাভাবিক ও সুষম।{{secondaryInsight}} এটি ত্বকের সবচেয়ে সুস্থ ধরন — এই ভারসাম্য ধরে রাখতে নিয়মিত যত্ন ও সুষম খাদ্যাভ্যাসই যথেষ্ট।",
+        "en": "{{name}}, your answers suggest normal, balanced skin.{{secondaryInsight}} This is the healthiest skin type — regular care and a balanced diet are enough to maintain this balance."
+      },
+      "secondaryInsights": {
+        "O": {
+          "bn": " কিছুটা তৈলাক্ততার লক্ষণও দেখা গেছে — অতিরিক্ত না হলে এটি স্বাভাবিকেরই অংশ।",
+          "en": " Some oiliness signs were noted — if not excessive, this is still within the normal range."
+        },
+        "D": {
+          "bn": " কিছুটা শুষ্কতাও লক্ষ্য করা গেছে — বিশেষত শীতকালে একটু বেশি আর্দ্রতা দেওয়া ভালো।",
+          "en": " Some dryness was also noted — especially in winter, a bit more moisture would be beneficial."
+        },
+        "X": {
+          "bn": " কালো দাগ বা নিস্তেজতার বিষয়টি মাথায় রাখুন — সানস্ক্রিন ও ব্রাইটেনিং রুটিন সাহায্য করবে।",
+          "en": " Keep dark spots or dullness in mind — a sunscreen and brightening routine will help."
+        }
+      },
+      "problems": {
+        "bn": [
+          "ঋতু পরিবর্তনে মাঝে মাঝে তারতম্য",
+          "বয়স বা পরিবেশের কারণে ধরন পরিবর্তন হতে পারে"
+        ],
+        "en": [
+          "Occasional changes with seasons",
+          "Skin type may gradually change with age or environment"
+        ]
+      },
+      "advice": {
+        "bn": [
+          "প্রতিদিন সানস্ক্রিন ব্যবহার করুন — এটি সবচেয়ে গুরুত্বপূর্ণ স্কিনকেয়ার অভ্যাস",
+          "হালকা ময়েশ্চারাইজার নিয়মিত ব্যবহার করুন",
+          "প্রচুর সবজি, পানি ও ঘুম ত্বককে সুস্থ রাখে",
+          "মৃদু ক্লেনজার দিয়ে দিনে দুইবার মুখ ধুন"
+        ],
+        "en": [
+          "Use sunscreen daily — it's the most important skincare habit",
+          "Use a light moisturizer regularly",
+          "Plenty of vegetables, water, and sleep keep skin healthy",
+          "Wash face twice daily with a gentle cleanser"
+        ]
+      }
+    },
+
+    "X": {
+      "key": "X",
+      "name": { "bn": "নিস্তেজ / পিগমেন্টেশন-প্রবণ ত্বক", "en": "Dull / Hyperpigmented Skin" },
+      "emoji": "🌟",
+      "meaning": {
+        "_comment": "Editorial context only — not rendered.",
+        "bn": "আপনার ত্বক উজ্জ্বলতা হারিয়েছে এবং কালো দাগ বা অসমান রং দেখা দিচ্ছে।",
+        "en": "Your skin has lost radiance and shows dark spots or uneven tone."
+      },
+      "insightTemplate": {
+        "bn": "{{name}}, আপনার উত্তরগুলো দেখে বোঝা যাচ্ছে আপনার ত্বকের প্রধান সমস্যা হলো নিস্তেজতা ও পিগমেন্টেশন।{{secondaryInsight}} সঠিক যত্ন ও ধৈর্যের সাথে ত্বক আবার উজ্জ্বল হতে পারে — এন্টিঅক্সিডেন্ট ও ব্রাইটেনিং উপাদান এখানে সবচেয়ে কার্যকর।",
+        "en": "{{name}}, your answers show that dullness and pigmentation are your main skin concerns.{{secondaryInsight}} With the right care and patience, your skin can regain its glow — antioxidant and brightening ingredients are most effective here."
+      },
+      "secondaryInsights": {
+        "D": {
+          "bn": " শুষ্কতাও আছে — আর্দ্রতা ও উজ্জ্বলতা দুটোই একসাথে দরকার।",
+          "en": " Dryness is also present — both moisture and brightening are needed together."
+        },
+        "S": {
+          "bn": " সংবেদনশীলতার লক্ষণও আছে — ব্রাইটেনিং উপাদান মৃদুভাবে ব্যবহার করুন।",
+          "en": " Sensitivity signs are also present — use brightening ingredients gently."
+        },
+        "A": {
+          "bn": " ব্রণের কারণেই অনেকটা দাগ হতে পারে — ব্রণ নিয়ন্ত্রণ করলে নতুন দাগও কমবে।",
+          "en": " Much of the pigmentation may be from acne — controlling breakouts will also prevent new dark marks."
+        }
+      },
+      "problems": {
+        "bn": [
+          "হাইপারপিগমেন্টেশন ও কালো ছোপ",
+          "অসমান ত্বকের রং",
+          "নিস্তেজ ও প্রাণহীন চেহারা",
+          "পুরনো ব্রণের দাগ বা রোদেপোড়া ছোপ"
+        ],
+        "en": [
+          "Hyperpigmentation and dark patches",
+          "Uneven skin tone",
+          "Dull and lifeless appearance",
+          "Old acne marks or sun damage spots"
+        ]
+      },
+      "advice": {
+        "bn": [
+          "প্রতিদিন সানস্ক্রিন ব্যবহার করুন — ছাড়া দাগ আরও গাঢ় হয়",
+          "সপ্তাহে ১–২ বার মৃদু এক্সফোলিয়েশন করুন",
+          "প্রচুর সবুজ সবজি ও পানি পান করুন",
+          "পর্যাপ্ত ঘুম নিশ্চিত করুন — কম ঘুমে ত্বক নিস্তেজ হয়"
+        ],
+        "en": [
+          "Use sunscreen daily — without it, dark spots get darker",
+          "Exfoliate gently 1–2 times a week",
+          "Eat plenty of vegetables and drink plenty of water",
+          "Ensure adequate sleep — lack of sleep worsens dullness"
+        ]
+      }
+    }
+
+  }
+}

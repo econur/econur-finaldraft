@@ -1,0 +1,54 @@
+{
+  "_comment": "Bengali (bn) UI strings for Eco-Nur Skin Quiz. All static user-facing copy lives here. Dynamic content (questions, results, products) lives in their respective config files.",
+  "locale": "bn",
+
+  "ui": {
+    "next": "পরবর্তী",
+    "nextArrow": "→",
+    "prev": "আগে",
+    "prevArrow": "←",
+    "finish": "ফলাফল দেখুন",
+    "finishCheck": "✓",
+    "retake": "আবার দিন",
+    "loading": "লোড হচ্ছে…",
+    "startBtn": "পরীক্ষা শুরু করুন",
+    "landingNamePlaceholder": "আপনার নাম (ঐচ্ছিক)"
+  },
+
+  "leadGate": {
+    "title": "প্রায় হয়ে এলো!",
+    "subtitle": "আপনার স্কিন রিপোর্ট কোথায় পাঠাব?",
+    "nameLabel": "আপনার নাম",
+    "namePlaceholder": "নাম লিখুন",
+    "genderLabel": "লিঙ্গ",
+    "genderPlaceholder": "বেছে নিন",
+    "genderOptions": [
+      { "value": "female", "label": "মহিলা" },
+      { "value": "male", "label": "পুরুষ" },
+      { "value": "other", "label": "অন্যান্য" }
+    ],
+    "waLabel": "WhatsApp নম্বর",
+    "waPlaceholder": "01XXXXXXXXX",
+    "submitBtn": "ফলাফল দেখুন →",
+    "submitting": "একটু অপেক্ষা করুন…",
+    "errors": {
+      "nameRequired": "⚠️ অনুগ্রহ করে আপনার নাম লিখুন।",
+      "genderRequired": "⚠️ অনুগ্রহ করে লিঙ্গ বেছে নিন।",
+      "waRequired": "⚠️ অনুগ্রহ করে সঠিক WhatsApp নম্বর দিন।"
+    }
+  },
+
+  "result": {
+    "headline": "{{name}}, আপনার ত্বকের ফলাফল প্রস্তুত",
+    "secondaryBadge": "আংশিক লক্ষণ:",
+    "insightHeading": "আপনার ত্বক সম্পর্কে",
+    "problemsHeading": "সাধারণ সমস্যা",
+    "adviceHeading": "যত্নের পরামর্শ",
+    "productHeading": "আপনার জন্য প্রস্তাবিত সাবান",
+    "whyHeading": "কেন এই সাবান?",
+    "orderBtn": "📲 WhatsApp-এ অর্ডার করুন",
+    "orderBtnCustom": "📲 কাস্টম বার সম্পর্কে জানুন",
+    "testimonialsHeading": "ব্যবহারকারীরা কী বলছেন",
+    "retakeBtn": "আবার পরীক্ষা দিন"
+  }
+}

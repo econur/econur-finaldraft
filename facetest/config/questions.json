@@ -1,0 +1,381 @@
+{
+  "_comment": "Eco-Nur Skin Type Quiz — Question Bank. Each question has a unique id, localized text/hint, answer options with scoring weights and semantic signals, and an optional showIf rule for conditional branching. To add a question: add an entry to this array. To remove one: delete it. No JS changes needed.",
+
+  "questions": [
+
+    {
+      "id": "q1",
+      "text": {
+        "bn": "মুখ ধোয়ার কিছুক্ষণ পরে ত্বক কেমন লাগে?",
+        "en": "How does your skin feel shortly after washing your face?"
+      },
+      "hint": {
+        "bn": "সকালে মুখ ধোয়ার ৩০–৬০ মিনিট পরের অনুভূতি মনে করুন",
+        "en": "Think about 30–60 minutes after your morning wash"
+      },
+      "showIf": null,
+      "options": [
+        {
+          "id": "q1_dry",
+          "text": { "bn": "শুষ্ক ও টানটান লাগে", "en": "Dry and tight" },
+          "scores": { "D": 2 },
+          "signals": ["dry"]
+        },
+        {
+          "id": "q1_oily",
+          "text": { "bn": "তেলতেলে হয়ে যায়", "en": "Gets oily all over" },
+          "scores": { "O": 2 },
+          "signals": ["oily"]
+        },
+        {
+          "id": "q1_combo",
+          "text": { "bn": "কপাল-নাকে তেল, গাল ঠিকঠাক", "en": "Oily forehead & nose, cheeks feel fine" },
+          "scores": { "C": 2 },
+          "signals": ["combination"]
+        },
+        {
+          "id": "q1_normal",
+          "text": { "bn": "আরামদায়ক ও স্বাভাবিক লাগে", "en": "Comfortable and normal" },
+          "scores": { "N": 2 },
+          "signals": ["normal"]
+        }
+      ]
+    },
+
+    {
+      "id": "q2",
+      "text": {
+        "bn": "দুপুরে মুখের অবস্থা কেমন থাকে?",
+        "en": "How does your face look by midday?"
+      },
+      "hint": {
+        "bn": "বাড়িতে বা বাইরে — দুপুরে আয়নায় মুখ দেখলে কী মনে হয়?",
+        "en": "At home or outdoors — what do you notice around noon?"
+      },
+      "showIf": null,
+      "options": [
+        {
+          "id": "q2_dry",
+          "text": { "bn": "এখনও শুষ্ক লাগে", "en": "Still feels dry" },
+          "scores": { "D": 2 },
+          "signals": ["dry"]
+        },
+        {
+          "id": "q2_oily",
+          "text": { "bn": "পুরো মুখ চকচকে হয়ে গেছে", "en": "Whole face is shiny and oily" },
+          "scores": { "O": 2 },
+          "signals": ["oily"]
+        },
+        {
+          "id": "q2_combo",
+          "text": { "bn": "শুধু নাক-কপালে কিছুটা তেল", "en": "Only nose and forehead are slightly oily" },
+          "scores": { "C": 2 },
+          "signals": ["combination"]
+        },
+        {
+          "id": "q2_normal",
+          "text": { "bn": "তেমন কোনো পরিবর্তন নেই", "en": "No noticeable change" },
+          "scores": { "N": 1 },
+          "signals": ["normal"]
+        }
+      ]
+    },
+
+    {
+      "_comment": "CONDITIONAL — shown only if Q1 or Q2 produced an oily or combination signal. Confirms pore characteristics to distinguish O vs C more precisely.",
+      "id": "q3",
+      "text": {
+        "bn": "ভালো আলোতে আয়নায় নাকের কাছের লোমকূপ দেখুন — কেমন দেখায়?",
+        "en": "In good light, look closely at the pores near your nose — what do you see?"
+      },
+      "hint": {
+        "bn": "নাক ও গালের মাঝামাঝি অংশে মনোযোগ দিন",
+        "en": "Focus on the area around your nose and upper cheeks"
+      },
+      "showIf": {
+        "type": "anySignal",
+        "questions": ["q1", "q2"],
+        "signals": ["oily", "combination"]
+      },
+      "options": [
+        {
+          "id": "q3_large",
+          "text": { "bn": "খুব বড় ও স্পষ্ট দেখা যায়", "en": "Very large and clearly visible" },
+          "scores": { "O": 2 },
+          "signals": ["oily"]
+        },
+        {
+          "id": "q3_tzone",
+          "text": { "bn": "নাক-কপালে বড়, গালে ছোট", "en": "Big in T-zone area, smaller on cheeks" },
+          "scores": { "C": 2 },
+          "signals": ["combination"]
+        },
+        {
+          "id": "q3_small",
+          "text": { "bn": "ছোট ও প্রায় বোঝাই যায় না", "en": "Small and barely noticeable" },
+          "scores": { "D": 1, "N": 1 },
+          "signals": ["dry", "normal"]
+        }
+      ]
+    },
+
+    {
+      "id": "q4",
+      "text": {
+        "bn": "ব্রণ বা পিম্পল কতটা হয়?",
+        "en": "How often do you get acne or pimples?"
+      },
+      "hint": {
+        "bn": "গত কয়েক মাসের অভিজ্ঞতা মনে করুন",
+        "en": "Think about your experience over the past few months"
+      },
+      "showIf": null,
+      "options": [
+        {
+          "id": "q4_frequent",
+          "text": { "bn": "প্রায়ই, অনেকটা জায়গা জুড়ে", "en": "Often, covering a wide area" },
+          "scores": { "A": 3, "O": 1 },
+          "signals": ["acne"]
+        },
+        {
+          "id": "q4_occasional",
+          "text": { "bn": "মাঝে মাঝে দু-একটা", "en": "Occasionally, one or two at a time" },
+          "scores": { "C": 1, "N": 1 },
+          "signals": []
+        },
+        {
+          "id": "q4_rash",
+          "text": { "bn": "ব্রণ না, তবে লালচে র‌্যাশ হয়", "en": "No acne, but redness or rashes" },
+          "scores": { "S": 2 },
+          "signals": ["sensitive"]
+        },
+        {
+          "id": "q4_rarely",
+          "text": { "bn": "খুব কমই হয়", "en": "Rarely, almost never" },
+          "scores": { "D": 1, "N": 1 },
+          "signals": []
+        }
+      ]
+    },
+
+    {
+      "id": "q5",
+      "text": {
+        "bn": "নতুন সাবান বা স্কিনকেয়ার লাগালে সাধারণত কী হয়?",
+        "en": "What usually happens when you try a new soap or skincare product?"
+      },
+      "hint": {
+        "bn": "প্রথমবার কোনো নতুন পণ্য ব্যবহারের পরের অনুভূতি মনে করুন",
+        "en": "Think about the first time you tried something new on your skin"
+      },
+      "showIf": null,
+      "options": [
+        {
+          "id": "q5_burn",
+          "text": { "bn": "জ্বালা বা চুলকানি শুরু হয়", "en": "Burning or itching begins" },
+          "scores": { "S": 3 },
+          "signals": ["sensitive"]
+        },
+        {
+          "id": "q5_acne",
+          "text": { "bn": "ব্রণ বা র‌্যাশ বেরিয়ে আসে", "en": "Acne or rash breaks out" },
+          "scores": { "A": 2 },
+          "signals": ["acne"]
+        },
+        {
+          "id": "q5_dry",
+          "text": { "bn": "ত্বক আরও শুষ্ক হয়ে যায়", "en": "Skin becomes even drier" },
+          "scores": { "D": 2 },
+          "signals": ["dry"]
+        },
+        {
+          "id": "q5_fine",
+          "text": { "bn": "সাধারণত কিছুই হয় না", "en": "Usually nothing happens" },
+          "scores": { "N": 2 },
+          "signals": ["normal"]
+        }
+      ]
+    },
+
+    {
+      "id": "q6",
+      "text": {
+        "bn": "আয়নায় দেখলে ত্বকের রং কেমন দেখায়?",
+        "en": "How does your skin tone look when you look in the mirror?"
+      },
+      "hint": {
+        "bn": "প্রাকৃতিক আলোতে সকালে দেখুন — সবচেয়ে সত্যিকারের চিত্র পাবেন",
+        "en": "Look in natural morning light for the most accurate picture"
+      },
+      "showIf": null,
+      "options": [
+        {
+          "id": "q6_dull",
+          "text": { "bn": "নিস্তেজ ও কালচে ছোপ আছে", "en": "Dull with dark spots or patches" },
+          "scores": { "X": 3, "D": 1 },
+          "signals": ["dull"]
+        },
+        {
+          "id": "q6_uneven",
+          "text": { "bn": "লালচে বা অসমান রং", "en": "Reddish or uneven skin tone" },
+          "scores": { "S": 2, "A": 1 },
+          "signals": ["sensitive"]
+        },
+        {
+          "id": "q6_shiny",
+          "text": { "bn": "চকচকে ও তেলতেলে দেখায়", "en": "Shiny and oily-looking" },
+          "scores": { "O": 1 },
+          "signals": ["oily"]
+        },
+        {
+          "id": "q6_healthy",
+          "text": { "bn": "মসৃণ ও সুস্থ দেখায়", "en": "Smooth and healthy looking" },
+          "scores": { "N": 2 },
+          "signals": ["normal"]
+        }
+      ]
+    },
+
+    {
+      "_comment": "CONDITIONAL — shown only if Q4 or Q5 produced a sensitive signal. Adds specificity to the sensitivity assessment, especially for distinguishing S vs. A.",
+      "id": "q7",
+      "text": {
+        "bn": "রোদে বা গরমে কিছুক্ষণ থাকলে ত্বকে কী হয়?",
+        "en": "What happens to your skin after spending some time in sun or heat?"
+      },
+      "hint": {
+        "bn": "বাইরে বের হলে বা গরম আবহাওয়ায় ত্বকের প্রতিক্রিয়া মনে করুন",
+        "en": "Think about how your skin reacts outdoors in warm weather"
+      },
+      "showIf": {
+        "type": "anySignal",
+        "questions": ["q4", "q5"],
+        "signals": ["sensitive"]
+      },
+      "options": [
+        {
+          "id": "q7_burn",
+          "text": { "bn": "দ্রুত পুড়ে যায় বা লাল হয়ে যায়", "en": "Burns or turns red quickly" },
+          "scores": { "S": 2 },
+          "signals": ["sensitive"]
+        },
+        {
+          "id": "q7_itch",
+          "text": { "bn": "জ্বালা বা চুলকানি শুরু হয়", "en": "Burning or itching starts" },
+          "scores": { "S": 2 },
+          "signals": ["sensitive"]
+        },
+        {
+          "id": "q7_dry",
+          "text": { "bn": "আরও শুষ্ক ও টানটান লাগে", "en": "Feels drier and tighter" },
+          "scores": { "D": 1 },
+          "signals": ["dry"]
+        },
+        {
+          "id": "q7_fine",
+          "text": { "bn": "তেমন কোনো সমস্যা হয় না", "en": "No significant problem" },
+          "scores": { "N": 1 },
+          "signals": ["normal"]
+        }
+      ]
+    },
+
+    {
+      "id": "q8",
+      "text": {
+        "bn": "শীতকালে ত্বকে কী পরিবর্তন আসে?",
+        "en": "How does your skin change in winter?"
+      },
+      "hint": {
+        "bn": "গত শীতে ত্বকের অবস্থা মনে করুন",
+        "en": "Think back to how your skin behaved last winter"
+      },
+      "showIf": null,
+      "options": [
+        {
+          "id": "q8_very_dry",
+          "text": { "bn": "খুব শুষ্ক হয়, মাঝে মাঝে ফাটে", "en": "Gets very dry, sometimes cracks" },
+          "scores": { "D": 3 },
+          "signals": ["dry"]
+        },
+        {
+          "id": "q8_sensitive",
+          "text": { "bn": "সংবেদনশীল হয়ে জ্বালা-চুলকানি করে", "en": "Becomes sensitive, itchy, or irritated" },
+          "scores": { "S": 2 },
+          "signals": ["sensitive"]
+        },
+        {
+          "id": "q8_less_oily",
+          "text": { "bn": "কিছুটা কম তেলতেলে হয়, মোটামুটি ঠিক থাকে", "en": "Gets slightly less oily, mostly fine" },
+          "scores": { "O": 1, "C": 1 },
+          "signals": ["oily", "combination"]
+        },
+        {
+          "id": "q8_unchanged",
+          "text": { "bn": "তেমন কোনো পরিবর্তন হয় না", "en": "Not much change either way" },
+          "scores": { "N": 2 },
+          "signals": ["normal"]
+        }
+      ]
+    },
+
+    {
+      "_comment": "Self-reported primary concern — carries highest score weight (3) as a strong confirmation signal.",
+      "id": "q9",
+      "text": {
+        "bn": "এখন আপনার সবচেয়ে বড় ত্বকের সমস্যা কোনটি?",
+        "en": "What is your biggest skin concern right now?"
+      },
+      "hint": {
+        "bn": "যেটা সবচেয়ে বেশি বিরক্ত করে সেটা বেছে নিন",
+        "en": "Pick the one that bothers you the most"
+      },
+      "showIf": null,
+      "options": [
+        {
+          "id": "q9_dry",
+          "text": { "bn": "ত্বক শুষ্ক ও টানটান", "en": "Dry and tight skin" },
+          "scores": { "D": 3 },
+          "signals": ["dry"]
+        },
+        {
+          "id": "q9_oily",
+          "text": { "bn": "অতিরিক্ত তেল ও চকচকে ভাব", "en": "Excess oil and shine" },
+          "scores": { "O": 3 },
+          "signals": ["oily"]
+        },
+        {
+          "id": "q9_acne",
+          "text": { "bn": "ব্রণ ও ব্ল্যাকহেড", "en": "Acne and blackheads" },
+          "scores": { "A": 3 },
+          "signals": ["acne"]
+        },
+        {
+          "id": "q9_sensitive",
+          "text": { "bn": "জ্বালাপোড়া ও র‌্যাশ", "en": "Burning, irritation, or rash" },
+          "scores": { "S": 3 },
+          "signals": ["sensitive"]
+        },
+        {
+          "id": "q9_combo",
+          "text": { "bn": "T-Zone-এ তেল, বাকিটায় শুষ্ক", "en": "Oily T-zone, dry elsewhere" },
+          "scores": { "C": 3 },
+          "signals": ["combination"]
+        },
+        {
+          "id": "q9_dull",
+          "text": { "bn": "কালো দাগ ও নিস্তেজ ত্বক", "en": "Dark spots and dull skin" },
+          "scores": { "X": 3 },
+          "signals": ["dull"]
+        },
+        {
+          "id": "q9_none",
+          "text": { "bn": "এমন কোনো বড় সমস্যা নেই", "en": "No major concerns" },
+          "scores": { "N": 3 },
+          "signals": ["normal"]
+        }
+      ]
+    }
+
+  ]
+}

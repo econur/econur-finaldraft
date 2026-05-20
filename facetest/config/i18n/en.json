@@ -1,0 +1,54 @@
+{
+  "_comment": "English (en) UI strings for Eco-Nur Skin Quiz. Scaffold — add full translations here when multilingual support is activated. The app falls back to 'bn' for any missing key.",
+  "locale": "en",
+
+  "ui": {
+    "next": "Next",
+    "nextArrow": "→",
+    "prev": "Back",
+    "prevArrow": "←",
+    "finish": "See Results",
+    "finishCheck": "✓",
+    "retake": "Retake",
+    "loading": "Loading…",
+    "startBtn": "Start the Quiz",
+    "landingNamePlaceholder": "Your name (optional)"
+  },
+
+  "leadGate": {
+    "title": "Almost there!",
+    "subtitle": "Where should we send your skin report?",
+    "nameLabel": "Your Name",
+    "namePlaceholder": "Enter your name",
+    "genderLabel": "Gender",
+    "genderPlaceholder": "Select",
+    "genderOptions": [
+      { "value": "female", "label": "Female" },
+      { "value": "male", "label": "Male" },
+      { "value": "other", "label": "Other" }
+    ],
+    "waLabel": "WhatsApp Number",
+    "waPlaceholder": "01XXXXXXXXX",
+    "submitBtn": "See My Results →",
+    "submitting": "Please wait…",
+    "errors": {
+      "nameRequired": "⚠️ Please enter your name.",
+      "genderRequired": "⚠️ Please select your gender.",
+      "waRequired": "⚠️ Please enter a valid WhatsApp number."
+    }
+  },
+
+  "result": {
+    "headline": "{{name}}, your skin results are ready",
+    "secondaryBadge": "Secondary trait:",
+    "insightHeading": "About Your Skin",
+    "problemsHeading": "Common Problems",
+    "adviceHeading": "Care Tips",
+    "productHeading": "Recommended Bar for You",
+    "whyHeading": "Why this bar?",
+    "orderBtn": "📲 Order on WhatsApp",
+    "orderBtnCustom": "📲 Ask about the Custom Bar",
+    "testimonialsHeading": "What our customers say",
+    "retakeBtn": "Retake the Quiz"
+  }
+}
