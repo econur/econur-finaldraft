@@ -18,7 +18,7 @@
 const WEBHOOK_URL = 'https://webhook-receiver.sf56787-0d4.workers.dev/hook/facetest-submission';
 
 /** Business WhatsApp number — digits only, country code first, no + or spaces */
-const WHATSAPP_NUMBER = '8801XXXXXXXXX';
+const WHATSAPP_NUMBER = '8801410753555';
 
 /** Default locale on page load. Switch to 'en' for English-first. */
 const DEFAULT_LOCALE = 'bn';
