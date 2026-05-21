@@ -215,10 +215,9 @@ export function initLeadGate() {
     if (!genderSelect) return;
 
     const genderOptions = getLocaleValue('leadGate.genderOptions') ?? [];
-    const placeholder   = t('leadGate.genderPlaceholder');
 
     genderSelect.innerHTML =
-        `<option value="">${placeholder}</option>` +
+        
         genderOptions.map(opt => `<option value="${opt.value}">${opt.label}</option>`).join('');
 }
 
@@ -359,8 +358,8 @@ export function renderResult(skinTypeProfile, secondaryProfile, product, userNam
 
         orderBtn.href      = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(waMsg)}`;
         orderBtn.innerHTML = isCustom
-            ? `<span aria-hidden="true">📲</span> ${t('result.orderBtnCustom')}`
-            : `<span aria-hidden="true">📲</span> ${t('result.orderBtn')}`;
+            ? `<span aria-hidden="true"></span> ${t('result.orderBtnCustom')}`
+            : `<span aria-hidden="true"></span> ${t('result.orderBtn')}`;
     }
 
     // --- Testimonials ---

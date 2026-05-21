@@ -21,11 +21,9 @@
     "nameLabel": "আপনার নাম",
     "namePlaceholder": "নাম লিখুন",
     "genderLabel": "লিঙ্গ",
-    "genderPlaceholder": "বেছে নিন",
     "genderOptions": [
       { "value": "female", "label": "মহিলা" },
-      { "value": "male", "label": "পুরুষ" },
-      { "value": "other", "label": "অন্যান্য" }
+      { "value": "male", "label": "পুরুষ" }
     ],
     "waLabel": "WhatsApp নম্বর",
     "waPlaceholder": "01XXXXXXXXX",
