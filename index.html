@@ -287,101 +287,55 @@ overlay
 </nav>
 
 <!-- ====================================================
-     HERO SECTION
+     HERO SECTION — Compact Premium Header
 ==================================================== -->
-<!-- SEO: role="main" identifies the primary content area to crawlers and assistive tech -->
-<section id="hero" role="main" aria-label="Hero — Natural handcrafted soap by Econur">
-  <!-- Animated Bubbles -->
+<section id="hero" role="main" aria-label="Econur — Natural handcrafted soap by Econur">
+  <!-- Subtle ambient bubbles (fewer, smaller) -->
   <div class="bubble-container" aria-hidden="true">
     <div class="bubble"></div><div class="bubble"></div>
     <div class="bubble"></div><div class="bubble"></div>
     <div class="bubble"></div><div class="bubble"></div>
-    <div class="bubble"></div><div class="bubble"></div>
-    <div class="bubble"></div><div class="bubble"></div>
-    <div class="bubble"></div><div class="bubble"></div>
   </div>
 
   <div class="container">
-    <div class="row align-items-center">
-      <!-- Text Side -->
-      <div class="col-lg-6 hero-content">
-        <div class="hero-eyebrow fade-up">
+    <div class="hero-compact-inner">
+
+      <!-- Left: Branding + Slogan + CTAs -->
+      <div class="hero-compact-text fade-up">
+        <div class="hero-eyebrow">
           <i class="fa fa-leaf"></i>
-          100% Natural &nbsp;·&nbsp; Handcrafted
+          100% Natural &nbsp;·&nbsp; Cold-Process Crafted
         </div>
-        <!-- SEO: H1 is the most important on-page SEO signal. Kept creative style but made semantically crawlable -->
-        <h1 class="hero-title fade-up delay-1">
-          From <span class="italic-accent">Earth</span><br/>
+        <h1 class="hero-title">
+          From <span class="italic-accent">Earth</span>
           To Your <span class="italic-accent">Glow.</span>
         </h1>
-        <p class="hero-desc fade-up delay-3">
-          Econur crafts each bar from natural botanicals, cold-pressed oils and zero synthetic chemicals. So your skin gets the best the earth has to offer.
-        </p>
-        <div class="d-flex flex-wrap gap-3 fade-up delay-4">
-          <a href="/facetest.html" class="btn-eco">Test Your Face</a>
-          <a href="#products" class="btn-outline-eco">Buy Soaps</a>
-        </div>
-
-        <div class="hero-stats fade-up delay-5">
-          <div class="hero-stat">
-            <span>4+</span>
-            <span>Skin Blends</span>
-          </div>
-          <div class="hero-stat">
-            <span>0%</span>
-            <span>Synthetic Chemicals</span>
-          </div>
-          <div class="hero-stat">
-            <span>100%</span>
-            <span>Plant-Based</span>
-          </div>
-        </div>
-      </div> 
-
-      <!-- Image Side -->
-      <div class="col-lg-6">
-        <div class="hero-image-wrap fade-up delay-3">
-          <div class="hero-soap-stack">
-            <!-- SEO: loading="eager" + explicit width/height prevents layout shift (improves CLS score) and speeds LCP, both Core Web Vitals ranking factors -->
-            <img
-              src="images/soap.png"
-              alt="Econur handcrafted natural soap bar — chemical-free skincare Bangladesh"
-              class="hero-soap-main"
-              loading="eager"
-              fetchpriority="high"
-              width="520"
-              height="520"
-            />
-            <div class="hero-badge">
-              <div class="hero-badge-inner">✦</div>
-              <div style="font-size:0.55rem; letter-spacing:1.5px; line-height:1.3; margin-top:2px;">ECO<br/>NUR</div>
-            </div>
-          </div>
+        <div class="hero-cta-row fade-up delay-2">
+          <a href="#products" class="btn-eco">Shop Now</a>
+          <a href="/skintest.html" class="btn-outline-eco">Free Skin Test</a>
         </div>
       </div>
-    </div>
-  </div>
 
-  <div class="scroll-hint" aria-hidden="true">
-    <span>Scroll</span>
-    <i class="fa fa-chevron-down"></i>
+      <!-- Right: Trust badge + info labels -->
+      <div class="hero-compact-trust fade-up delay-2">
+        <div class="hero-trust-badge">
+          <div class="htb-icon"><i class="fa fa-flask"></i></div>
+          <div class="htb-text">
+            <span class="htb-label">Lab Tested</span>
+            <span class="htb-sub">BCSIR Certified</span>
+          </div>
+        </div>
+        <div class="hero-trust-pills">
+          <span class="htrust-pill"><i class="fa fa-seedling"></i> Chemical-Free</span>
+          <span class="htrust-pill"><i class="fa fa-recycle"></i> Zero-Plastic Pack</span>
+          <span class="htrust-pill"><i class="fa fa-shipping-fast"></i> Nationwide Delivery</span>
+          <span class="htrust-pill"><i class="fab fa-whatsapp"></i> WhatsApp Order</span>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
-
-<!-- ====================================================
-     TRUST BAR
-==================================================== -->
-<div id="trust-bar" aria-label="Econur brand trust signals">
-  <div class="container">
-    <div class="trust-bar-inner">
-      <div class="trust-item"><i class="fa fa-leaf"></i> 100% Natural Ingredients</div>
-      <div class="trust-item"><i class="fa fa-flask"></i> Cold-Process Crafted</div>
-      <div class="trust-item"><i class="fa fa-shipping-fast"></i> Nationwide Delivery</div>
-      <div class="trust-item"><i class="fa fa-whatsapp fab"></i> Order via WhatsApp</div>
-      <div class="trust-item"><i class="fa fa-recycle"></i> Zero-Plastic Packaging</div>
-    </div>
-  </div>
-</div>
 
 <!-- ====================================================
      PRODUCTS SECTION
@@ -390,203 +344,164 @@ overlay
 <section id="products" aria-label="Econur Natural Soap Products Collection">
   <div class="container">
     <div class="text-center mb-4 fade-up">
-      <span class="section-label">Our Collection</span>
       <!-- SEO: H2 now contains primary keywords "Natural Soap" for mid-page keyword reinforcement -->
-      <h2 class="section-title">Our <span class="gradient-text">Natural Soap Collection</span></h2>
-      <p class="section-sub mx-auto">Each bar is crafted for a different skin mood and need. Not sure which is yours?&nbsp;
-        <a href="/skintest.html" style="color:var(--emerald-dark);font-weight:700;text-decoration:underline;text-underline-offset:3px;">Take the 2-min skin test →</a>
+      <h2 class="section-title">Our <span class="gradient-text">Natural Products</span></h2>
+      <p class="section-sub mx-auto">Each bar is crafted for a different skin need. Not sure which is yours?&nbsp;
+        <a href="/skintest.html" style="color:var(--emerald-dark);font-weight:700;text-decoration:underline;text-underline-offset:3px;">Take the free 2-min skin test →</a>
       </p>
     </div>
 
-    <div class="row g-4">
-
-  <!-- Product 1 -->
-  <div class="col-lg-4 col-md-6 d-flex fade-up delay-1">
-    <div class="glass-card product-card w-100">
-      <a href="active-defense-bar.html">
-        <div class="product-card-img">
-          <!-- SEO: loading="lazy" defers off-screen images, improving page load speed (a Google ranking factor) -->
-          <img src="images/activedefense.jpg" alt="Active Defense Bar — Neem and Activated Charcoal natural soap for acne-prone skin" loading="lazy" width="400" height="300" />
-          <span class="product-tag">Acne & Oily Skin</span>
-          <span class="product-badge-bestseller">⭐ Best Seller</span>
-          <span class="link-tag"></span>
-      </a>
+    <!-- Category Filter Tabs (scalable) -->
+    <div class="product-filter-bar fade-up delay-1">
+      <button class="filter-btn active" data-filter="all">All Products</button>
+      <button class="filter-btn" data-filter="face">Face Care</button>
+      <button class="filter-btn" data-filter="baby">Baby Care</button>
+      <button class="filter-btn" data-filter="haircare" disabled title="Coming Soon">Hair Care <span class="filter-soon">Soon</span></button>
+      <button class="filter-btn" data-filter="daily" disabled title="Coming Soon">Daily Care <span class="filter-soon">Soon</span></button>
     </div>
-    <div class="product-card-body">
-      <!-- SEO: Product H4 headings include skin-type keywords for long-tail search relevance -->
-      <h4>Active Defense Bar — Acne &amp; Oily Skin Soap</h4>
-      <p>Deep-cleansing face bar crafted for <b>oily, acne-prone,</b> and sweaty skin. Helps control excess oil, body odor, itchiness, and breakouts without over-drying.</p>
 
-      <div class="product-ingredients">
-        <span class="ingredient-chip">Neem</span>
-        <span class="ingredient-chip">Activated Charcoal</span>
-        <span class="ingredient-chip">Tea Tree EO</span>
-      </div>
+    <!-- Products Grid -->
+    <div class="products-grid" id="productsGrid">
 
-      <div class="d-flex align-items-center justify-content-between">
-        <div>
-          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
-            <span style="font-size:0.82rem;color:#94a3b8;text-decoration:line-through;">৳520</span>
+      <!-- Product 1 -->
+      <div class="product-card-wrap fade-up delay-1" data-category="face">
+        <div class="glass-card product-card">
+          <a href="active-defense-bar.html" class="product-card-img-link">
+            <div class="product-card-img">
+              <img src="images/activedefense.jpg" alt="Active Defense Bar — Neem and Activated Charcoal natural soap for acne-prone skin" loading="lazy"  />
+              <span class="product-tag">Acne &amp; Oily</span>
+              <span class="product-badge-bestseller">⭐ Best Seller</span>
+            </div>
+          </a>
+          <div class="product-card-body">
+            <h4>Active Defense Bar</h4>
+            <p>Deep-cleansing bar for oily, acne-prone skin. Controls oil &amp; breakouts without over-drying.</p>
+            <div class="product-ingredients">
+              <span class="ingredient-chip">Neem</span>
+              <span class="ingredient-chip">Activated Charcoal</span>
+              <span class="ingredient-chip">Tea Tree EO</span>
+            </div>
+            <div class="product-pricing-row">
+              <div class="product-size-options">
+                <label class="size-option">
+                  <input type="radio" name="size-p1" value="50gm" checked />
+                  <span>50gm — <strong>৳299</strong></span>
+                </label>
+                <label class="size-option">
+                  <input type="radio" name="size-p1" value="100gm" />
+                  <span>100gm — <strong>৳499</strong></span>
+                </label>
+              </div>
+              <a href="https://wa.me/8801410753555?text=Hello%20Eco%20Nur%2C%20I%20would%20like%20to%20buy%20Active%20Defense%20Bar" class="btn-eco btn-card-order">Order</a>
+            </div>
           </div>
-          <div class="product-price" style="margin-top:2px;">৳470 <sub>/ bar</sub></div>
         </div>
-
-        <a href="https://wa.me/8801410753555?text=Hello%20Eco%20Nur%2C%20I%20would%20like%20to%20buy%20Active%20Defense%20Bar"
-          class="btn-eco"
-          style="padding:9px 20px;font-size:0.83rem;">
-          Order
-        </a>
       </div>
-    </div>
-  </div>
-</div>
-
 
       <!-- Product 2 -->
-     <div class="col-lg-4 col-md-6 d-flex fade-up delay-3">
-  <div class="glass-card product-card w-100">
-    <a href="dry-skin-bar.html">
-      <div class="product-card-img">
-        <!-- SEO: Descriptive alt text includes skin type keywords for image search visibility -->
-        <img src="images/dryskinbar.jpg" alt="Dry Skin Bar — Aloe Vera, Calendula and Honey natural soap for dry and combination skin" loading="lazy" width="400" height="300" />
-        <span class="product-tag">Dry Skin</span>
-        <span class="link-tag"></span>
-      </div>
-    </a>
-
-    <div class="product-card-body">
-      <h4>Dry Skin Bar — Hydrating Natural Soap</h4>
-
-      <p>
-        Nourishing facial bar for <b>dry, normal,</b> and <b>combination skin.</b>
-        Helps fade dark spots, soothe irritation, support hydration, and keep skin soft, bright, and healthy-looking.
-      </p>
-
-      <div class="product-ingredients">
-        <span class="ingredient-chip">Aloe Vera</span>
-        <span class="ingredient-chip">Calendula</span>
-        <span class="ingredient-chip">Honey</span>
-      </div>
-
-      <div class="d-flex align-items-center justify-content-between">
-        <div>
-          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
-            <span style="font-size:0.82rem;color:#94a3b8;text-decoration:line-through;">৳500</span>
-          </div>
-
-          <div class="product-price" style="margin-top:2px;">
-            ৳450 <sub>/ bar</sub>
+      <div class="product-card-wrap fade-up delay-2" data-category="face">
+        <div class="glass-card product-card">
+          <a href="dry-skin-bar.html" class="product-card-img-link">
+            <div class="product-card-img">
+              <img src="images/dryskinbar.jpg" alt="Dry Skin Bar — Aloe Vera, Calendula and Honey natural soap for dry and combination skin" loading="lazy"  />
+              <span class="product-tag">Dry Skin</span>
+            </div>
+          </a>
+          <div class="product-card-body">
+            <h4>Dry Skin Bar</h4>
+            <p>Nourishing bar for dry &amp; combination skin. Fades dark spots and keeps skin soft and bright.</p>
+            <div class="product-ingredients">
+              <span class="ingredient-chip">Aloe Vera</span>
+              <span class="ingredient-chip">Calendula</span>
+              <span class="ingredient-chip">Honey</span>
+            </div>
+            <div class="product-pricing-row">
+              <div class="product-size-options">
+                <label class="size-option">
+                  <input type="radio" name="size-p2" value="50gm" checked />
+                  <span>50gm — <strong>৳299</strong></span>
+                </label>
+                <label class="size-option">
+                  <input type="radio" name="size-p2" value="100gm" />
+                  <span>100gm — <strong>৳499</strong></span>
+                </label>
+              </div>
+              <a href="https://wa.me/8801410753555?text=Hello%20Eco%20Nur%2C%20I%20would%20like%20to%20buy%20Dry%20Skin%20Bar" class="btn-eco btn-card-order">Order</a>
+            </div>
           </div>
         </div>
-
-        <a href="https://wa.me/8801410753555?text=Hello%20Eco%20Nur%2C%20I%20would%20like%20to%20buy%20Dry%20Skin%20Bar"
-          class="btn-eco"
-          style="padding:9px 20px;font-size:0.83rem;">
-          Order
-        </a>
       </div>
-    </div>
-  </div>
-</div>
-      
+
       <!-- Product 3 -->
-
-      <div class="col-lg-4 col-md-6 d-flex fade-up delay-2">
-  <div class="glass-card product-card w-100">
-    <a href="balanced-bar.html">
-      <div class="product-card-img">
-        <!-- SEO: Alt text includes ingredient and skin type keywords -->
-        <img src="images/balancedbar.jpg" alt="Balanced Bar — Moringa, Neem and Green Tea natural soap for normal and combination skin" loading="lazy" width="400" height="300" />
-        <span class="product-tag">Balanced Care</span>
-        <span class="link-tag"></span>
-      </div>
-    </a>
-
-    <div class="product-card-body">
-      <h4>Balanced Bar — Daily Natural Soap for Combination Skin</h4>
-
-      <p>
-        Crafted for <b>normal, combination,</b> and <b>light oily skin.</b>
-        Supports oily T-zones, gently exfoliates dead skin, and keeps skin fresh, calm, and balanced for daily use.
-      </p>
-
-      <div class="product-ingredients">
-        <span class="ingredient-chip">Moringa</span>
-        <span class="ingredient-chip">Neem</span>
-        <span class="ingredient-chip">Green Tea</span>
-      </div>
-
-      <div class="d-flex align-items-center justify-content-between">
-        <div>
-          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
-            <span style="font-size:0.82rem;color:#94a3b8;text-decoration:line-through;">৳500</span>
-          </div>
-
-          <div class="product-price" style="margin-top:2px;">
-            ৳450 <sub>/ bar</sub>
+      <div class="product-card-wrap fade-up delay-3" data-category="face">
+        <div class="glass-card product-card">
+          <a href="balanced-bar.html" class="product-card-img-link">
+            <div class="product-card-img">
+              <img src="images/balancedbar.jpg" alt="Balanced Bar — Moringa, Neem and Green Tea natural soap for normal and combination skin" loading="lazy"  />
+              <span class="product-tag">Balanced Care</span>
+            </div>
+          </a>
+          <div class="product-card-body">
+            <h4>Balanced Bar</h4>
+            <p>Daily bar for normal &amp; combination skin. Exfoliates gently and keeps skin fresh and calm.</p>
+            <div class="product-ingredients">
+              <span class="ingredient-chip">Moringa</span>
+              <span class="ingredient-chip">Neem</span>
+              <span class="ingredient-chip">Green Tea</span>
+            </div>
+            <div class="product-pricing-row">
+              <div class="product-size-options">
+                <label class="size-option">
+                  <input type="radio" name="size-p3" value="50gm" checked />
+                  <span>50gm — <strong>৳299</strong></span>
+                </label>
+                <label class="size-option">
+                  <input type="radio" name="size-p3" value="100gm" />
+                  <span>100gm — <strong>৳499</strong></span>
+                </label>
+              </div>
+              <a href="https://wa.me/8801410753555?text=Hello%20Eco%20Nur%2C%20I%20would%20like%20to%20buy%20Balanced%20Bar" class="btn-eco btn-card-order">Order</a>
+            </div>
           </div>
         </div>
-
-        <a href="https://wa.me/8801410753555?text=Hello%20Eco%20Nur%2C%20I%20would%20like%20to%20buy%20Balanced%20Bar"
-          class="btn-eco"
-          style="padding:9px 20px;font-size:0.83rem;">
-          Order
-        </a>
       </div>
-    </div>
-  </div>
-</div>
 
       <!-- Product 4 -->
-      <div class="row justify-content-center g-4">
-  <div class="col-lg-4 col-md-6 d-flex fade-up delay-1">
-    <div class="glass-card product-card w-100">
-      <a href="olivelle-bar.html">
-        <div class="product-card-img">
-          <!-- SEO: Baby-care keyword in alt text targets relevant long-tail searches -->
-          <img src="images/olivellebar.jpg" alt="Olivelle Bar — Olive Oil and Oat Milk natural soap for babies and sensitive skin" loading="lazy" width="400" height="300" />
-          <span class="product-tag">Baby Care</span>
-          <span class="link-tag"></span>
-        </div>
-      </a>
-
-      <div class="product-card-body">
-        <h4>Olivelle Bar — Natural Baby &amp; Sensitive Skin Soap</h4>
-
-        <p>
-          Ultra-mild bathing bar for <b>babies, sensitive,</b> and <b>super dry skin.</b>
-          Rich in olive oil to deeply nourish, soothe irritation, and keep skin soft, calm, and comfortably hydrated.
-        </p>
-
-        <div class="product-ingredients">
-          <span class="ingredient-chip">Olive Oil</span>
-          <span class="ingredient-chip">Kaolin Clay</span>
-          <span class="ingredient-chip">Oat Milk</span>
-        </div>
-
-        <div class="d-flex align-items-center justify-content-between">
-          <div>
-            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
-              <span style="font-size:0.82rem;color:#94a3b8;text-decoration:line-through;">৳500</span>
+      <div class="product-card-wrap fade-up delay-4" data-category="baby">
+        <div class="glass-card product-card">
+          <a href="olivelle-bar.html" class="product-card-img-link">
+            <div class="product-card-img">
+              <img src="images/olivellebar.jpg" alt="Olivelle Bar — Olive Oil and Oat Milk natural soap for babies and sensitive skin" loading="lazy"  />
+              <span class="product-tag">Baby Care</span>
             </div>
-
-            <div class="product-price" style="margin-top:2px;">
-              ৳450 <sub>/ bar</sub>
+          </a>
+          <div class="product-card-body">
+            <h4>Olivelle Bar</h4>
+            <p>Ultra-mild bar for babies &amp; sensitive skin. Rich olive oil deeply nourishes and soothes.</p>
+            <div class="product-ingredients">
+              <span class="ingredient-chip">Olive Oil</span>
+              <span class="ingredient-chip">Kaolin Clay</span>
+              <span class="ingredient-chip">Oat Milk</span>
+            </div>
+            <div class="product-pricing-row">
+              <div class="product-size-options">
+                <label class="size-option">
+                  <input type="radio" name="size-p4" value="50gm" checked />
+                  <span>50gm — <strong>৳299</strong></span>
+                </label>
+                <label class="size-option">
+                  <input type="radio" name="size-p4" value="100gm" />
+                  <span>100gm — <strong>৳499</strong></span>
+                </label>
+              </div>
+              <a href="https://wa.me/8801410753555?text=Hello%20Eco%20Nur%2C%20I%20would%20like%20to%20buy%20Olivelle%20Bar" class="btn-eco btn-card-order">Order</a>
             </div>
           </div>
-
-          <a href="https://wa.me/8801410753555?text=Hello%20Eco%20Nur%2C%20I%20would%20like%20to%20buy%20Olivelle%20Bar"
-            class="btn-eco"
-            style="padding:9px 20px;font-size:0.83rem;">
-            Order
-          </a>
         </div>
       </div>
-    </div>
-  </div>
-</div>
 
-    </div>
+    </div><!-- /products-grid -->
+
   </div>
 </section>
 
@@ -1210,6 +1125,29 @@ overlay
 
 <!-- Back to Top -->
 <button id="backToTop" aria-label="Back to top"><i class="fa fa-arrow-up"></i></button>
+
+<!-- Category filter logic -->
+<script>
+(function() {
+  const filterBtns = document.querySelectorAll('.filter-btn:not(:disabled)');
+  const cards = document.querySelectorAll('.product-card-wrap');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      const filter = this.dataset.filter;
+      cards.forEach(card => {
+        if (filter === 'all' || card.dataset.category === filter) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
+})();
+</script>
 
 <!-- Bootstrap 5 JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
