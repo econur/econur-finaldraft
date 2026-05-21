@@ -319,198 +319,188 @@
 }
     }
 
-    /* ==========================================
-       HERO SECTION — Compact
-       WHY: 88vh hero pushes products below fold.
-       New design targets ~28vh: navbar + hero = ~30vh,
-       products become visible on load. Premium editorial
-       feel achieved through typography weight + trust signals.
-    ========================================== */
-    #hero {
-      position: relative;
-      overflow: hidden;
-      background: linear-gradient(160deg, #f0fff4 0%, #dcfce7 55%, #a7f3d0 100%);
-      padding-top: 76px; /* clears fixed navbar */
-      padding-bottom: 0;
-    }
+ /* ==========================================
+   HERO SECTION — Compact
+========================================== */
+#hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(160deg, #f0fff4 0%, #dcfce7 55%, #a7f3d0 100%);
+  padding-top: 76px;
+  padding-bottom: 0;
+}
 
-    #hero::before {
-      content: '';
-      position: absolute; inset: 0;
-      background:
-        radial-gradient(ellipse 60% 80% at 100% 50%, rgba(16,185,129,0.13) 0%, transparent 60%),
-        radial-gradient(ellipse 40% 60% at 0% 100%, rgba(6,78,59,0.08) 0%, transparent 55%);
-      pointer-events: none;
-    }
+#hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 60% 80% at 100% 50%, rgba(16,185,129,0.13) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 60% at 0% 100%, rgba(6,78,59,0.08) 0%, transparent 55%);
+  pointer-events: none;
+}
 
-    /* Ambient bubbles — fewer, subtler in compact hero */
-    .bubble-container {
-      position: absolute; inset: 0;
-      pointer-events: none;
-      overflow: hidden;
-    }
+.hero-compact-inner {
+  position: relative; z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 32px 0 36px;
+}
 
-    .bubble {
-      position: absolute;
-      border-radius: 50%;
-      background: radial-gradient(circle at 35% 35%, rgba(255,255,255,0.8), rgba(110,231,183,0.25));
-      border: 1px solid rgba(255,255,255,0.5);
-      box-shadow: inset 0 0 14px rgba(255,255,255,0.3), 0 4px 14px rgba(16,185,129,0.1);
-      animation: floatBubble linear infinite;
-    }
+/* LEFT COLUMN */
+.hero-compact-text {
+  flex: 1 1 auto;
+  max-width: 460px;
+}
 
-    .bubble:nth-child(1) { width:44px; height:44px; left:6%;   animation-duration:14s; animation-delay:0s; }
-    .bubble:nth-child(2) { width:22px; height:22px; left:22%;  animation-duration:10s; animation-delay:3s; }
-    .bubble:nth-child(3) { width:60px; height:60px; left:78%;  animation-duration:16s; animation-delay:2s; }
-    .bubble:nth-child(4) { width:18px; height:18px; left:55%;  animation-duration:8s;  animation-delay:5s; }
-    .bubble:nth-child(5) { width:36px; height:36px; left:88%;  animation-duration:12s; animation-delay:1s; }
-    .bubble:nth-child(6) { width:28px; height:28px; left:42%;  animation-duration:11s; animation-delay:4s; }
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.65);
+  border: 1px solid rgba(16,185,129,0.3);
+  border-radius: 40px;
+  padding: 6px 16px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--forest);
+  margin-bottom: 14px;
+}
 
-    @keyframes floatBubble {
-      0%   { transform: translateY(110vh) scale(0.6); opacity: 0; }
-      5%   { opacity: 0.8; }
-      90%  { opacity: 0.6; }
-      100% { transform: translateY(-15vh) scale(1); opacity: 0; }
-    }
+.hero-eyebrow i { color: var(--emerald); }
 
-    /* Compact hero two-column layout */
-    .hero-compact-inner {
-      position: relative; z-index: 2;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 32px;
-      padding: 32px 0 36px;
-    }
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.5vw, 3.4rem);
+  font-weight: 900;
+  line-height: 1.08;
+  color: var(--forest);
+  margin-bottom: 18px;
+}
 
-    .hero-compact-text {
-      flex: 0 0 auto;
-      max-width: 480px;
-    }
+.hero-title .italic-accent {
+  font-style: italic;
+  color: var(--emerald);
+}
 
-    .hero-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(255,255,255,0.65);
-      border: 1px solid rgba(16,185,129,0.3);
-      border-radius: 40px;
-      padding: 6px 16px;
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--forest);
-      margin-bottom: 16px;
-    }
+/* Trust checklist — 2-column tick list */
+.hero-trust-list {
+  list-style: none;
+  padding: 0; margin: 0 0 22px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 16px;
+}
 
-    .hero-eyebrow i { color: var(--emerald); }
+.hero-trust-list li {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--forest);
+}
 
-    .hero-title {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 4.5vw, 3.4rem);
-      font-weight: 900;
-      line-height: 1.08;
-      color: var(--forest);
-      margin-bottom: 22px;
-    }
+.hero-trust-list li i {
+  color: var(--emerald);
+  font-size: 0.75rem;
+  flex-shrink: 0;
+}
 
-    .hero-title .italic-accent {
-      font-style: italic;
-      color: var(--emerald);
-    }
+.hero-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
 
-    .hero-cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      align-items: center;
-    }
+/* RIGHT COLUMN — Offer visual zone */
+.hero-offer-zone {
+  flex: 0 0 340px;
+  height: 340px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    /* Right side trust block */
-    .hero-compact-trust {
-      flex: 0 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-      align-items: flex-end;
-    }
+/* Animated rings around the offer image */
+.offer-ring,
+.offer-glow { display: none; }
 
-    .hero-trust-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 14px;
-      background: var(--forest);
-      border-radius: 16px;
-      padding: 14px 22px;
-      box-shadow: 0 8px 28px rgba(6,78,59,0.25);
-    }
+/* Accent burst — top-right corner starburst */
+.offer-ring-1 {
+  display: block;
+  position: absolute;
+  top: -14px; right: -14px;
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg 30deg,
+    rgba(16,185,129,0.55) 30deg 36deg,
+    transparent 36deg 60deg,
+    rgba(16,185,129,0.55) 60deg 66deg,
+    transparent 66deg 90deg,
+    rgba(16,185,129,0.55) 90deg 96deg,
+    transparent 96deg 360deg
+  );
+  animation: burst-spin 8s linear infinite;
+  z-index: 3;
+}
 
-    .htb-icon {
-      width: 42px; height: 42px;
-      background: linear-gradient(135deg, var(--emerald), var(--forest-light));
-      border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.1rem;
-      color: white;
-    }
+/* Outer softer halo ring around burst */
+.offer-ring-2 {
+  display: block;
+  position: absolute;
+  top: -22px; right: -22px;
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  border: 1.5px dashed rgba(16,185,129,0.35);
+  animation: burst-spin 12s linear infinite reverse;
+  z-index: 3;
+}
 
-    .htb-text { display: flex; flex-direction: column; gap: 2px; }
+@keyframes burst-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
 
-    .htb-label {
-      font-family: var(--font-body);
-      font-weight: 700;
-      font-size: 0.92rem;
-      color: var(--mint);
-      letter-spacing: 0.3px;
-    }
+/* The image itself — gentle float */
+.offer-visual-wrap {
+  position: relative; z-index: 2;
+}
 
-    .htb-sub {
-      font-size: 0.72rem;
-      color: rgba(167,243,208,0.7);
-      letter-spacing: 0.5px;
-    }
+.offer-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px;
+  filter: drop-shadow(0 12px 28px rgba(6,78,59,0.18));
+}
 
-    .hero-trust-pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      justify-content: flex-end;
-    }
 
-    .htrust-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(255,255,255,0.72);
-      border: 1px solid rgba(16,185,129,0.22);
-      border-radius: 30px;
-      padding: 5px 14px;
-      font-size: 0.72rem;
-      font-weight: 600;
-      color: var(--forest);
-      letter-spacing: 0.3px;
-      white-space: nowrap;
-    }
 
-    .htrust-pill i { color: var(--emerald); font-size: 0.75rem; }
-
-    /* Mobile: stack vertically */
-    @media (max-width: 767px) {
-      .hero-compact-inner {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 24px 0 28px;
-        gap: 20px;
-      }
-      .hero-compact-trust {
-        align-items: flex-start;
-        width: 100%;
-      }
-      .hero-trust-pills { justify-content: flex-start; }
-      .hero-title { font-size: clamp(1.9rem, 7vw, 2.8rem); }
-    }
-
+/* Mobile */
+@media (max-width: 767px) {
+  .hero-compact-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 0 28px;
+    gap: 24px;
+  }
+  .hero-offer-zone {
+    width: 100%;
+    height: 260px;
+    flex: unset;
+  }
+  .hero-title { font-size: clamp(1.9rem, 7vw, 2.8rem); }
+  .hero-trust-list { grid-template-columns: 1fr 1fr; }
+}
     /* ==========================================
        PRODUCTS SECTION — Redesigned
        WHY: Moved to CSS grid for true 4-up layout
@@ -1475,7 +1465,7 @@
     /* SEO: Print styles prevent Google from seeing garbled print layouts in page rendering;
        also helps if Google ever renders for print-based evaluation */
     @media print {
-      #preloader, #backToTop, .bubble-container, .scroll-hint { display: none !important; }
+      #preloader, #backToTop, .scroll-hint { display: none !important; }
       #mainNav { position: static; background: white; box-shadow: none; }
       body { background: white; color: #000; }
       .glass-card { box-shadow: none; border: 1px solid #ccc; }
