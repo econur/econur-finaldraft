@@ -375,18 +375,32 @@ function initHeroParticles() {
 document.addEventListener('DOMContentLoaded', () => {
   // Language: default Bengali
   setLang('bn');
-
+ 
   // Carousel
   buildDots();
   updateActiveCard();
   initDragScroll();
   initAutoPlayHover();
-
-  // Initial position
+ 
+  // Initial position (no autoplay yet — wait for viewport)
   setTimeout(() => {
     goToSlide(0, true);
-    startAutoPlay();
   }, 100);
+ 
+  // Start autoplay only when carousel section enters viewport
+  const carouselSection = document.querySelector('.carousel-section');
+  if (carouselSection) {
+    const carouselVisibilityObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          startAutoPlay();
+        } else {
+          stopAutoPlay();
+        }
+      });
+    }, { threshold: 0.3 });
+    carouselVisibilityObs.observe(carouselSection);
+  }
 
   // Lazy images
   initLazyImages();
