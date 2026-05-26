@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="bn" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ঈদের সুন্দর কাজ | Eid Er Shundor Kaj</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="adha26/style.css" />
+</head>
+<body>
+
+  <!-- Language Toggle -->
+  <div class="lang-toggle">
+    <button class="lang-btn active" data-lang="bn" onclick="setLang('bn')">বাংলা</button>
+    <span class="lang-divider">|</span>
+    <button class="lang-btn " data-lang="en" onclick="setLang('en')">English</button>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg-pattern"></div>
+    <div class="hero-grain"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-icon">☽</span>
+        <span class="badge-text bn-text">Econur Presents </span>
+        <span class="badge-text en-text hidden">Econur Presents</span>
+        <span class="badge-icon">☽</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="title-line bn-text">ঈদের</span>
+        <span class="title-line en-text hidden">Eid Er</span>
+        <em class="title-em bn-text">সুন্দর কাজ</em>
+        <em class="title-em en-text hidden">Shundor Kaj</em>
+      </h1>
+      <p class="hero-subtitle bn-text">এই ঈদে পৃথিবীকে আরেকটু সুন্দর করে তুলি।</p>
+      <p class="hero-subtitle en-text hidden">Let's make some meaningful contribution to the world this Eid.</p>
+      <div class="hero-dates">
+        <span class="date-badge">২৭–২৯ মে ২০২৫</span>
+      </div>
+      <a class="hero-cta" href="#how-to-join">
+        <span class="bn-text">চ্যালেঞ্জে Join করো  </span>
+        <span class="en-text hidden">Join the Challenge</span>
+        <span class="cta-arrow">↓</span>
+      </a>
+    </div>
+    <div class="hero-scroll-hint">
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Good Deeds Cinematic Carousel -->
+  <section class="carousel-section" id="good-deeds">
+    <div class="section-header">
+      <div class="section-kicker bn-text">ভালো কাজের তালিকা</div>
+      <div class="section-kicker en-text hidden">The Good Deeds</div>
+      <h2 class="section-title bn-text">যে কাজগুলো করতে পারো</h2>
+      <h2 class="section-title en-text hidden">Choose Your Good Deed</h2>
+    </div>
+
+    <div class="carousel-track-outer">
+      <div class="carousel-track" id="carouselTrack">
+
+        <!-- Card 1 -->
+        <div class="deed-card" data-index="0">
+          <div class="card-media">
+            <div class="card-img-wrap">
+              <img class="card-img lazy" data-src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?q=80&w=800" alt="Charity" />
+              <div class="card-img-placeholder"></div>
+            </div>
+            <div class="card-overlay"></div>
+            <div class="card-number">০১</div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title bn-text">ঈদ সালামি থেকে দান</h3>
+            <h3 class="card-title en-text hidden">Charity from Eid Salami</h3>
+            <p class="card-desc bn-text">নিছক টাকা না দিয়ে কারো জন্য কাপড়, খাবার বা দৈনন্দিন প্রয়োজনীয় জিনিস কিনে দিলে মিলবে বাড়তি পয়েন্ট।</p>
+            <p class="card-desc en-text hidden">Thoughtful support — buying clothes, food, or essentials for someone — earns higher points than simply giving money.</p>
+            <div class="card-bonus bn-text">⭐ বাড়তি পয়েন্ট: সরাসরি উপহার দিলে</div>
+            <div class="card-bonus en-text hidden">⭐ Bonus Points: Gifting essentials directly</div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="deed-card" data-index="1">
+          <div class="card-media">
+            <div class="card-img-wrap">
+              <img class="card-img lazy" data-src="https://images.unsplash.com/photo-1581536678522-afcf3257d780?q=80&w=800" alt="Street Animals" />
+              <div class="card-img-placeholder"></div>
+            </div>
+            <div class="card-overlay"></div>
+            <div class="card-number">০২</div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title bn-text">পথের প্রাণীদের খাওয়ানো</h3>
+            <h3 class="card-title en-text hidden">Feeding Street Animals</h3>
+            <p class="card-desc bn-text">কুরবানির পর পথের পশুপাখিদের খাবার দাও। দুর্বল প্রাণী যারা খাবার নিতে পারছে না তাদের বিশেষভাবে যত্ন নিলে মিলবে এক্সট্রা পয়েন্ট।</p>
+            <p class="card-desc en-text hidden">Feed street animals after Qurbani. Specially caring for weaker animals that cannot compete for food earns extra points.</p>
+            <div class="card-bonus bn-text">⭐ এক্সট্রা পয়েন্ট: দুর্বল পশুপাখিদের যত্ন</div>
+            <div class="card-bonus en-text hidden">⭐ Extra Points: Caring for the weakest animals</div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="deed-card" data-index="2">
+          <div class="card-media">
+            <div class="card-img-wrap">
+              <img class="card-img lazy" data-src="https://images.unsplash.com/photo-1710092784814-4a6f158913b8?q=80&w=800" alt="Food for workers" />
+              <div class="card-img-placeholder"></div>
+            </div>
+            <div class="card-overlay"></div>
+            <div class="card-number">০৩</div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title bn-text">পরিচ্ছন্নকর্মী ও শ্রমজীবীদের খাওয়ানো</h3>
+            <h3 class="card-title en-text hidden">Meals for Workers & Cleaners</h3>
+            <p class="card-desc bn-text">ঈদের দিনেও যারা রাস্তায় কাজ করছেন — সিটি কর্পোরেশনের কর্মী, ভ্যানচালক, রিকশাওয়ালা — তাদের জন্য ভালো খাবার কিনে দাও।</p>
+            <p class="card-desc en-text hidden">Buy quality food or Eid meals for cleaners, workers, or struggling families who are out working even on Eid.</p>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="deed-card" data-index="3">
+          <div class="card-media">
+            <div class="card-img-wrap">
+              <img class="card-img lazy" data-src="https://images.unsplash.com/photo-1734079692160-fcbe4be6ab96?q=80&w=800" alt="Cleaning waste" />
+              <div class="card-img-placeholder"></div>
+            </div>
+            <div class="card-overlay"></div>
+            <div class="card-number">০৪</div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title bn-text">কুরবানির বর্জ্য সঠিকভাবে নিষ্পত্তি</h3>
+            <h3 class="card-title en-text hidden">Proper Qurbani Waste Disposal</h3>
+            <p class="card-desc bn-text">কুরবানির বর্জ্য যেখানে-সেখানে না ফেলে সঠিক স্থানে ফেলো । পরিবেশ রক্ষায় উদ্যোগী হও।</p>
+            <p class="card-desc en-text hidden">Properly clean and dispose of Qurbani waste in designated areas. Be the change for a cleaner Eid.</p>
+
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="deed-card" data-index="4">
+          <div class="card-media">
+            <div class="card-img-wrap">
+              <img class="card-img lazy" data-src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80" alt="Trees and green spaces" />
+              <div class="card-img-placeholder"></div>
+            </div>
+            <div class="card-overlay"></div>
+            <div class="card-number">০৫</div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title bn-text">অবহেলিত গাছ ও সবুজ স্থান পুনরুজ্জীবন</h3>
+            <h3 class="card-title en-text hidden">Reviving Neglected Green Spaces</h3>
+            <p class="card-desc bn-text">রাস্তার ধারের অবহেলিত গাছ বা বাগানের আশপাশ থেকে ময়লা পরিষ্কার করো।</p>
+            <p class="card-desc en-text hidden">Clear waste around neglected trees or green spaces. Help the city breathe and revive nature's beauty.</p>
+
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="deed-card" data-index="5">
+          <div class="card-media">
+            <div class="card-img-wrap">
+              <img class="card-img lazy" data-src="https://images.unsplash.com/photo-1607923287346-24af932a5f41?q=80&w=800" alt="Street cleaning" />
+              <div class="card-img-placeholder"></div>
+            </div>
+            <div class="card-overlay"></div>
+            <div class="card-number">০৬</div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title bn-text">রাস্তা বা পাড়া পরিষ্কার অভিযান</h3>
+            <h3 class="card-title en-text hidden">Street or Neighborhood Cleanup</h3>
+            <p class="card-desc bn-text">ঈদের ছুটিতে তোমার রাস্তা বা মহল্লায় পরিষ্কার অভিযানে অংশ নাও। বন্ধুদের নিয়ে দলবেঁধে করলে আরো মজা!</p>
+            <p class="card-desc en-text hidden">Participate in street or neighborhood cleaning during Eid. Even better — bring friends and make it a movement!</p>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <!-- <div class="deed-card" data-index="6">
+          <div class="card-media">
+            <div class="card-img-wrap">
+              <img class="card-img lazy" data-src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=800&q=80" alt="Reducing food waste" />
+              <div class="card-img-placeholder"></div>
+            </div>
+            <div class="card-overlay"></div>
+            <div class="card-number">০৭</div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title bn-text">ঈদে খাবারের অপচয় কমানো</h3>
+            <h3 class="card-title en-text hidden">Reducing Food Waste During Eid</h3>
+            <p class="card-desc bn-text">ঈদের আনন্দে যেন অপচয় না হয়। অতিরিক্ত খাবার প্রতিবেশীদের দাও বা সংরক্ষণ করো। সচেতনতা নিজেই একটি সুন্দর কাজ।</p>
+            <p class="card-desc en-text hidden">Be mindful of food waste this Eid. Share excess food with neighbors or preserve it thoughtfully. Conscious living is a good deed.</p>
+
+          </div>
+        </div> -->
+
+        <!-- Card 8 -->
+        <div class="deed-card" data-index="6">
+          <div class="card-media">
+            <div class="card-img-wrap">
+              <img class="card-img lazy" data-src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80" alt="Any good deed" />
+              <div class="card-img-placeholder"></div>
+            </div>
+            <div class="card-overlay"></div>
+            <div class="card-number">০৭ </div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title bn-text">তোমার নিজস্ব ভালো কাজ</h3>
+            <h3 class="card-title en-text hidden">Your Own Good Deed</h3>
+            <p class="card-desc bn-text">মানুষ, পশু বা পরিবেশের জন্য যেকোনো অর্থবহ ভালো কাজ। তুমিই ঠিক করো !</p>
+            <p class="card-desc en-text hidden">Any meaningful deed that positively impacts people, animals, or the environment — you decide what your heart calls you to do.</p>
+            <div class="card-bonus bn-text">💫 সৃজনশীলতায় মিলবে বিশেষ স্বীকৃতি</div>
+            <div class="card-bonus en-text hidden">💫 Creativity earns special recognition</div>
+          </div>
+        </div>
+
+      </div><!-- end track -->
+
+      <!-- Carousel Controls -->
+      <button class="carousel-btn carousel-prev" onclick="carouselPrev()" aria-label="Previous">&#8592;</button>
+      <button class="carousel-btn carousel-next" onclick="carouselNext()" aria-label="Next">&#8594;</button>
+      <div class="carousel-dots" id="carouselDots"></div>
+    </div>
+  </section>
+
+  <!-- How to Join -->
+  <section class="join-section" id="how-to-join">
+    <div class="join-bg-ornament"></div>
+    <div class="container">
+      <div class="section-header">
+        <!-- <div class="section-kicker bn-text">অংশগ্রহণ পদ্ধতি</div>
+        <div class="section-kicker en-text hidden">How to Join</div> -->
+        <h2 class="section-title bn-text">যেভাবে যোগ দেবে</h2>
+        <h2 class="section-title en-text hidden">How to Participate</h2>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-item" style="--delay:0s">
+          <div class="step-icon-wrap">
+            <div class="step-icon">📲</div>
+            <div class="step-num">০১</div>
+          </div>
+          <div class="step-content">
+            <h3 class="step-title bn-text">ফলো করো ও শেয়ার করো</h3>
+            <h3 class="step-title en-text hidden">Follow & Share</h3>
+            <p class="step-desc bn-text"><strong>@econur.skincare</strong> ফলো করো, তারপর <a href="">এই পোস্টটি </a>  তোমার স্টোরিতে শেয়ার করো।</p>
+            <p class="step-desc en-text hidden">Follow <strong>@econur.skincare</strong>, then share <a href="">this specific Econur post</a>  on your story.</p>
+          </div>
+        </div>
+
+        <div class="step-item" style="--delay:0.1s">
+          <div class="step-icon-wrap">
+            <div class="step-icon">💬</div>
+            <div class="step-num">০২</div>
+          </div>
+          <div class="step-content">
+            <h3 class="step-title bn-text">DM পাঠাও</h3>
+            <h3 class="step-title en-text hidden">Send a DM</h3>
+            <p class="step-desc bn-text">আমাদের DM করো <strong>"Adha26 Challenge"</strong> লিখে। আমরা ২৪ ঘণ্টার মধ্যে যোগাযোগ করে রেজিস্ট্রেশন ফর্মের অ্যাক্সেস দেব।</p>
+            <p class="step-desc en-text hidden">DM us <strong>"Adha26 Challenge"</strong>. We will contact you within 24 hours and provide access to the registration form.</p>
+          </div>
+        </div>
+
+        <div class="step-item" style="--delay:0.2s">
+          <div class="step-icon-wrap">
+            <div class="step-icon">✅</div>
+            <div class="step-num">০৩</div>
+          </div>
+          <div class="step-content">
+            <h3 class="step-title bn-text">ভালো কাজ বেছে নাও</h3>
+            <h3 class="step-title en-text hidden">Choose Your Deed</h3>
+            <p class="step-desc bn-text">তালিকা থেকে এক বা একাধিক ভালো কাজ বেছে নাও এবং ঈদের তিন দিনে (২৭–২৯ মে) সম্পন্ন করো।</p>
+            <p class="step-desc en-text hidden">Choose one or more good deeds from the list and complete them during Eid — 27th to 29th May.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Submission -->
+      <div class="submission-box">
+        <div class="submission-header">
+          <h3 class="bn-text">জমা দেওয়ার নিয়ম</h3>
+          <h3 class="en-text hidden">Submission Guidelines</h3>
+        </div>
+        <div class="submission-body">
+          <p class="bn-text">তোমার ভালো কাজের Reel, Post বা Story বানাও এবং নিচের নিয়মে পোস্ট করো:</p>
+          <p class="en-text hidden">Create a Reel, Post, or Story about your good deed and post it with the following format:</p>
+          <div class="rules-list">
+            <div class="rule-item">
+              <span class="rule-icon">@</span>
+              <span class="bn-text"><strong>@econur.skincare</strong> ট্যাগ করো</span>
+              <span class="en-text hidden">Tag <strong>@econur.skincare</strong></span>
+            </div>
+            <div class="rule-item">
+              <span class="rule-icon">#</span>
+              <span class="bn-text">হ্যাশট্যাগ: <strong>#Eid_er_shundor_kaj &nbsp; #adha26_challange &nbsp; #econur</strong></span>
+              <span class="en-text hidden">Hashtags: <strong>#Eid_er_shundor_kaj &nbsp; #adha26_challange &nbsp; #econur</strong></span>
+            </div>
+            <div class="rule-item">
+              <span class="rule-icon">+</span>
+              <span class="bn-text">ক্যাপশনে লেখো তুমি কী করেছ এবং optional মন্তব্য</span>
+              <span class="en-text hidden">Caption: describe what you did and an optional remark</span>
+            </div>
+            <div class="rule-item">
+              <span class="rule-icon">+</span>
+              <span class="bn-text">প্রাসঙ্গিক ছবি বা ভিডিও যুক্ত করো। মুখ দেখানো বাধ্যতামূলক নয় — যাদের সাহায্য করছ তাদের গোপনীয়তা ও সম্মান রক্ষা করো।</span>
+              <span class="en-text hidden">Include relevant photos or videos. Showing faces is not necessary. Please respect the privacy and dignity of the people you help.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ambassadorship -->
+  <section class="ambassador-section" id="ambassador">
+    <div class="amb-bg"></div>
+    <div class="container">
+      <div class="section-header light">
+        <!-- <div class="section-kicker bn-text"></div>
+        <div class="section-kicker en-text hidden"></div> -->
+        <h2 class="section-title bn-text">অ্যাম্বাসেডরশিপ</h2>
+        <h2 class="section-title en-text hidden">Ambassadorship</h2>
+      </div>
+
+      <div class="amb-card">
+        <div class="amb-icon">🌟</div>
+        <div class="amb-content">
+          <p class="bn-text">রেজিস্ট্রেশন ফর্মে একটি বিশেষ ফিল্ড থাকবে — <strong>"Who told you about the challenge? Share their Instagram username."</strong> যদি অন্তত একজন সেখানে তোমার নাম দেয়, তুমি অ্যাম্বাসেডর সুবিধা পাবে।</p>
+          <p class="en-text hidden">The registration form will include a special field — <strong>"Who told you about the challenge? Share their Instagram username."</strong> If at least one person puts your name there, you receive Ambassador benefits.</p>
+        </div>
+      </div>
+
+      <div class="amb-tiers">
+        <div class="amb-tier">
+          <div class="amb-tier-icon">🏆</div>
+          <h4 class="bn-text">চ্যালেঞ্জ সম্পন্নকারী অ্যাম্বাসেডর</h4>
+          <h4 class="en-text hidden">Ambassadors Who Complete the Challenge</h4>
+          <p class="bn-text"> <b>১,৫০০ টাকার </b> অ্যাম্বাসেডর প্রাইজপুল ও সার্টিফিকেটের জন্য যোগ্য হবে।</p>
+          <p class="en-text hidden">Qualify for the Ambassador Prize Pool of BDT 1,500 and certificates.</p>
+        </div>
+        <div class="amb-tier">
+          <div class="amb-tier-icon">📜</div>
+          <h4 class="bn-text">শুধুমাত্র রেফারকারী অ্যাম্বাসেডর</h4>
+          <h4 class="en-text hidden">Ambassadors Who Don't Complete</h4>
+          <p class="bn-text">সার্টিফিকেট প্রদান করা হবে।</p>
+          <p class="en-text hidden">Will receive certificates of recognition.</p>
+        </div>
+        <div class="amb-tier amb-tier-note">
+          <div class="amb-tier-icon">🚫</div>
+          <h4 class="bn-text">মনে রাখো</h4>
+          <h4 class="en-text hidden">Important Note</h4>
+          <p class="bn-text">নিজেকে নিজে অ্যাম্বাসেডর হিসেবে মনোনীত করা যাবে না।</p>
+          <p class="en-text hidden">You cannot nominate yourself as an ambassador.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recognition & Prizes -->
+  <section class="prizes-section" id="prizes">
+    <div class="prizes-grain"></div>
+    <div class="container">
+      <div class="section-header">
+        <!-- <div class="section-kicker bn-text"></div>
+        <div class="section-kicker en-text hidden"></div> -->
+        <h2 class="section-title bn-text">পুরস্কার ও স্বীকৃতি</h2>
+        <h2 class="section-title en-text hidden">Awards & Recognition</h2>
+      </div>
+
+      <div class="prize-tiers">
+
+        <!-- Tier 1 -->
+        <div class="prize-tier tier-gold">
+          <div class="tier-crown">👑</div>
+          <div class="tier-badge bn-text">সর্বোচ্চ স্বীকৃতি</div>
+          <div class="tier-badge en-text hidden">Highest Recognition</div>
+          <h3 class="tier-name">Community Leadership Excellence</h3>
+          <p class="tier-desc bn-text">যার কাজ গোটা সমাজে উল্লেখযোগ্য পরিবর্তন এনেছে। যেমন — একটি পুরো রাস্তা পরিষ্কার করার জন্য স্বেচ্ছাসেবী দল পরিচালনা, বা এলাকার বয়স্ক রিকশাচালকদের জন্য বিশেষ সহায়তা প্রদান।</p>
+          <p class="tier-desc en-text hidden">For deeds that made a significant contribution to the broader community — leading a volunteer group to clean an entire street, or providing special support to elderly rickshaw pullers of your area.</p>
+          <ul class="tier-perks">
+            <li class="bn-text">🏅 'Community Leadership Excellence'-এর সর্বোচ্চ সার্টিফিকেট — Foreign Scholarship ও কর্পোরেট রিক্রুটমেন্টে সর্বোচ্চ credibility সহ ব্যবহারযোগ্য</li>
+            <li class="en-text hidden">🏅 Highest-tier 'Community Leadership Excellence' certificate — presentable in scholarships and corporate recruitments with the highest credibility</li>
+                        <li class="bn-text">📬 Print-যোগ্য সার্টিফিকেট E-mail করে পাঠানো হবে</li>
+            <li class="en-text hidden">📬 Printable certificates mailed to recipients</li>
+            <li class="bn-text">🌐 ওয়েবসাইটের স্থায়ী লিডারবোর্ডে শীর্ষ স্থান</li>
+            <li class="en-text hidden">🌐 Top ranks on the website's permanent leaderboard</li>
+            <li class="bn-text">📣 ইকোনূরের পেজ পোস্ট ও স্টোরিতে বিশেষ উল্লেখ</li>
+            <li class="en-text hidden">📣 Distinguished mention in Econur's page posts and stories</li>
+          </ul>
+        </div>
+
+        <!-- Tier 2 -->
+        <div class="prize-tier tier-silver">
+          <div class="tier-crown">✦</div>
+          <div class="tier-badge bn-text">বিশেষ স্বীকৃতি</div>
+          <div class="tier-badge en-text hidden">Special Recognition</div>
+          <h3 class="tier-name">Visionary Changemaking Leadership</h3>
+          <p class="tier-desc bn-text">যার কাজ নিজের পারিপার্শ্বিকতায় উল্লেখযোগ্য পরিবর্তন এনেছে। যেমন — নিজের বাসার বর্জ্য যথাযথ স্থানে ফেলা, গৃহপরিচারিকাকে দান করা, বা গ্যারেজের বিড়াল-কুকুরদের খাওয়ানো ও চিকিৎসা দেওয়া। <em class="bn-text">Visionary Changemaker-দের Ambassador Score ৮+ হলে Community Leadership Excellence পাবে।</em></p>
+          <p class="tier-desc en-text hidden">For deeds that made a meaningful change in your personal sphere — properly disposing household Eid waste, donating to household helpers, or feeding and treating cats and dogs around your garage. <em class="en-text hidden">With an Ambassador Score of 8+, you qualify for Community Leadership Excellence.</em></p>
+          <ul class="tier-perks">
+            <li class="bn-text">🎖 'Visionary Changemaker'-এর বিশেষ সার্টিফিকেট — Foreign Scholarships ও কর্পোরেট রিক্রুটমেন্টে ব্যবহারযোগ্য</li>
+            <li class="en-text hidden">🎖 Special 'Visionary Changemaker' certificate — presentable in scholarships and corporate recruitments</li>
+            <li class="bn-text">📬 Print-যোগ্য সার্টিফিকেট E-mail করে পাঠানো হবে</li>
+            <li class="en-text hidden">📬 Printable certificates mailed to recipients</li>
+            <li class="bn-text">🌐 ওয়েবসাইটের স্থায়ী লিডারবোর্ডে বিশেষ প্রদর্শন</li>
+            <li class="en-text hidden">🌐 Specially showcased on the website's permanent leaderboard</li>
+            <li class="bn-text">📣 ইকোনূরের পেজ পোস্ট ও স্টোরিতে উল্লেখ</li>
+            <li class="en-text hidden">📣 Mentioned in Econur's page posts and stories</li>
+          </ul>
+        </div>
+
+        <!-- Tier 3 -->
+        <div class="prize-tier tier-bronze">
+          <div class="tier-badge bn-text">অংশগ্রহণ স্বীকৃতি</div>
+          <div class="tier-badge en-text hidden">Participation Recognition</div>
+          <h3 class="tier-name">Visionary Participant</h3>
+          <p class="tier-desc bn-text">রেজিস্ট্রেশন করেছ কিন্তু সঠিকভাবে সাবমিট করতে পারোনি — তবু তোমার উদ্যোগ অবশ্যই স্বীকৃত।</p>
+          <p class="tier-desc en-text hidden">For those who registered but could not submit properly — your initiative is still recognised and celebrated.</p>
+          <ul class="tier-perks">
+            <li class="bn-text">📜 Participant Certificate প্রদান</li>
+            <li class="en-text hidden">📜 Participant Certificate awarded</li>
+            <li class="bn-text">📣 ইকোনূরের পেজ স্টোরিতে উল্লেখ</li>
+            <li class="en-text hidden">📣 Mentioned in Econur's page stories</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Ambassador Prize Pool -->
+      <div class="amb-prize-pool">
+        <div class="prize-pool-header">
+          <h3 class="bn-text">অ্যাম্বাসেডর পুরস্কার</h3>
+          <h3 class="en-text hidden">Ambassador Prize Pool</h3>
+          <p class="bn-text">শীর্ষ তিন অ্যাম্বাসেডর পাবেন —</p>
+          <p class="en-text hidden">The top three ambassadors will receive —</p>
+        </div>
+        <div class="prize-money-row">
+          <div class="prize-money gold">
+            <div class="prize-rank bn-text">১ম</div>
+            <div class="prize-rank en-text hidden">1st</div>
+            <div class="prize-label bn-text">ঈদ সালামি</div>
+            <div class="prize-label en-text hidden">Eid Salami</div>
+            <div class="prize-amount">৳৭০০</div>
+          </div>
+          <div class="prize-money silver">
+            <div class="prize-rank bn-text">২য়</div>
+            <div class="prize-rank en-text hidden">2nd</div>
+            <div class="prize-label bn-text">ঈদ সালামি</div>
+            <div class="prize-label en-text hidden">Eid Salami</div>
+            <div class="prize-amount">৳৫০০</div>
+          </div>
+          <div class="prize-money bronze">
+            <div class="prize-rank bn-text">৩য়</div>
+            <div class="prize-rank en-text hidden">3rd</div>
+            <div class="prize-label bn-text">ঈদ সালামি</div>
+            <div class="prize-label en-text hidden">Eid Salami</div>
+            <div class="prize-amount">৳৩০০</div>
+          </div>
+        </div>
+        <div class="prize-pool-extra">
+          <div class="pool-extra-badge">
+            <span class="badge-star">✦</span>
+            <p class="bn-text">সকল অ্যাম্বাসেডর পাবেন <strong>"Visionary Changemaking Orchestrator"</strong> Certificate — Scholarship ও কর্পোরেট রিক্রুটমেন্টে ব্যবহারযোগ্য ; লিডারবোর্ডে বিশেষ প্রদর্শন ও ইকোনূরের সোশ্যাল মিডিয়ায় উল্লেখ।</p>
+            <p class="en-text hidden">All ambassadors are granted the <strong>"Visionary Changemaking Orchestrator"</strong> distinction — with certificates for scholarship and corporate recruitments, specially showcased on the leaderboard, and mentioned in Econur's social media.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final-cta">
+    <div class="cta-bg"></div>
+    <div class="cta-grain"></div>
+    <div class="cta-content">
+      <h2 class="cta-title bn-text">This Eid, you are the change.</h2>
+      <h2 class="cta-title en-text hidden"></h2>
+      <p class="cta-sub bn-text">২৭–২৯ মে। সময় এখনই।</p>
+      <p class="cta-sub en-text hidden">27–29 May. The time is now.</p>
+      <a class="cta-btn" href="https://instagram.com/econur.skincare" target="_blank">
+        <span class="bn-text">@econur.skincare এ DM করো</span>
+        <span class="en-text hidden">DM @econur.skincare</span>
+      </a>
+      <div class="cta-hashtags">#Eid_er_shundor_kaj &nbsp;·&nbsp; #adha26_challange &nbsp;·&nbsp; #econur</div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p class="bn-text">© 2026 Econur. All rights reserved.</p>
+    <p class="en-text hidden">© 2026 Econur. All rights reserved.</p>
+  </footer>
+
+  <script src="adha26/script.js"></script>
+</body>
+</html>
