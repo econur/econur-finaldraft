@@ -58,7 +58,7 @@ const PRODUCTS = [
   },
     {
     id: 'p5',
-    name: 'Olivelle Bar',
+    name: 'New soap',
     tag: 'Baby Care',
     badge: '⭐ Most Premium',
     img: 'images/olivelle.webp',
