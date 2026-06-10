@@ -71,6 +71,14 @@ document.addEventListener('DOMContentLoaded', () => {
   setupHoverPause();
   setupFilterBtns();
 
+  // Trigger fade-in on product grid cards via IntersectionObserver
+  // (they are always visible in the DOM now, below the showcase)
+  setTimeout(() => {
+    document.querySelectorAll('#productsGrid .fade-up').forEach(el => {
+      fadeObserver.observe(el);
+    });
+  }, 100);
+
   // Order form — live validation listeners
   document.getElementById('fieldName').addEventListener('input', () => clearError('fieldName', 'errName'));
   document.getElementById('fieldPhone').addEventListener('input', () => clearError('fieldPhone', 'errPhone'));
@@ -130,10 +138,20 @@ function setFeatured(idx, animate) {
   document.querySelectorAll('.thumb-card').forEach((el, i) => {
     el.classList.toggle('active', i === idx);
   });
-  const activeThumb = document.querySelector('.thumb-card.active');
-  if (activeThumb) {
-    activeThumb.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'smooth' });
+const activeThumb = document.querySelector('.thumb-card.active');
+if (activeThumb) {
+  const strip = document.getElementById('showcaseThumbs');
+  if (strip) {
+    // Desktop: vertical strip — scroll top
+    // Mobile: horizontal strip — scroll left
+    const isHorizontal = strip.scrollWidth > strip.clientWidth;
+    if (isHorizontal) {
+      strip.scrollTo({ left: activeThumb.offsetLeft - strip.clientWidth / 2 + activeThumb.offsetWidth / 2, behavior: 'smooth' });
+    } else {
+      strip.scrollTo({ top: activeThumb.offsetTop - strip.clientHeight / 2 + activeThumb.offsetHeight / 2, behavior: 'smooth' });
+    }
   }
+}
 
   // Trigger transition
   const card = document.getElementById('featuredCard');
@@ -273,23 +291,9 @@ function setupFilterBtns() {
 }
 
 /* ==========================================
-   BROWSE MODE TOGGLE
+   BROWSE MODE — removed; products section is
+   now a standalone section below showcase.
 ========================================== */
-function enterBrowseMode() {
-  stopAuto();
-  document.getElementById('showcase').classList.add('browse-mode');
-  window.scrollTo({ top: document.getElementById('showcase').offsetTop - 70, behavior: 'smooth' });
-  // Trigger fade-in on grid cards that just became visible
-  setTimeout(() => {
-    document.querySelectorAll('#productsGrid .fade-up').forEach(el => el.classList.add('visible'));
-  }, 100);
-}
-
-function exitBrowseMode() {
-  document.getElementById('showcase').classList.remove('browse-mode');
-  startAuto();
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
 
 /* ==========================================
    MARQUEE

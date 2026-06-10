@@ -799,50 +799,7 @@
   opacity: 1;
 }
 
-/* Browse All button */
-.showcase-browse-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  padding: 10px 0 8px;
-  position: relative;
-  z-index: 2;
-  flex-shrink: 0;
-}
-
-.btn-browse-all {
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  background: transparent;
-  color: var(--forest);
-  border: 2px solid rgba(16,185,129,0.4);
-  border-radius: var(--radius-pill);
-  padding: 10px 22px;
-  font-family: var(--font-body);
-  font-weight: 600;
-  font-size: 0.83rem;
-  cursor: pointer;
-  transition: all var(--transition);
-  letter-spacing: 0.2px;
-}
-
-.btn-browse-all:hover {
-  background: var(--forest);
-  border-color: var(--forest);
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 12px 32px rgba(6,78,59,0.2);
-}
-
-.btn-browse-all svg {
-  transition: transform 0.3s ease;
-}
-
-.btn-browse-all:hover svg {
-  transform: translateX(4px);
-}
+/* Browse All button — removed from showcase */
 
 /* ---------- Marquee trust bar ---------- */
 .trust-marquee-wrap {
@@ -973,7 +930,7 @@
   bottom: 96px;
   right: 22px;
   z-index: 998;
-  background: linear-gradient(135deg, var(--emerald), var(--forest-light));
+  background: linear-gradient(135deg, #f59e0b, #d97706);
   color: white;
   font-family: var(--font-body);
   font-size: 0.8rem;
@@ -981,7 +938,7 @@
   padding: 9px 16px;
   border-radius: var(--radius-pill);
   cursor: pointer;
-  box-shadow: 0 8px 24px rgba(16,185,129,0.35);
+  box-shadow: 0 8px 24px rgba(245,158,11,0.45);
   opacity: 0;
   transform: translateY(8px) scale(0.92);
   transition: opacity 0.28s ease, transform 0.28s cubic-bezier(0.34,1.56,0.64,1);
@@ -1310,7 +1267,7 @@
 
 .btn-proceed-order {
   width: 100%;
-  background: linear-gradient(135deg, var(--emerald), var(--forest-light));
+  background: linear-gradient(135deg, #f59e0b, #d97706);
   color: white;
   border: none;
   border-radius: var(--radius-pill);
@@ -1336,11 +1293,12 @@
 
 .btn-proceed-order:hover {
   transform: translateY(-2px);
-  box-shadow: 0 14px 40px rgba(16,185,129,0.4);
+  box-shadow: 0 14px 40px rgba(245,158,11,0.45);
+  filter: brightness(1.05);
 }
 
 .btn-proceed-order:disabled {
-  opacity: 0.5;
+  opacity: 0.45;
   cursor: not-allowed;
   transform: none;
   box-shadow: none;
@@ -1783,41 +1741,16 @@
 }
 
 /* ==============================
-   FULL GRID (browse all view)
+   FULL GRID — always visible as standalone section
+   (browse-mode toggle removed; products live in #products)
    ============================== */
-#fullProductsGrid {
-  display: none;
-  padding-top: 48px;
-}
 
-#fullProductsGrid.visible {
-  display: block;
-}
+/* Hide browse-back row since it no longer exists */
+.browse-back-row { display: none; }
 
-/* Hide carousel pieces when browse-all is open */
-#showcase.browse-mode .showcase-stage,
-#showcase.browse-mode .showcase-headline,
-#showcase.browse-mode .trust-marquee-wrap,
-#showcase.browse-mode .showcase-browse-row {
-  display: none;
-}
-
-/* Browse mode: let the section grow to fit any number of product cards */
-#showcase.browse-mode {
-  height: auto;
-  max-height: none;
-  overflow: visible;
-  padding-bottom: 60px;
-}
-
-#showcase.browse-mode #fullProductsGrid {
-  display: block;
-}
-
-/* Products grid is always auto-height — no clipping, no truncation */
-#showcase.browse-mode .products-grid {
-  height: auto;
-  overflow: visible;
+/* Showcase no longer has an overflow-hidden products grid */
+#showcase {
+  /* keep overflow:hidden for decorative orbs */
 }
 
 .browse-back-row {
@@ -2837,6 +2770,32 @@
       transform: translateY(-2px);
       box-shadow: 0 10px 30px rgba(16,185,129,0.4);
       color: var(--forest);
+    }
+
+    /* ==========================================
+       PRODUCTS SECTION — standalone below showcase
+    ========================================== */
+    #products {
+      background: var(--pale-2);
+      padding: var(--section-gap) 0;
+    }
+
+    .products-section-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .products-section-header .section-sub {
+      margin: 0 auto;
+    }
+
+    /* Filter bar — #fullProductsGrid is now just the filter bar wrapper;
+       styling handled by .product-filter-bar class */
+
+    /* Products grid is always visible and auto-height */
+    #productsGrid {
+      height: auto;
+      overflow: visible;
     }
 
     /* ==========================================

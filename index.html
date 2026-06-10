@@ -539,37 +539,6 @@ overlay
       </div>
     </div><!-- /showcase-stage -->
 
-    <!-- Browse All button -->
-    <div class="showcase-browse-row fade-up delay-2">
-      <button class="btn-browse-all" onclick="enterBrowseMode()">
-        Browse All Products
-        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </button>
-    </div>
-
-    <!-- FULL PRODUCTS GRID (browse mode) -->
-    <div id="fullProductsGrid">
-      <div class="browse-back-row">
-        <button class="btn-back-showcase" onclick="exitBrowseMode()">
-          ← Back
-        </button>
-        <h2 class="section-title" style="margin-bottom:0;">Our <span class="gradient-text">Natural Products</span></h2>
-      </div>
-
-      <!-- Filter bar -->
-      <div class="product-filter-bar">
-        <button class="filter-btn active" data-filter="all">All Products</button>
-        <button class="filter-btn" data-filter="face">Face Care</button>
-        <button class="filter-btn" data-filter="baby">Baby Care</button>
-        <button class="filter-btn" data-filter="haircare" disabled title="Coming Soon">Hair Care <span class="filter-soon">Soon</span></button>
-        <button class="filter-btn" data-filter="daily" disabled title="Coming Soon">Daily Care <span class="filter-soon">Soon</span></button>
-      </div>
-
-      <!-- Products Grid -->
-      <div class="products-grid" id="productsGrid"></div>
-
-    </div><!-- /fullProductsGrid -->
-
   </div><!-- /container -->
 
   <!-- TRUST MARQUEE -->
@@ -580,6 +549,34 @@ overlay
   </div>
 
 </section><!-- /#showcase -->
+
+<!-- ====================================================
+   PRODUCTS SECTION — always visible, below showcase
+==================================================== -->
+<section id="products" aria-label="Our Natural Products">
+  <div class="container">
+
+    <!-- Section header -->
+    <div class="products-section-header fade-up">
+      <span class="section-label">Our Collection</span>
+      <h2 class="section-title">Our <span class="gradient-text">Natural Products</span></h2>
+      <p class="section-sub">Every bar is handcrafted with certified organic ingredients — no synthetics, no shortcuts.</p>
+    </div>
+
+    <!-- Filter bar -->
+    <div class="product-filter-bar fade-up delay-1" id="fullProductsGrid">
+      <button class="filter-btn active" data-filter="all">All Products</button>
+      <button class="filter-btn" data-filter="face">Face Care</button>
+      <button class="filter-btn" data-filter="baby">Baby Care</button>
+      <button class="filter-btn" data-filter="haircare" disabled title="Coming Soon">Hair Care <span class="filter-soon">Soon</span></button>
+      <button class="filter-btn" data-filter="daily" disabled title="Coming Soon">Daily Care <span class="filter-soon">Soon</span></button>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="products-grid" id="productsGrid"></div>
+
+  </div>
+</section>
 
 
   <!-- ====================================================
