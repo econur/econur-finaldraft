@@ -15,33 +15,36 @@ const PRODUCTS = [
     ingredients: ['Neem', 'Activated Charcoal', 'Tea Tree EO'],
     price: 299,
     category: 'face',
-    waLink: 'https://wa.me/8801410753555?text=Hello%20Eco%20Nur%2C%20I%20would%20like%20to%20buy%20Active%20Defense%20Bar'
+    pageUrl: 'active-defense.html',
+    waLink: 'https://wa.me/8801410753555?text=Hello%20Econur%2C%20I%20would%20like%20to%20buy%20Active%20Defense%20Bar'
   },
   {
     id: 'p2',
-    name: 'Dry Skin Bar',
-    tag: 'Dry Skin',
+    name: 'Licorice Brightening Bar',
+    tag: 'Brightening',
     badge: '',
     img: 'images/licorice.webp',
-    imgAlt: 'Dry Skin Bar — Aloe Vera, Calendula and Honey natural soap',
-    desc: 'Nourishing bar for dry &amp; combination skin. Fades dark spots and keeps skin soft and bright with every wash.',
-    ingredients: ['Aloe Vera', 'Calendula', 'Honey'],
+    imgAlt: 'Licorice Brightening Bar — Wild Turmeric and Honey natural soap',
+    desc: 'Brightening bar for normal &amp; combination skin. Fades tanning, dark spots and pigmentation while soothing redness — with licorice, wild turmeric and honey.',
+    ingredients: ['Licorice', 'Wild Turmeric', 'Honey'],
     price: 299,
     category: 'face',
-    waLink: 'https://wa.me/8801410753555?text=Hello%20Eco%20Nur%2C%20I%20would%20like%20to%20buy%20Dry%20Skin%20Bar'
+    pageUrl: 'licorice-brightening.html',
+    waLink: 'https://wa.me/8801410753555?text=Hello%20Econur%2C%20I%20would%20like%20to%20buy%20Licorice%20Brightening%20Bar'
   },
   {
     id: 'p3',
-    name: 'Balanced Bar',
-    tag: 'Balanced Care',
+    name: 'Herbifresh Bar',
+    tag: 'Normal &amp; Combination',
     badge: '',
     img: 'images/termeric.webp',
-    imgAlt: 'Balanced Bar — Moringa, Neem and Green Tea natural soap',
-    desc: 'Daily bar for normal &amp; combination skin. Exfoliates gently and keeps skin fresh, calm and balanced throughout the day.',
+    imgAlt: 'Herbifresh Bar — Moringa, Neem and Green Tea natural soap',
+    desc: 'Herbal antibacterial bar for normal &amp; combination skin. Moringa and neem cleanse deeply while oats gently exfoliate for fresh, calm skin.',
     ingredients: ['Moringa', 'Neem', 'Green Tea'],
     price: 299,
     category: 'face',
-    waLink: 'https://wa.me/8801410753555?text=Hello%20Eco%20Nur%2C%20I%20would%20like%20to%20buy%20Balanced%20Bar'
+    pageUrl: 'herbifresh.html',
+    waLink: 'https://wa.me/8801410753555?text=Hello%20Econur%2C%20I%20would%20like%20to%20buy%20Herbifresh%20Bar'
   },
   {
     id: 'p4',
@@ -54,19 +57,36 @@ const PRODUCTS = [
     ingredients: ['Olive Oil', 'Kaolin Clay', 'Oat Milk'],
     price: 299,
     category: 'baby',
-    waLink: 'https://wa.me/8801410753555?text=Hello%20Eco%20Nur%2C%20I%20would%20like%20to%20buy%20Olivelle%20Bar'
+    pageUrl: 'olivelle.html',
+    waLink: 'https://wa.me/8801410753555?text=Hello%20Econur%2C%20I%20would%20like%20to%20buy%20Olivelle%20Bar'
   },
-    {
+  {
     id: 'p5',
-    name: 'New soap',
-    tag: 'Baby Care',
-    badge: '⭐ Most Premium',
-    img: 'images/olivelle.webp',
-    imgAlt: 'Olivelle Bar — Olive Oil and Oat Milk natural soap for babies',
-    desc: 'Ultra-mild bar for babies &amp; sensitive skin. Rich olive oil deeply nourishes and soothes — gentle enough for the most delicate skin.',
-    ingredients: ['Olive Oil', 'Kaolin Clay', 'Oat Milk'],
+    name: 'Caffiend Bar',
+    tag: 'Combination &amp; Oily',
+    badge: '',
+    img: 'images/caffiend.webp',
+    imgAlt: 'Caffiend Bar — Ground Coffee and Almond Oil natural soap',
+    desc: 'Energizing scrub bar for combination &amp; mildly oily skin. Ground coffee lifts away oil and impurities while gently exfoliating for fresh, revitalized skin.',
+    ingredients: ['Ground Coffee', 'Almond Oil', 'Milk'],
     price: 299,
-    category: 'baby',
-    waLink: 'https://wa.me/8801410753555?text=Hello%20Eco%20Nur%2C%20I%20would%20like%20to%20buy%20Olivelle%20Bar'
+    category: 'body',
+    pageUrl: 'caffiend.html',
+    waLink: 'https://wa.me/8801410753555?text=Hello%20Econur%2C%20I%20would%20like%20to%20buy%20Caffiend%20Bar'
   }
 ];
+
+
+  // {
+  //   id: 'p6',
+  //   name: 'Himalayan Pink Salt Soap',
+  //   tag: 'All Skin Types',
+  //   badge: '',
+  //   img: 'images/himalayan-salt.webp',
+  //   imgAlt: 'Himalayan Pink Salt Soap — mineral-rich natural soap bar',
+  //   desc: 'Mineral-rich bar for all skin types. Himalayan pink salt deep-cleans and balances oil while gently exfoliating, leaving skin smooth, fresh and odor-free.',
+  //   ingredients: ['Himalayan Pink Salt', 'Almond Oil', 'Olive Oil'],
+  //   price: 299,
+  //   category: 'body',
+  //   waLink: 'https://wa.me/8801410753555?text=Hello%20Econur%2C%20I%20would%20like%20to%20buy%20Himalayan%20Pink%20Salt%20Soap'
+  // }

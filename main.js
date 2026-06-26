@@ -112,7 +112,7 @@ function buildThumbs() {
   container.innerHTML = PRODUCTS.map((p, i) => `
     <div class="thumb-card ${i === 0 ? 'active' : ''}" data-idx="${i}" onclick="onThumbClick(${i})" tabindex="0" role="button" aria-label="View ${p.name}">
       <div class="thumb-card-img">
-        <img src="${p.img}" alt="${p.name}" loading="lazy"/>
+          <img src="${p.img}" alt="${p.name}" loading="lazy"/>
       </div>
       <div class="thumb-card-info">
         <div class="thumb-card-name">${p.name}</div>
@@ -171,6 +171,10 @@ if (activeThumb) {
   const img = document.getElementById('featuredImg');
   img.src = p.img;
   img.alt = p.imgAlt;
+
+  const link = document.getElementById('featuredLink');
+  link.href = p.pageUrl
+
 
   // Swap text
   document.getElementById('featuredTag').innerHTML = p.tag;
@@ -248,7 +252,9 @@ function buildFullGrid() {
     <div class="product-card-wrap fade-up delay-${(i % 4) + 1}" data-category="${p.category}">
       <div class="glass-card product-card">
         <div class="product-card-img">
-          <img src="${p.img}" alt="${p.imgAlt}" loading="lazy"/>
+          <a href="${p.pageUrl}">
+            <img src="${p.img}" alt="${p.imgAlt}" loading="lazy"/>
+          </a>
           <span class="product-tag">${p.tag}</span>
           ${p.badge ? `<span class="product-badge-bestseller">${p.badge}</span>` : ''}
         </div>

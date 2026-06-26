@@ -1,34 +1,18 @@
 {
-  "_comment": "Eco-Nur Recommendation Engine Config. Controls how skin types map to products and how specific answers can override the default mapping. To change a mapping: edit primaryMapping. To add an override rule: add an entry to answerOverrides. No JS changes needed.",
+  "_comment": "Econur Recommendation Engine Config. Controls how skin types map to products and how specific answers can override the default mapping. To change a mapping: edit primaryMapping. To add an override rule: add an entry to answerOverrides. No JS changes needed.",
 
   "primaryMapping": {
-    "_comment": "Default product per skin type. Evaluated only after all answerOverrides have been checked.",
+    "_comment": "Default product per skin type. Evaluated only after all answerOverrides have been checked. FIXED: D used to point to the old 'dry-skin' id, which was actually the Licorice Brightening Bar (a normal/combination brightening formula, not a dry-skin formula) — D now correctly points to Olivelle, the real dry/sensitive-skin product. X used to share that same mislabeled id; it now correctly points to 'licorice-brightening', whose actual purpose (fading dark spots, pigmentation, dullness) matches X directly.",
     "O": "active-defense",
     "A": "active-defense",
     "S": "olivelle",
-    "D": "dry-skin",
-    "C": "balanced",
-    "N": "balanced",
-    "X": "dry-skin"
+    "D": "olivelle",
+    "C": "herbifresh",
+    "N": "herbifresh",
+    "X": "licorice-brightening"
   },
 
   "answerOverrides": [
-    {
-      "_comment": "If user reports burning/itching on new products AND primary type is Dry → upgrade to Olivelle. Olivelle is fragrance-free and barrier-focused, far safer for sensitive-dry overlap.",
-      "id": "override_sensitive_dry_q5burn",
-      "triggerAnswer": "q5_burn",
-      "appliesWhenPrimaryIs": ["D"],
-      "overrideProduct": "olivelle",
-      "reason": "Strong sensitivity signal (burning on new products) combined with dry skin → Olivelle is safer than Dry Skin Bar"
-    },
-    {
-      "_comment": "If winter makes skin sensitively irritated AND primary type is Dry → Olivelle. Cold-weather reactivity with dry skin points to a compromised barrier that needs the gentlest possible formula.",
-      "id": "override_winter_sensitive_dry",
-      "triggerAnswer": "q8_sensitive",
-      "appliesWhenPrimaryIs": ["D"],
-      "overrideProduct": "olivelle",
-      "reason": "Winter sensitivity + dry skin → Olivelle Bar for barrier protection and itch relief"
-    },
     {
       "_comment": "If user's self-reported primary concern is acne AND computed type is Normal or Combination → upgrade to Active Defense. Self-report carries high weight and overrides a borderline N/C result.",
       "id": "override_acne_concern_normal_combo",
@@ -43,9 +27,27 @@
       "triggerAnswer": "q4_frequent",
       "appliesWhenPrimaryIs": ["C"],
       "overrideProduct": "active-defense",
-      "reason": "Frequent acne in combination skin → Active Defense more appropriate than Balanced"
+      "reason": "Frequent acne in combination skin → Active Defense more appropriate than Herbifresh"
+    },
+    {
+      "_comment": "NEW. If skin tone reads shiny/oily (q6) AND computed type is Combination → Caffiend. Caffiend's coffee formula is documented specifically for combination + mildly oily skin, with extra oil control and exfoliation that the general-purpose Herbifresh bar doesn't target as directly. Placed after the acne overrides above so a self-reported or frequent acne signal takes priority over a plain oiliness signal when both are present — this assumes the engine evaluates answerOverrides in array order and applies the first match; please confirm that matches your implementation.",
+      "id": "override_combo_oily_caffiend_q6",
+      "triggerAnswer": "q6_shiny",
+      "appliesWhenPrimaryIs": ["C"],
+      "overrideProduct": "caffiend",
+      "reason": "Visible shine/oiliness on combination skin → Caffiend's coffee-based oil control fits better than the general Herbifresh bar"
+    },
+    {
+      "_comment": "NEW. If winter brings 'slightly less oily, mostly fine' (q8), the underlying oily+combination signal still applies in non-winter months → Caffiend over Herbifresh, same reasoning as above.",
+      "id": "override_combo_oily_caffiend_q8",
+      "triggerAnswer": "q8_less_oily",
+      "appliesWhenPrimaryIs": ["C"],
+      "overrideProduct": "caffiend",
+      "reason": "Oily/combination seasonal pattern → Caffiend fits the oil-control need better than the general Herbifresh bar"
     }
   ],
+
+  "_comment_removed_overrides": "Removed 'override_sensitive_dry_q5burn' and 'override_winter_sensitive_dry' (both previously pointed D → olivelle). They're now redundant no-ops since D's primaryMapping already resolves to olivelle by default — keeping dead config that never changes the outcome was itself a small source of confusion, so they were dropped rather than left in place.",
 
   "tieBreakingPriority": ["A", "S", "O", "C", "D", "X", "N"],
 
@@ -59,15 +61,17 @@
 
   "_comment_fallback": "If primaryMapping has no entry for a computed skin type, fall back to this product ID.",
 
+  "_comment_himalayan": "Himalayan Pink Salt Soap is intentionally excluded from this recommendation engine and from products.json entirely — it is not a candidate outcome for any skin type or override in this quiz.",
+
   "whatsappMessageTemplates": {
     "_comment": "WhatsApp order/inquiry message templates. {{skinTypeName}} and {{productName}} are interpolated at runtime.",
     "standard": {
-      "bn": "হ্যালো Eco-Nur! আমার ত্বক '{{skinTypeName}}'। আমি {{productName}} অর্ডার করতে চাই।",
-      "en": "Hello Eco-Nur! My skin type is '{{skinTypeName}}'. I'd like to order the {{productName}}."
+      "bn": "হ্যালো Econur! আমার ত্বক '{{skinTypeName}}'। আমি {{productName}} অর্ডার করতে চাই।",
+      "en": "Hello Econur! My skin type is '{{skinTypeName}}'. I'd like to order the {{productName}}."
     },
     "custom": {
-      "bn": "হ্যালো Eco-Nur! আমার ত্বক '{{skinTypeName}}'। কাস্টম বার সম্পর্কে আরও জানতে চাই।",
-      "en": "Hello Eco-Nur! My skin type is '{{skinTypeName}}'. I'd like to learn more about the Custom Bar."
+      "bn": "হ্যালো Econur! আমার ত্বক '{{skinTypeName}}'। কাস্টম বার সম্পর্কে জানতে চাই।",
+      "en": "Hello Econur! My skin type is '{{skinTypeName}}'. I'd like to learn more about the Custom Bar."
     }
   }
 }

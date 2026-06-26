@@ -1,5 +1,5 @@
 {
-  "_comment": "Eco-Nur Skin Type Profiles. Each entry defines a skin type's display content. The 'insightTemplate' is the personalized paragraph shown on the result page — it supports {{name}} and {{secondaryInsight}} interpolation. The 'meaning' field is kept as editorial context but is NOT rendered directly; the insightTemplate replaces it. To edit result copy: edit here only — no JS changes needed.",
+  "_comment": "Econur Skin Type Profiles. Each entry defines a skin type's display content. The 'insightTemplate' is the personalized paragraph shown on the result page — it supports {{name}} and {{secondaryInsight}} interpolation. The 'meaning' field is kept as editorial context but is NOT rendered directly; the insightTemplate replaces it. To edit result copy: edit here only — no JS changes needed.",
 
   "skinTypes": {
 

@@ -1,5 +1,5 @@
 {
-  "_comment": "Eco-Nur Product Catalog. To add a product: add a new key under 'products'. To edit price/name/why: edit here only — no JS changes needed. Prices are placeholders — fill in before deploying.",
+  "_comment": "Econur Product Catalog. To add a product: add a new key under 'products'. To edit price/name/why: edit here only — no JS changes needed. Prices are placeholders — fill in before deploying.",
 
   "products": {
 
@@ -7,7 +7,7 @@
       "id": "active-defense",
       "name": { "bn": "Active Defense Bar", "en": "Active Defense Bar" },
       "emoji": "🖤",
-      "price": { "bn": "মূল্য জানতে WhatsApp করুন", "en": "Contact us for pricing" },
+      "price": { "bn": "অর্ডার করতে WhatsApp করুন", "en": "Contact us for pricing" },
       "tagline": {
         "bn": "তৈলাক্ত ও ব্রণপ্রবণ ত্বকের জন্য বিশেষভাবে তৈরী",
         "en": "Specially formulated for oily and acne-prone skin"
@@ -48,10 +48,10 @@
       "id": "olivelle",
       "name": { "bn": "Olivelle Bar", "en": "Olivelle Bar" },
       "emoji": "🫒",
-      "price": { "bn": "মূল্য জানতে WhatsApp করুন", "en": "Contact us for pricing" },
+      "price": { "bn": "অর্ডার করতে WhatsApp করুন", "en": "Contact us for pricing" },
       "tagline": {
-        "bn": "সুপার ড্রাই ও সংবেদনশীল ত্বকের জন্য বিশেষভাবে তৈরী",
-        "en": "Specially formulated for super dry and sensitive skin"
+        "bn": "সুপার ড্রাই, সংবেদনশীল ত্বক ও শিশুদের জন্য বিশেষভাবে তৈরী",
+        "en": "Specially formulated for super dry, sensitive skin, and babies"
       },
       "keyIngredients": {
         "bn": ["অলিভ অয়েল (৮০%+)", "নারিকেল তেল", "ক্যাস্টর অয়েল", "বিফ ট্যালো", "কেওলিন ক্লে", "ওটস মিল্ক"],
@@ -61,7 +61,7 @@
         "bn": "৮০% এরও বেশি অলিভ অয়েল ত্বকে গভীর আর্দ্রতা দেয় এবং skin barrier শক্তিশালী করে। কোনো সুগন্ধি নেই বলে সংবেদনশীল ও শিশুর ত্বকেও সম্পূর্ণ নিরাপদ। কেওলিন ক্লে অত্যন্ত মৃদুভাবে পরিষ্কার করে ও সিল্কি অনুভূতি দেয়। ওটস মিল্ক চুলকানি ও প্রদাহ প্রশমিত করে।",
         "en": "Over 80% olive oil delivers deep moisture and strengthens the skin barrier. Completely fragrance-free, making it safe for sensitive and baby skin. Kaolin clay cleanses very gently with a silky feel. Oat milk calms itching and reduces inflammation."
       },
-      "suitableFor": ["S", "D"],
+      "suitableFor": ["D", "S"],
       "notSuitableFor": ["O", "A"],
       "isCustom": false,
       "bundle": null,
@@ -85,40 +85,41 @@
       ]
     },
 
-    "dry-skin": {
-      "id": "dry-skin",
-      "name": { "bn": "Dry Skin Bar", "en": "Dry Skin Bar" },
-      "emoji": "🌿",
-      "price": { "bn": "মূল্য জানতে WhatsApp করুন", "en": "Contact us for pricing" },
+    "licorice-brightening": {
+      "_comment": "Renamed from old id 'dry-skin'. The old entry was mislabeled — this formula is documented as being for normal/combination skin with a brightening focus, not for dryness. Olivelle is the actual dry-skin product. NOTE: the source ingredient sheet credits Calendula with soothing rashes in its bullet points but does not list Calendula in this bar's formal ingredient list — flagging this discrepancy rather than guessing; please confirm with your actual formulation before publishing.",
+      "id": "licorice-brightening",
+      "name": { "bn": "লিকোরিস ব্রাইটেনিং বার", "en": "Licorice Brightening Bar" },
+      "emoji": "🌼",
+      "price": { "bn": "অর্ডার করতে WhatsApp করুন", "en": "Contact us for pricing" },
       "tagline": {
-        "bn": "নরমাল, মিশ্র ও ড্রাই ত্বকের পরিচর্যায়",
-        "en": "For normal, combination and dry skin care"
+        "bn": "নরমাল ও মিশ্র ত্বকের জন্য বিশেষভাবে তৈরী, উজ্জ্বলতা কেন্দ্রিক যত্ন",
+        "en": "Specially formulated for normal and combination skin, with a focus on brightening"
       },
       "keyIngredients": {
-        "bn": ["অলিভ অয়েল", "নারিকেল তেল", "ক্যাস্টর অয়েল", "বিফ ট্যালো", "অ্যালোভেরা", "ক্যালেন্ডুলা", "কেওলিন ক্লে", "বড়ই পাতা", "লিকোরিস", "মধু"],
-        "en": ["Olive Oil", "Coconut Oil", "Castor Oil", "Beef Tallow", "Aloe Vera", "Calendula", "Kaolin Clay", "Jujube Leaf", "Licorice", "Honey"]
+        "bn": ["লিকোরিস", "বুনো হলুদ", "মধু", "অ্যালোভেরা", "কেওলিন ক্লে", "ল্যাভেন্ডার EO", "অলিভ অয়েল", "নারিকেল তেল", "ক্যাস্টর অয়েল", "বিফ ট্যালো"],
+        "en": ["Licorice", "Wild Turmeric", "Honey", "Aloe Vera", "Kaolin Clay", "Lavender EO", "Olive Oil", "Coconut Oil", "Castor Oil", "Beef Tallow"]
       },
       "whyText": {
-        "bn": "অ্যালোভেরা ও মধু ত্বকে গভীর আর্দ্রতা এনে উজ্জ্বলতা বাড়ায়। লিকোরিস পিগমেন্টেশন ও কালো ছোপ কমায়। ক্যালেন্ডুলা র‌্যাশ ও প্রদাহ প্রশমিত করে। বড়ই পাতা মৃদুভাবে মৃত কোষ সরিয়ে ত্বক তাজা রাখে এবং অ্যান্টিঅক্সিডেন্ট হিসেবে কাজ করে।",
-        "en": "Aloe vera and honey bring deep moisture and restore radiance. Licorice reduces pigmentation and dark spots. Calendula soothes rash and inflammation. Jujube leaf gently exfoliates dead cells and acts as an antioxidant for fresh, bright skin."
+        "bn": "লিকোরিস মেলাসমা, ব্রণের দাগ ও হাইপারপিগমেন্টেশন কমাতে অত্যন্ত কার্যকর — উজ্জ্বল ও সমান ত্বকের জন্য। বুনো হলুদ ও মধু ত্বককে পুষ্টি দিয়ে রোদে পোড়া ও ট্যান কমায়। অ্যালোভেরা গভীর আর্দ্রতা ও প্রশান্তি দেয়, এবং এই বার একটি প্রাকৃতিক অ্যান্টি-এজিং যত্ন হিসেবেও কাজ করে, এর অ্যান্টিঅক্সিডেন্ট উপাদান লালভাব প্রশমিত করে।",
+        "en": "Licorice is highly effective at reducing melasma, acne marks, and hyperpigmentation for a brighter, more even complexion. Wild turmeric and honey nourish the skin while fading sun damage and tanning. Aloe vera provides deep hydration and soothing relief, and the bar's antioxidant properties also make it an effective natural anti-aging treatment that calms redness."
       },
-      "suitableFor": ["D", "N", "C", "X"],
-      "notSuitableFor": ["O", "A", "S"],
+      "suitableFor": ["X", "N", "C"],
+      "notSuitableFor": [],
       "isCustom": false,
       "bundle": null,
       "testimonials": [
         {
           "text": {
-            "bn": "মুখের কালো দাগ নিয়ে অনেক চিন্তায় ছিলাম। Dry Skin Bar দেড় মাস ব্যবহার করে পার্থক্য নিজেই বুঝতে পারছি। ত্বক আগের চেয়ে অনেক উজ্জ্বল।",
-            "en": "I was really worried about dark spots on my face. After using Dry Skin Bar for six weeks, I can see the difference myself. Skin is much brighter now."
+            "bn": "মুখের কালো দাগ নিয়ে অনেক চিন্তায় ছিলাম। লিকোরিস ব্রাইটেনিং বার দেড় মাস ব্যবহার করে পার্থক্য নিজেই বুঝতে পারছি। ত্বক আগের চেয়ে অনেক উজ্জ্বল।",
+            "en": "I was really worried about dark spots on my face. After using the Licorice Brightening Bar for six weeks, I can see the difference myself. Skin is much brighter now."
           },
           "name": "মিম",
           "location": { "bn": "ময়মনসিংহ", "en": "Mymensingh" }
         },
         {
           "text": {
-            "bn": "ত্বক নরম ও আর্দ্র থাকে সারাদিন। কোনো কৃত্রিম গন্ধ নেই — একদম প্রাকৃতিক অনুভূতি।",
-            "en": "Skin stays soft and moisturized all day. No artificial fragrance — completely natural feel."
+            "bn": "ত্বক নরম ও আর্দ্র থাকে সারাদিন, আর কয়েক সপ্তাহেই ত্বকের টোন আগের চেয়ে সমান লাগছে।",
+            "en": "Skin stays soft and moisturized all day, and within a few weeks my skin tone already looks more even."
           },
           "name": "সুমাইয়া",
           "location": { "bn": "কুমিল্লা", "en": "Comilla" }
@@ -126,22 +127,23 @@
       ]
     },
 
-    "balanced": {
-      "id": "balanced",
-      "name": { "bn": "Balanced Bar", "en": "Balanced Bar" },
-      "emoji": "⚖️",
-      "price": { "bn": "মূল্য জানতে WhatsApp করুন", "en": "Contact us for pricing" },
+    "herbifresh": {
+      "_comment": "Renamed from old id 'balanced'. Ingredient list expanded to match the full source formulation (the old entry was missing Black Seed Oil, Black Seed, Tulsi, and Tea Tree EO). NOTE: the source sheet credits Jujube (Ber) leaves with gentle exfoliation in its bullet points but does not list Jujube Leaf in this bar's formal ingredient list — flagging this discrepancy rather than guessing; please confirm with your actual formulation before publishing.",
+      "id": "herbifresh",
+      "name": { "bn": "হার্বিফ্রেশ বার", "en": "Herbifresh Bar" },
+      "emoji": "🌱",
+      "price": { "bn": "অর্ডার করতে WhatsApp করুন", "en": "Contact us for pricing" },
       "tagline": {
-        "bn": "নরমাল, মিশ্র ও হালকা তৈলাক্ত ত্বকের জন্য বিশেষভাবে তৈরী",
-        "en": "Specially formulated for normal, combination and mildly oily skin"
+        "bn": "নরমাল ও মিশ্র ত্বকের জন্য বিশেষভাবে তৈরী",
+        "en": "Specially crafted for normal and combination skin"
       },
       "keyIngredients": {
-        "bn": ["আমন্ড অয়েল", "অলিভ অয়েল", "নারিকেল তেল", "ক্যাস্টর অয়েল", "বিফ ট্যালো", "মরিঙ্গা", "নিম", "গ্রিন টি", "ওটস"],
-        "en": ["Almond Oil", "Olive Oil", "Coconut Oil", "Castor Oil", "Beef Tallow", "Moringa", "Neem", "Green Tea", "Oats"]
+        "bn": ["নিম", "মরিঙ্গা", "গ্রিন টি", "কালোজিরা ও কালোজিরা তেল", "তুলসি", "ওটস", "Tea Tree EO", "ল্যাভেন্ডার EO", "আমন্ড অয়েল", "অলিভ অয়েল", "নারিকেল তেল", "ক্যাস্টর অয়েল", "বিফ ট্যালো"],
+        "en": ["Neem", "Moringa", "Green Tea", "Black Seed & Black Seed Oil", "Tulsi", "Oats", "Tea Tree EO", "Lavender EO", "Almond Oil", "Olive Oil", "Coconut Oil", "Castor Oil", "Beef Tallow"]
       },
       "whyText": {
-        "bn": "মরিঙ্গা ত্বকে ভিটামিন ও পুষ্টি জোগায়। গ্রিন টির এন্টিমাইক্রোবিয়াল বৈশিষ্ট্য ব্যাকটেরিয়া ধ্বংস করে। নিম T-Zone-এর অতিরিক্ত তেল নিয়ন্ত্রণ করে। ওটস মৃদু এক্সফোলিয়েশন করে ও soothing এজেন্ট হিসেবে ত্বক মসৃণ রাখে।",
-        "en": "Moringa provides essential vitamins and nutrients. Green tea's antimicrobial properties fight bacteria. Neem controls excess oil in the T-zone. Oats exfoliate gently and act as a soothing agent for smooth skin."
+        "bn": "এই হার্বাল বার একটি কার্যকর প্রাকৃতিক অ্যান্টিব্যাকটেরিয়াল ক্লেনজার হিসেবে কাজ করে। মরিঙ্গা ত্বকে ভিটামিন ও পুষ্টি জোগায়, আর নিমের অ্যান্টিঅক্সিডেন্ট ক্ষতিকর জীবাণু দূর করে। কালোজিরা ও তুলসি অতিরিক্ত অ্যান্টিমাইক্রোবিয়াল সহায়তা দেয়, এবং Tea Tree পোরস পরিষ্কার রাখে। গ্রিন টির অ্যান্টিমাইক্রোবিয়াল বৈশিষ্ট্য ব্রণ সৃষ্টিকারী ব্যাকটেরিয়া ধ্বংস করে, আর ওটস মৃদুভাবে মৃত কোষ সরিয়ে ত্বক প্রশমিত রাখে।",
+        "en": "This herbal bar works as an effective natural antibacterial cleanser. Moringa provides essential vitamins and nutrients, while neem's antioxidants help eliminate harmful microbes. Black seed and tulsi add extra antimicrobial support, and tea tree helps keep pores clear. Green tea's antimicrobial properties fight acne-causing bacteria, while oats gently exfoliate dead skin and keep it calm."
       },
       "suitableFor": ["N", "C"],
       "notSuitableFor": ["S"],
@@ -150,8 +152,8 @@
       "testimonials": [
         {
           "text": {
-            "bn": "T-Zone তৈলাক্ত আর গাল শুষ্ক — এই সমস্যা বহু বছর ধরে ছিল। Balanced Bar এখন পর্যন্ত সবচেয়ে ভালো কাজ করছে। প্রথম সপ্তাহ থেকেই ভালো লাগছে।",
-            "en": "Oily T-zone and dry cheeks — a problem I've had for years. Balanced Bar has worked the best so far. I could feel the difference from the first week."
+            "bn": "T-Zone তৈলাক্ত আর গাল শুষ্ক — এই সমস্যা বহু বছর ধরে ছিল। হার্বিফ্রেশ বার এখন পর্যন্ত সবচেয়ে ভালো কাজ করছে। প্রথম সপ্তাহ থেকেই ভালো লাগছে।",
+            "en": "Oily T-zone and dry cheeks — a problem I've had for years. The Herbifresh Bar has worked the best so far. I could feel the difference from the first week."
           },
           "name": "রুমানা",
           "location": { "bn": "খুলনা", "en": "Khulna" }
@@ -167,6 +169,31 @@
       ]
     },
 
+    "caffiend": {
+      "_comment": "New entry, added to integrate the Caffiend Bar into the quiz. No real customer testimonials existed for this product yet, so the testimonials array is left empty rather than inventing quotes — add real ones when available.",
+      "id": "caffiend",
+      "name": { "bn": "Caffiend Bar", "en": "Caffiend Bar" },
+      "emoji": "☕",
+      "price": { "bn": "অর্ডার করতে WhatsApp করুন", "en": "Contact us for pricing" },
+      "tagline": {
+        "bn": "মিশ্র ও হালকা তৈলাক্ত ত্বকের জন্য উপযোগী",
+        "en": "Ideal for combination and mildly oily skin"
+      },
+      "keyIngredients": {
+        "bn": ["গ্রাউন্ড কফি", "কফি ওয়াটার", "দুধ", "আমন্ড অয়েল", "অলিভ অয়েল", "নারিকেল তেল", "ক্যাস্টর অয়েল", "বিফ ট্যালো"],
+        "en": ["Ground Coffee", "Coffee Water", "Milk", "Almond Oil", "Olive Oil", "Coconut Oil", "Castor Oil", "Beef Tallow"]
+      },
+      "whyText": {
+        "bn": "গ্রাউন্ড কফি অতিরিক্ত তেল ও ময়লা তুলে নিয়ে পোরস পরিষ্কার রাখে। এর প্রাকৃতিক অ্যান্টি-ইনফ্লেমেটরি ও অ্যান্টিব্যাকটেরিয়াল উপাদান ব্রণ সৃষ্টিকারী ব্যাকটেরিয়ার সাথে লড়াই করে ও লালভাব কমায়। কফি মৃদুভাবে মৃত কোষ সরিয়ে ত্বক সতেজ রাখে, এবং ক্যাফেইন রক্ত সঞ্চালন বাড়িয়ে ফোলাভাব সাময়িকভাবে কমাতে সাহায্য করে।",
+        "en": "Ground coffee lifts away excess oil and impurities while keeping pores clean. Its natural anti-inflammatory and antibacterial properties fight acne-causing bacteria and calm redness. Coffee gently exfoliates dead skin for a fresh, revitalized feel, and the caffeine stimulates circulation, which may temporarily reduce the appearance of puffiness."
+      },
+      "suitableFor": ["C", "O"],
+      "notSuitableFor": ["D", "S"],
+      "isCustom": false,
+      "bundle": null,
+      "testimonials": []
+    },
+
     "custom": {
       "_comment": "Fallback product. Shown when no standard bar is a strong match. isCustom:true triggers a different CTA (consultation instead of order).",
       "id": "custom",
@@ -179,8 +206,8 @@
       },
       "keyIngredients": { "bn": [], "en": [] },
       "whyText": {
-        "bn": "আপনার ত্বকের বৈশিষ্ট্য অনুযায়ী Eco-Nur একটি কাস্টম ফর্মুলা তৈরি করতে পারে। WhatsApp-এ যোগাযোগ করুন এবং আমাদের জানান আপনার ত্বকের সমস্যাগুলো — আমরা আপনার জন্য সেরা সমাধান তৈরি করব।",
-        "en": "Eco-Nur can create a custom formula tailored to your skin's specific characteristics. Contact us on WhatsApp and tell us about your skin concerns — we'll craft the best solution for you."
+        "bn": "আপনার ত্বকের বৈশিষ্ট্য অনুযায়ী Econur একটি কাস্টম ফর্মুলা তৈরি করতে পারে। WhatsApp-এ যোগাযোগ করুন এবং আমাদের জানান আপনার ত্বকের সমস্যাগুলো — আমরা আপনার জন্য সেরা সমাধান তৈরি করব।",
+        "en": "Econur can create a custom formula tailored to your skin's specific characteristics. Contact us on WhatsApp and tell us about your skin concerns — we'll craft the best solution for you."
       },
       "suitableFor": [],
       "notSuitableFor": [],
