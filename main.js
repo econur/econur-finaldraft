@@ -652,7 +652,7 @@ async function submitOrder() {
     // Don't block the user — order shows success regardless
   }
 
-  // Show success screen
+  // Show screen
   document.getElementById('orderFormWrap').style.display = 'none';
   document.getElementById('orderSuccess').classList.add('visible');
   btn.disabled = false;
