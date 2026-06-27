@@ -6,46 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Favicon / App Icons -->
-<link rel="icon" type="image/x-icon" href="/favicon/favicon.ico" />
+  <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico" />
 
-<link
-  rel="icon"
-  type="image/png"
-  sizes="16x16"
-  href="/favicon/favicon-16x16.png"
-/>
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
 
-<link
-  rel="icon"
-  type="image/png"
-  sizes="32x32"
-  href="/favicon/favicon-32x32.png"
-/>
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
 
-<link
-  rel="apple-touch-icon"
-  sizes="180x180"
-  href="/favicon/apple-touch-icon.png"
-/>
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
 
-<link
-  rel="icon"
-  type="image/png"
-  sizes="192x192"
-  href="/favicon/android-chrome-192x192.png"
-/>
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-chrome-192x192.png" />
 
-<link
-  rel="icon"
-  type="image/png"
-  sizes="512x512"
-  href="/favicon/android-chrome-512x512.png"
-/>
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon/android-chrome-512x512.png" />
 
-<link rel="manifest" href="/favicon/site.webmanifest" />
+  <link rel="manifest" href="/favicon/site.webmanifest" />
 
-<!-- Optional Theme Color -->
-<meta name="theme-color" content="#0d3027" />
+  <!-- Optional Theme Color -->
+  <meta name="theme-color" content="#0d3027" />
 
   <!-- ===== SEO METADATA START ===== -->
 
@@ -299,10 +275,10 @@ overlay
   <!-- SEO: role="banner" + aria-label improves accessibility signals which are a minor ranking factor -->
   <nav id="mainNav" class="navbar navbar-expand-lg" role="banner" aria-label="Main navigation">
     <div class="container">
-      <a class="nav-brand navbar-brand" href="#hero" aria-label="Econur — Natural Handcrafted Soap, go to homepage">
+      <a class="nav-brand navbar-brand" href="#" aria-label="Econur — Natural Handcrafted Soap, go to homepage">
         <!-- SEO: Descriptive alt text on logo helps screen readers and crawlers understand brand context -->
-        <img src="images/logo.png" alt="Econur natural handcrafted soap brand logo" class="nav-logo" width="120"
-          height="34" />
+        <img src="images/logo.png" alt="Econur natural handcrafted soap brand logo" class="nav-logo" width="100"
+          height="30" />
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
         aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -313,254 +289,266 @@ overlay
 
       <div class="collapse navbar-collapse justify-content-end" id="navMenu">
         <ul class="navbar-nav gap-1 align-items-center">
-          <li class="nav-item"><a class="nav-link-eco" href="https://movement.eco-nur.com">The Econur Movement</a></li>
           <li class="nav-item"><a class="nav-link-eco" href="#products">Products</a></li>
-          <li class="nav-item"><a class="nav-link-eco" href="/Econur-BCSIR-Report.pdf">Lab Report</a></li>
+          <li class="nav-item"><a class="nav-link-eco" href="/certs.html">Lab Report</a></li>
           <!--gotta add another page-->
           <li class="nav-item">
-            <a class="btn-eco" href="#order">Pre-Order</a>
+            <a class="btn-eco" href="#order">Order</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-<button class="cart-fab" id="cartFab" aria-label="View cart" onclick="openCart()">
-  🛒
-  <span class="cart-fab-badge" id="cartFabBadge">0</span>
-</button>
+  <button class="cart-fab" id="cartFab" aria-label="View cart" onclick="openCart()">
+    🛒
+    <span class="cart-fab-badge" id="cartFabBadge">0</span>
+  </button>
 
-<!-- ====================================================
+  <!-- ====================================================
    CART DRAWER
 ==================================================== -->
-<div class="cart-drawer-overlay" id="cartOverlay" onclick="closeCart()"></div>
-<div class="cart-drawer" id="cartDrawer">
-  <div class="cart-drawer-header">
-    <div class="cart-drawer-title">Your Basket</div>
-    <button class="cart-close-btn" onclick="closeCart()" aria-label="Close cart">✕</button>
-  </div>
-  <div class="cart-items-list" id="cartItemsList">
-    <div class="cart-empty" id="cartEmptyMsg">
-      <svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
-      <p>Your basket is empty</p>
+  <div class="cart-drawer-overlay" id="cartOverlay" onclick="closeCart()"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-header">
+      <div class="cart-drawer-title">Your Basket</div>
+      <button class="cart-close-btn" onclick="closeCart()" aria-label="Close cart">✕</button>
+    </div>
+    <div class="cart-items-list" id="cartItemsList">
+      <div class="cart-empty" id="cartEmptyMsg">
+        <svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <path d="M16 10a4 4 0 01-8 0" />
+        </svg>
+        <p>Your basket is empty</p>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span class="cart-total-label">Total</span>
+        <span class="cart-total-amount" id="cartTotalDisplay">৳0</span>
+      </div>
+      <button class="btn-proceed-order" id="proceedOrderBtn" onclick="openOrderModal()" disabled>
+        Proceed to Order →
+      </button>
     </div>
   </div>
-  <div class="cart-footer">
-    <div class="cart-total-row">
-      <span class="cart-total-label">Total</span>
-      <span class="cart-total-amount" id="cartTotalDisplay">৳0</span>
-    </div>
-    <button class="btn-proceed-order" id="proceedOrderBtn" onclick="openOrderModal()" disabled>
-      Proceed to Order →
-    </button>
-  </div>
-</div>
 
-<!-- ====================================================
+  <!-- ====================================================
    ORDER MODAL
 ==================================================== -->
-<div class="order-modal-overlay" id="orderModalOverlay">
-  <div class="order-modal">
-    <div class="order-modal-header">
-      <div class="order-modal-title">Confirm Your Order</div>
-      <div class="order-modal-sub">Fill in your details — we'll handle the rest.</div>
-      <button class="order-modal-close" onclick="closeOrderModal()" aria-label="Close">✕</button>
-    </div>
-    <div class="order-modal-body">
+  <div class="order-modal-overlay" id="orderModalOverlay">
+    <div class="order-modal">
+      <div class="order-modal-header">
+        <div class="order-modal-title">Confirm Your Order</div>
+        <div class="order-modal-sub">Fill in your details.</div>
+        <button class="order-modal-close" onclick="closeOrderModal()" aria-label="Close">✕</button>
+      </div>
+      <div class="order-modal-body">
 
-      <!-- Order summary -->
-      <div class="order-items-preview" id="orderItemsPreview"></div>
-      <div class="order-total-line">
-        <span class="order-total-label">Subtotal</span>
-        <span class="order-total-val" id="orderTotalVal">৳0</span>
-      </div>
-      <div class="order-total-line order-delivery-line">
-        <span class="order-total-label">Delivery</span>
-        <span class="order-total-val order-delivery-val" id="orderDeliveryVal">৳60</span>
-      </div>
-      <div class="order-total-line order-grand-line">
-        <span class="order-total-label" style="font-weight:700;color:var(--forest);">Grand Total</span>
-        <span class="order-total-val" id="orderGrandVal" style="color:var(--emerald-dark);">৳0</span>
-      </div>
-
-      <!-- Form -->
-      <div id="orderFormWrap">
-        <div class="form-group">
-          <label class="form-label" for="fieldName">Full Name</label>
-          <input class="form-input" type="text" id="fieldName" placeholder="Your full name" autocomplete="name"/>
-          <div class="form-error-msg" id="errName">Please enter your full name.</div>
+        <!-- Order summary -->
+        <div class="order-items-preview" id="orderItemsPreview"></div>
+        <div class="order-total-line">
+          <span class="order-total-label">Subtotal</span>
+          <span class="order-total-val" id="orderTotalVal">৳0</span>
+        </div>
+        <div class="order-total-line order-delivery-line">
+          <span class="order-total-label">Delivery</span>
+          <span class="order-total-val order-delivery-val" id="orderDeliveryVal">৳60</span>
+        </div>
+        <div class="order-total-line order-grand-line">
+          <span class="order-total-label" style="font-weight:700;color:var(--forest);">Grand Total</span>
+          <span class="order-total-val" id="orderGrandVal" style="color:var(--emerald-dark);">৳0</span>
         </div>
 
-        <div class="form-group">
-          <label class="form-label" for="fieldPhone">Phone Number</label>
-          <input class="form-input" type="tel" id="fieldPhone" placeholder="01XXXXXXXXX" autocomplete="tel"/>
-          <div class="form-error-msg" id="errPhone">Enter a valid Bangladeshi number (e.g. 017XXXXXXXX).</div>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label" for="fieldAddress">Full Delivery Address</label>
-          <textarea class="form-input" id="fieldAddress" rows="3" placeholder="House/flat, road, area, district..." autocomplete="street-address" style="resize:vertical;"></textarea>
-          <div class="form-error-msg" id="errAddress">Please enter your full delivery address.</div>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label">Delivery Location</label>
-          <div class="delivery-choice-wrap">
-            <label class="delivery-choice active" id="deliveryChoiceInside">
-              <input type="radio" name="deliveryZone" id="zoneInside" value="inside" checked style="display:none;" />
-              <div class="delivery-choice-icon">🏙️</div>
-              <div class="delivery-choice-info">
-                <div class="delivery-choice-title">Inside Dhaka</div>
-                <div class="delivery-choice-fee">+৳60</div>
-              </div>
-            </label>
-            <label class="delivery-choice" id="deliveryChoiceOutside">
-              <input type="radio" name="deliveryZone" id="zoneOutside" value="outside" style="display:none;" />
-              <div class="delivery-choice-icon">🚚</div>
-              <div class="delivery-choice-info">
-                <div class="delivery-choice-title">Outside Dhaka</div>
-                <div class="delivery-choice-fee">+৳120</div>
-              </div>
-            </label>
+        <!-- Form -->
+        <div id="orderFormWrap">
+          <div class="form-group">
+            <label class="form-label" for="fieldName">Full Name</label>
+            <input class="form-input" type="text" id="fieldName" placeholder="Your full name" autocomplete="name" />
+            <div class="form-error-msg" id="errName">Please enter your full name.</div>
           </div>
-        </div>
 
-        <div class="cod-badge">
-          <div class="cod-badge-icon">💵</div>
-          <div class="cod-badge-text">
-            <div class="cod-title">Cash on Delivery</div>
-            <div class="cod-sub">Pay when your order arrives, no advance required.</div>
+          <div class="form-group">
+            <label class="form-label" for="fieldPhone">Phone Number</label>
+            <input class="form-input" type="tel" id="fieldPhone" placeholder="01XXXXXXXXX" autocomplete="tel" />
+            <div class="form-error-msg" id="errPhone">Enter a valid Bangladeshi number (e.g. 017XXXXXXXX).</div>
           </div>
+
+          <div class="form-group">
+            <label class="form-label" for="fieldAddress">Full Delivery Address</label>
+            <textarea class="form-input" id="fieldAddress" rows="3" placeholder="House/flat, road, area, district..."
+              autocomplete="street-address" style="resize:vertical;"></textarea>
+            <div class="form-error-msg" id="errAddress">Please enter your full delivery address.</div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Delivery Location</label>
+            <div class="delivery-choice-wrap">
+              <label class="delivery-choice active" id="deliveryChoiceInside">
+                <input type="radio" name="deliveryZone" id="zoneInside" value="inside" checked style="display:none;" />
+                <div class="delivery-choice-icon">🏙️</div>
+                <div class="delivery-choice-info">
+                  <div class="delivery-choice-title">Inside Dhaka</div>
+                  <div class="delivery-choice-fee">+৳60</div>
+                </div>
+              </label>
+              <label class="delivery-choice" id="deliveryChoiceOutside">
+                <input type="radio" name="deliveryZone" id="zoneOutside" value="outside" style="display:none;" />
+                <div class="delivery-choice-icon">🚚</div>
+                <div class="delivery-choice-info">
+                  <div class="delivery-choice-title">Outside Dhaka</div>
+                  <div class="delivery-choice-fee">+৳120</div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div class="cod-badge">
+            <div class="cod-badge-icon">💵</div>
+            <div class="cod-badge-text">
+              <div class="cod-title">Cash on Delivery</div>
+              <div class="cod-sub">Pay when your order arrives, no advance required.</div>
+            </div>
+          </div>
+
+          <div class="delivery-notice">
+            📞 <div><span>Econur will call you within 12 hours</span> to confirm your delivery details and estimated
+              arrival time.</div>
+          </div>
+
+          <button class="btn-submit-order" id="submitOrderBtn" onclick="submitOrder()">
+            Place My Order 🌿
+          </button>
         </div>
 
-        <div class="delivery-notice">
-          📞 <div><span>Econur will call you within 12 hours</span> to confirm your delivery details and estimated arrival time.</div>
+        <!-- Success state -->
+        <div class="order-success" id="orderSuccess">
+          <div class="success-check">✓</div>
+          <div class="success-title">Order Placed!</div>
+          <div class="success-msg">Thank you! Econur will call you within 12 hours to confirm your delivery. You're one
+            step closer to glowing skin. 🌿</div>
+          <button class="btn-eco" onclick="closeOrderModal(); clearCart();"
+            style="display:inline-block; text-decoration:none;">Back to Products</button>
         </div>
-
-        <button class="btn-submit-order" id="submitOrderBtn" onclick="submitOrder()">
-          Place My Order 🌿
-        </button>
-      </div>
-
-      <!-- Success state -->
-      <div class="order-success" id="orderSuccess">
-        <div class="success-check">✓</div>
-        <div class="success-title">Order Placed!</div>
-        <div class="success-msg">Thank you! Econur will call you within 12 hours to confirm your delivery. You're one step closer to glowing skin. 🌿</div>
-        <button class="btn-eco" onclick="closeOrderModal(); clearCart();" style="display:inline-block; text-decoration:none;">Back to Products</button>
       </div>
     </div>
   </div>
-</div>
 
-<!-- ====================================================
+  <!-- ====================================================
    MAIN SHOWCASE SECTION (replaces #hero + #products)
 ==================================================== -->
-<section id="showcase" role="main" aria-label="Econur Natural Soap Products">
-  <div class="container">
+  <section id="showcase" role="main" aria-label="Econur Natural Soap Products">
+    <div class="container">
 
-    <!-- SLOGAN HEADLINE -->
-    <div class="showcase-headline fade-up">
-      <h1 class="showcase-title">
-        From <span class="accent-italic">Earth</span>,
-        To Your <span class="accent-italic">Glow.</span>
-      </h1>
-    </div>
+      <!-- SLOGAN HEADLINE -->
+      <div class="showcase-headline fade-up">
+        <h1 class="showcase-title">
+          Products Certified by <span class="accent-italic">BUET</span> &
+          <span class="accent-italic">BCSIR</span>
+        </h1>
+      </div>
 
-    <!-- CAROUSEL STAGE: featured LEFT + thumbs RIGHT -->
-    <div class="showcase-stage fade-up delay-1" id="showcaseStage">
+      <!-- CAROUSEL STAGE: featured LEFT + thumbs RIGHT -->
+      <div class="showcase-stage fade-up delay-1" id="showcaseStage">
 
-      <!-- FEATURED PRODUCT (left, large) -->
-      <div class="showcase-featured">
-        <div class="featured-card" id="featuredCard">
-          <div class="featured-transition-overlay" id="featuredOverlay"></div>
-          <div class="featured-card-inner">
-            <!-- Image -->
-            <div class="featured-img-zone" id="featuredImgZone">
-              <a href="active-defense.html" id="featuredLink"><img src="images/charcoal.webp" alt="Active Defense Bar" id="featuredImg" loading="eager"/></a>
-              <span class="featured-product-tag" id="featuredTag">Acne &amp; Oily</span>
-              <span class="featured-badge" id="featuredBadge">⭐ Best Seller</span>
-            </div>
-            <!-- Info -->
-            <div class="featured-info" id="featuredInfo">
-              <div>
-                <h2 class="featured-product-name" id="featuredName">Active Defense Bar</h2>
-                <p class="featured-product-desc" id="featuredDesc">Deep-cleansing bar for oily, acne-prone skin. Controls oil &amp; breakouts without over-drying — powered by nature's most potent purifiers.</p>
-                <div class="featured-ingredients" id="featuredIngredients">
-                  <span class="ingredient-chip">Neem</span>
-                  <span class="ingredient-chip">Activated Charcoal</span>
-                  <span class="ingredient-chip">Tea Tree EO</span>
-                </div>
+        <!-- FEATURED PRODUCT (left, large) -->
+        <div class="showcase-featured">
+          <div class="featured-card" id="featuredCard">
+            <div class="featured-transition-overlay" id="featuredOverlay"></div>
+            <div class="featured-card-inner">
+              <!-- Image -->
+              <div class="featured-img-zone" id="featuredImgZone">
+                <a href="active-defense.html" id="featuredLink"><img src="images/PVADBd.webp" alt="Active Defense Bar"
+                    id="featuredImg" loading="eager" /></a>
+                <span class="featured-product-tag" id="featuredTag">Acne &amp; Oily</span>
+                <span class="featured-badge" id="featuredBadge">⭐ Best Seller</span>
               </div>
-              <div>
-                <div class="featured-price-row">
-                  <div class="featured-price" id="featuredPrice">৳299</div>
-                  <div class="featured-weight">50gm</div>
+              <!-- Info -->
+              <div class="featured-info" id="featuredInfo">
+                <div>
+                  <h2 class="featured-product-name" id="featuredName">Active Defense Bar</h2>
+                  <p class="featured-product-desc" id="featuredDesc">Deep-cleansing bar for oily, acne-prone skin.
+                    Controls oil &amp; breakouts without over-drying — powered by nature's most potent purifiers.</p>
+                  <div class="featured-ingredients" id="featuredIngredients">
+                    <span class="ingredient-chip">Neem</span>
+                    <span class="ingredient-chip">Activated Charcoal</span>
+                    <span class="ingredient-chip">Tea Tree EO</span>
+                  </div>
                 </div>
-                <div class="featured-cta-row">
-                  <button class="btn-add-cart" onclick="addToCart(currentProduct)">
-                    🛒 Add to Cart
-                  </button>
-                  <button class="btn-order-now" onclick="orderNow(currentProduct)">
-                    Order Now →
-                  </button>
+                <div>
+                  <div class="featured-price-row">
+                    <div class="featured-price" id="featuredPrice">৳299</div>
+                    <div class="featured-weight">50gm</div>
+                  </div>
+                  <div class="featured-cta-row">
+                    <button class="btn-add-cart" onclick="addToCart(currentProduct)">
+                      🛒 Add to Cart
+                    </button>
+                    <button class="btn-order-now" onclick="orderNow(currentProduct)">
+                      Order Now →
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          <!-- Auto-advance progress bar -->
+          <div class="featured-progress">
+            <div class="featured-progress-bar" id="progressBar"></div>
+          </div>
         </div>
-        <!-- Auto-advance progress bar -->
-        <div class="featured-progress">
-          <div class="featured-progress-bar" id="progressBar"></div>
+
+        <!-- THUMBNAIL STRIP (right) -->
+        <div class="showcase-thumbs" id="showcaseThumbs">
+          <!-- Injected by JS -->
         </div>
+      </div><!-- /showcase-stage -->
+
+    </div><!-- /container -->
+
+    <!-- TRUST MARQUEE -->
+    <div class="trust-marquee-wrap">
+      <div class="trust-marquee-track" id="marqueeTrack">
+        <!-- injected by JS -->
       </div>
-
-      <!-- THUMBNAIL STRIP (right) -->
-      <div class="showcase-thumbs" id="showcaseThumbs">
-        <!-- Injected by JS -->
-      </div>
-    </div><!-- /showcase-stage -->
-
-  </div><!-- /container -->
-
-  <!-- TRUST MARQUEE -->
-  <div class="trust-marquee-wrap">
-    <div class="trust-marquee-track" id="marqueeTrack">
-      <!-- injected by JS -->
     </div>
-  </div>
 
-</section><!-- /#showcase -->
+  </section><!-- /#showcase -->
 
-<!-- ====================================================
+  <!-- ====================================================
    PRODUCTS SECTION — 
 ==================================================== -->
-<section id="products" aria-label="Our Natural Products">
-  <div class="container">
+  <section id="products" aria-label="Our Natural Products">
+    <div class="container">
 
-    <!-- Section header -->
-    <div class="products-section-header fade-up">
-      <h2 class="section-title">Our <span class="gradient-text">Natural Products</span></h2>
-      <p class="section-sub">Every bar is handcrafted with certified organic ingredients <br> Not sure which one you need? <a href="/skintest.html">Click to take a skintest &#10132;</a> </p>
+      <!-- Section header -->
+      <div class="products-section-header fade-up">
+        <h2 class="section-title">From Earth <span class="gradient-text">To Your Glow</span></h2>
+        <p class="section-sub">Every bar is handcrafted with certified organic ingredients <br> Not sure which one you
+          need? <a href="/skintest.html">Click to take a skintest &#10132;</a> </p>
+      </div>
+
+      <!-- Filter bar -->
+      <div class="product-filter-bar fade-up delay-1" id="fullProductsGrid">
+        <button class="filter-btn active" data-filter="all">All Products</button>
+        <button class="filter-btn" data-filter="face">Face Care</button>
+        <button class="filter-btn" data-filter="baby">Baby Care</button>
+        <button class="filter-btn" data-filter="haircare" disabled title="Coming Soon">Hair Care <span
+            class="filter-soon">Soon</span></button>
+        <button class="filter-btn" data-filter="daily" disabled title="Coming Soon">Daily Care <span
+            class="filter-soon">Soon</span></button>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid" id="productsGrid"></div>
+
     </div>
-
-    <!-- Filter bar -->
-    <div class="product-filter-bar fade-up delay-1" id="fullProductsGrid">
-      <button class="filter-btn active" data-filter="all">All Products</button>
-      <button class="filter-btn" data-filter="face">Face Care</button>
-      <button class="filter-btn" data-filter="baby">Baby Care</button>
-      <button class="filter-btn" data-filter="haircare" disabled title="Coming Soon">Hair Care <span class="filter-soon">Soon</span></button>
-      <button class="filter-btn" data-filter="daily" disabled title="Coming Soon">Daily Care <span class="filter-soon">Soon</span></button>
-    </div>
-
-    <!-- Products Grid -->
-    <div class="products-grid" id="productsGrid"></div>
-
-  </div>
-</section>
+  </section>
 
 
-<!--SKIN TEST SECTION-->
+  <!--SKIN TEST SECTION-->
   <section id="facetest">
     <div class="container">
       <div class="row justify-content-center fade-up">
@@ -674,7 +662,8 @@ overlay
       <div class="text-center mb-5 fade-up">
         <span class="section-label">What's Inside</span>
         <h2 class="section-title">Earth-Grown <span style="color:var(--mint);">Ingredients</span></h2>
-        <p class="section-sub mx-auto" style="color:rgba(194, 243, 220, 0.75);">Every single ingredient is handpicked for
+        <p class="section-sub mx-auto" style="color:rgba(194, 243, 220, 0.75);">Every single ingredient is handpicked
+          for
           its proven skin benefit and earth-friendly footprint.</p>
       </div>
 
@@ -890,7 +879,7 @@ overlay
 }
 </script>
 
-<!-- ============== ACTUAL PRICING =============== -->
+    <!-- ============== ACTUAL PRICING =============== -->
 
 
 
@@ -950,11 +939,11 @@ overlay
 
           <div class="social-links" aria-label="Econur social media links">
             <!-- SEO: Real social links (update href values) improve E-E-A-T signals -->
-            <a href="https://facebook.com/econurskincare" class="social-link" aria-label="Econur on Facebook"><i class="fab fa-facebook-f"
-                aria-hidden="true"></i></a>
-            <a href="https://instagram.com/econur.skincare" class="social-link" aria-label="Econur on Instagram"><i class="fab fa-instagram"
-                aria-hidden="true"></i></a>
-            
+            <a href="https://facebook.com/econurskincare" class="social-link" aria-label="Econur on Facebook"><i
+                class="fab fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="https://instagram.com/econur.skincare" class="social-link" aria-label="Econur on Instagram"><i
+                class="fab fa-instagram" aria-hidden="true"></i></a>
+
             <a href="#" class="social-link" aria-label="Econur on YouTube"><i class="fab fa-youtube"
                 aria-hidden="true"></i></a>
             <a href="https://wa.me/8801410753555" class="social-link" aria-label="Econur on WhatsApp"><i
@@ -993,8 +982,8 @@ overlay
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="products-data.js"></script>
-  <script src="main.js"></script>
-  
+    <script src="main.js"></script>
+
 </body>
 
 </html>

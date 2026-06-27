@@ -27,7 +27,7 @@ window.addEventListener('scroll', () => {
    Smooth Scroll for nav links
 ========================================== */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
+  anchor.addEventListener('click', function (e) {
     const target = document.querySelector(this.getAttribute('href'));
     if (!target) return;
     e.preventDefault();
@@ -43,8 +43,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 /* PRODUCTS is defined in products-data.js — loaded before this file in index.html */
-
-const DISCORD_WEBHOOK_URL = 'https://discord.com/api/webhooks/1513394918498762833/n8FlDOV8c9acYj2tLmKHLXfa8cnhfSY5_rC4_Dpw9QNu2d06pcAbtmk0Q21W61Q4tHmW';
 
 /* ==========================================
    SHOWCASE STATE
@@ -85,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('fieldAddress').addEventListener('input', () => clearError('fieldAddress', 'errAddress'));
 
   // Order modal — close on backdrop click
-  document.getElementById('orderModalOverlay').addEventListener('click', function(e) {
+  document.getElementById('orderModalOverlay').addEventListener('click', function (e) {
     if (e.target === this) closeOrderModal();
   });
 });
@@ -138,20 +136,20 @@ function setFeatured(idx, animate) {
   document.querySelectorAll('.thumb-card').forEach((el, i) => {
     el.classList.toggle('active', i === idx);
   });
-const activeThumb = document.querySelector('.thumb-card.active');
-if (activeThumb) {
-  const strip = document.getElementById('showcaseThumbs');
-  if (strip) {
-    // Desktop: vertical strip — scroll top
-    // Mobile: horizontal strip — scroll left
-    const isHorizontal = strip.scrollWidth > strip.clientWidth;
-    if (isHorizontal) {
-      strip.scrollTo({ left: activeThumb.offsetLeft - strip.clientWidth / 2 + activeThumb.offsetWidth / 2, behavior: 'smooth' });
-    } else {
-      strip.scrollTo({ top: activeThumb.offsetTop - strip.clientHeight / 2 + activeThumb.offsetHeight / 2, behavior: 'smooth' });
+  const activeThumb = document.querySelector('.thumb-card.active');
+  if (activeThumb) {
+    const strip = document.getElementById('showcaseThumbs');
+    if (strip) {
+      // Desktop: vertical strip — scroll top
+      // Mobile: horizontal strip — scroll left
+      const isHorizontal = strip.scrollWidth > strip.clientWidth;
+      if (isHorizontal) {
+        strip.scrollTo({ left: activeThumb.offsetLeft - strip.clientWidth / 2 + activeThumb.offsetWidth / 2, behavior: 'smooth' });
+      } else {
+        strip.scrollTo({ top: activeThumb.offsetTop - strip.clientHeight / 2 + activeThumb.offsetHeight / 2, behavior: 'smooth' });
+      }
     }
   }
-}
 
   // Trigger transition
   const card = document.getElementById('featuredCard');
@@ -307,6 +305,7 @@ function setupFilterBtns() {
 function buildMarquee() {
   const items = [
     'BCSIR Certified',
+    'BUET Certified',
     'Chemical-Free Formula',
     'Zero-Plastic Packaging',
     'Nationwide Delivery',
@@ -486,20 +485,20 @@ function openOrderModal() {
 
   // Reset delivery zone to Inside Dhaka
   deliveryFee = 60;
-  const insideLabel  = document.getElementById('deliveryChoiceInside');
+  const insideLabel = document.getElementById('deliveryChoiceInside');
   const outsideLabel = document.getElementById('deliveryChoiceOutside');
-  const insideRadio  = document.getElementById('zoneInside');
+  const insideRadio = document.getElementById('zoneInside');
   const outsideRadio = document.getElementById('zoneOutside');
   if (insideLabel && outsideLabel) {
-    insideRadio.checked  = true;
+    insideRadio.checked = true;
     outsideRadio.checked = false;
     insideLabel.classList.add('active');
     outsideLabel.classList.remove('active');
   }
   const deliveryEl = document.getElementById('orderDeliveryVal');
-  const grandEl    = document.getElementById('orderGrandVal');
+  const grandEl = document.getElementById('orderGrandVal');
   if (deliveryEl) deliveryEl.textContent = '৳60';
-  if (grandEl)    grandEl.textContent    = '৳' + (subtotal + 60);
+  if (grandEl) grandEl.textContent = '৳' + (subtotal + 60);
 
   // Reset form state
   document.getElementById('orderFormWrap').style.display = '';
@@ -527,23 +526,23 @@ function closeOrderModal() {
    DELIVERY ZONE PICKER
 ========================================== */
 document.addEventListener('DOMContentLoaded', () => {
-  const insideLabel   = document.getElementById('deliveryChoiceInside');
-  const outsideLabel  = document.getElementById('deliveryChoiceOutside');
-  const insideRadio   = document.getElementById('zoneInside');
-  const outsideRadio  = document.getElementById('zoneOutside');
+  const insideLabel = document.getElementById('deliveryChoiceInside');
+  const outsideLabel = document.getElementById('deliveryChoiceOutside');
+  const insideRadio = document.getElementById('zoneInside');
+  const outsideRadio = document.getElementById('zoneOutside');
 
   function updateDeliveryFee(fee) {
     deliveryFee = fee;
     const subtotal = getCartTotal();
     const deliveryEl = document.getElementById('orderDeliveryVal');
-    const grandEl    = document.getElementById('orderGrandVal');
+    const grandEl = document.getElementById('orderGrandVal');
     if (deliveryEl) deliveryEl.textContent = '৳' + fee;
-    if (grandEl)    grandEl.textContent    = '৳' + (subtotal + fee);
+    if (grandEl) grandEl.textContent = '৳' + (subtotal + fee);
   }
 
   if (insideLabel && outsideLabel) {
     insideLabel.addEventListener('click', () => {
-      insideRadio.checked  = true;
+      insideRadio.checked = true;
       outsideRadio.checked = false;
       insideLabel.classList.add('active');
       outsideLabel.classList.remove('active');
@@ -552,7 +551,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     outsideLabel.addEventListener('click', () => {
       outsideRadio.checked = true;
-      insideRadio.checked  = false;
+      insideRadio.checked = false;
       outsideLabel.classList.add('active');
       insideLabel.classList.remove('active');
       updateDeliveryFee(120);
@@ -579,20 +578,20 @@ function clearError(fieldId, errId) {
 }
 
 async function submitOrder() {
-  const name    = document.getElementById('fieldName').value.trim();
-  const phone   = document.getElementById('fieldPhone').value.trim();
+  const name = document.getElementById('fieldName').value.trim();
+  const phone = document.getElementById('fieldPhone').value.trim();
   const address = document.getElementById('fieldAddress').value.trim();
 
   let valid = true;
 
-  if (!name)                    { showError('fieldName',    'errName');    valid = false; }
-  else                            clearError('fieldName',    'errName');
+  if (!name) { showError('fieldName', 'errName'); valid = false; }
+  else clearError('fieldName', 'errName');
 
-  if (!isValidBDPhone(phone))   { showError('fieldPhone',   'errPhone');   valid = false; }
-  else                            clearError('fieldPhone',   'errPhone');
+  if (!isValidBDPhone(phone)) { showError('fieldPhone', 'errPhone'); valid = false; }
+  else clearError('fieldPhone', 'errPhone');
 
   if (!address || address.length < 10) { showError('fieldAddress', 'errAddress'); valid = false; }
-  else                                   clearError('fieldAddress', 'errAddress');
+  else clearError('fieldAddress', 'errAddress');
 
   if (!valid) return;
 
@@ -601,7 +600,7 @@ async function submitOrder() {
   btn.textContent = 'Placing order...';
 
   const deliveryZone = deliveryFee === 60 ? 'Inside Dhaka' : 'Outside Dhaka';
-  const grandTotal   = getCartTotal() + deliveryFee;
+  const grandTotal = getCartTotal() + deliveryFee;
 
   // For console reference if webhook not yet wired
   const orderData = {
@@ -620,9 +619,9 @@ async function submitOrder() {
       title: '🛒 New Econur Order!',
       color: 0x10B981,
       fields: [
-        { name: '👤 Customer', value: name,    inline: true },
-        { name: '📞 Phone',    value: phone,   inline: true },
-        { name: '📍 Address',  value: address, inline: false },
+        { name: '👤 Customer', value: name, inline: true },
+        { name: '📞 Phone', value: phone, inline: true },
+        { name: '📍 Address', value: address, inline: false },
         {
           name: '📦 Items',
           value: cart.map(i => `• ${i.name} (50gm) × ${i.qty} = ৳${i.price * i.qty}`).join('\n'),
@@ -638,17 +637,17 @@ async function submitOrder() {
   };
 
   try {
-    if (DISCORD_WEBHOOK_URL) {
-      await fetch(DISCORD_WEBHOOK_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(discordPayload)
-      });
-    } else {
-      console.log('Order data (Discord not configured):', orderData);
+    const res = await fetch('/api/order', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(discordPayload)
+    });
+
+    if (!res.ok) {
+      console.error('Backend order processing error:', await res.text());
     }
   } catch (err) {
-    console.error('Discord webhook error:', err);
+    console.error('Order request error:', err);
     // Don't block the user — order shows success regardless
   }
 
