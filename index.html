@@ -294,18 +294,6 @@ overlay
 
 
   <!-- ====================================================
-     LIGHTBOX
-==================================================== -->
-  <div id="lightbox" role="dialog" aria-modal="true">
-    <button class="lightbox-close" id="lightboxClose" aria-label="Close"><i class="fa fa-times"></i></button>
-    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous"><i
-        class="fa fa-chevron-left"></i></button>
-    <img src="" alt="" class="lightbox-img" id="lightboxImg" />
-    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next"><i
-        class="fa fa-chevron-right"></i></button>
-  </div>
-
-  <!-- ====================================================
      NAVIGATION
 ==================================================== -->
   <!-- SEO: role="banner" + aria-label improves accessibility signals which are a minor ranking factor -->
@@ -337,12 +325,6 @@ overlay
     </div>
   </nav>
 
-  <!-- ====================================================
-     HERO SECTION — Compact Premium Header
-==================================================== -->
-  <!-- ====================================================
-     HERO SECTION — Compact Premium Header
-==================================================== -->
 <button class="cart-fab" id="cartFab" aria-label="View cart" onclick="openCart()">
   🛒
   <span class="cart-fab-badge" id="cartFabBadge">0</span>
@@ -551,7 +533,7 @@ overlay
 </section><!-- /#showcase -->
 
 <!-- ====================================================
-   PRODUCTS SECTION — always visible, below showcase
+   PRODUCTS SECTION — 
 ==================================================== -->
 <section id="products" aria-label="Our Natural Products">
   <div class="container">
@@ -578,33 +560,7 @@ overlay
 </section>
 
 
-  <!-- ====================================================
-     PRODUCT 4 — Uncomment to re-enable (change col-lg-4 → col-lg-3 on all 4 products when adding back)
-==================================================== -->
-  <!--
-      <div class="col-lg-4 col-md-6 d-flex fade-up delay-4">
-        <div class="glass-card product-card w-100">
-          <div class="product-card-img">
-            <img src="images/neemsoap.jpg" alt="Rose Botanical Soap" />
-            <span class="product-tag" style="background:#be185d;">Luxury</span>
-          </div>
-          <div class="product-card-body">
-            <h4>Equilibrium Bar</h4>
-            <p>Promotes radiance and deep hydration for a visibly luxurious glow.</p>
-            <div class="product-ingredients">
-              <span class="ingredient-chip">Rosehip Oil</span>
-              <span class="ingredient-chip">Rose Petals</span>
-              <span class="ingredient-chip">Argan Oil</span>
-            </div>
-            <div class="d-flex align-items-center justify-content-between">
-              <div class="product-price">৳620 <sub>/ bar</sub></div>
-              <a href="#order" class="btn-eco" style="padding:9px 20px;font-size:0.83rem;">Order</a>
-            </div>
-          </div>
-        </div>
-      </div>
--->
-
+<!--SKIN TEST SECTION-->
   <section id="facetest">
     <div class="container">
       <div class="row justify-content-center fade-up">
@@ -933,164 +889,8 @@ overlay
   ]
 }
 </script>
-    <!-- </section>
-  <div class="container">
-    <div class="text-center mb-5 fade-up">
-      <span class="section-label">Pricing</span>
-      <h2 class="section-title">Simple, <span class="gradient-text">Honest Pricing</span></h2>
-      <p class="section-sub mx-auto">Choose a plan that fits your skin ritual — single bars, family bundles, or a full seasonal subscription.</p>
-    </div>
-
-    <div class="row g-4 justify-content-center">
-       Starter 
-      <div class="col-lg-4 col-md-6 d-flex fade-up delay-1">
-        <div class="glass-card pricing-card w-100">
-          <div class="pricing-name">Single Bar</div>
-          <div class="pricing-price"><sup>৳</sup>450-470</div>
-          <div class="pricing-period">per bar, one-time</div>
-          <div class="pricing-divider"></div>
-          <ul class="pricing-features">
-            <li><i class="fa fa-check-circle"></i> Choose any 1 variant</li>
-            <li><i class="fa fa-check-circle"></i> Eco-friendly packaging</li>
-            <li><i class="fa fa-check-circle"></i> WhatsApp order support</li>
-            <li class="disabled"><i class="fa fa-times-circle"></i> Bundle discount</li>
-            <li class="disabled"><i class="fa fa-times-circle"></i> Free shipping</li>
-          </ul>
-          <a href="#order" class="btn-outline-eco w-100 text-center d-block">Order Single</a>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 d-flex fade-up delay-2">
-        <div class="glass-card pricing-card featured w-100">
-          <div class="pricing-name">Complete Set</div>
-          <div class="pricing-price"><sup>৳</sup>1,750</div>
-          <div class="pricing-period">all 4 variants — save ৳370</div>
-          <div class="pricing-divider"></div>
-          <ul class="pricing-features">
-            <li><i class="fa fa-check-circle"></i> All 4 unique variants</li>
-            <li><i class="fa fa-check-circle"></i> Premium gift box</li>
-            <li><i class="fa fa-check-circle"></i> Priority WhatsApp support</li>
-            <li><i class="fa fa-check-circle"></i> 20% bundle discount</li>
-            <li><i class="fa fa-check-circle"></i> Free nationwide shipping</li>
-          </ul>
-          <a href="#order" class="btn-pricing-featured d-block">Get the Full Set</a>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 d-flex fade-up delay-3">
-        <div class="glass-card pricing-card w-100">
-          <div class="pricing-name">Monthly Ritual</div>
-          <div class="pricing-price"><sup>৳</sup>890</div>
-          <div class="pricing-period">per month, 2 bars delivered</div>
-          <div class="pricing-divider"></div>
-          <ul class="pricing-features">
-            <li><i class="fa fa-check-circle"></i> 2 bars of your choice</li>
-            <li><i class="fa fa-check-circle"></i> Eco packaging every time</li>
-            <li><i class="fa fa-check-circle"></i> Skip or cancel anytime</li>
-            <li><i class="fa fa-check-circle"></i> Subscriber-only new blends</li>
-            <li class="disabled"><i class="fa fa-times-circle"></i> Free gift box</li>
-          </ul>
-          <a href="#order" class="btn-outline-eco w-100 text-center d-block">Subscribe</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>  -->
-
 
 <!-- ============== ACTUAL PRICING =============== -->
-
-    <!-- <section id="pricing" aria-label="Econur soap bundle pricing and subscription plans">
-      <div class="container">
-        <div class="text-center mb-5 fade-up">
-          <span class="section-label">Bundle Pricing</span>
-          <h2 class="section-title">Purchase in Bundle <span class="gradient-text">Save A Lot</span></h2>
-          <p class="section-sub mx-auto"></p>
-        </div>
-
-        <!-- Toggle -->
-        <!-- Toggle 
-        <div class="text-center mb-5 fade-up">
-          <div class="d-inline-flex align-items-center gap-2 p-1 rounded-pill"
-            style="background:rgba(255,255,255,0.08)">
-            <button class="btn-outline-eco px-4 py-2" id="toggle-onetime"
-              onclick="switchPricing('onetime')">One-Time</button>
-            <button class="btn-outline-eco px-4 py-2" id="toggle-sub"
-              onclick="switchPricing('sub')">Subscription</button>
-          </div>
-        </div>
-
-         ONE-TIME: Gift Set only 
-        <div id="tab-onetime">
-          <div class="row g-4 justify-content-center">
-            <div class="col-lg-4 col-md-6 d-flex fade-up delay-2">
-              <div class="glass-card pricing-card featured w-100">
-                <div class="pricing-name">Gift Set</div>
-                <div class="pricing-price"><sup>৳</sup>999</div>
-                <div class="pricing-period">all 3 bars — save ৳371 (27%)</div>
-                <div class="pricing-divider"></div>
-                <ul class="pricing-features">
-                  <li><i class="fa fa-check-circle"></i> All 3 unique variants</li>
-                  <li><i class="fa fa-check-circle"></i> Premium gift box</li>
-                  <li><i class="fa fa-check-circle"></i> Handwritten note option</li>
-                  <li><i class="fa fa-check-circle"></i> Free nationwide shipping</li>
-                  <li><i class="fa fa-check-circle"></i> Priority WhatsApp support</li>
-                </ul>
-                <a href="https://wa.me/8801410753555?text=Hello%20Econur%2C%20I%20am%20interested%20in%20the%20Gift%20Set%20(all%203%20bars%20for%20%E2%9F%B3999).%20Please%20let%20me%20know%20how%20to%20order."
-                  class="btn-pricing-featured d-block">Order Gift Set</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-         SUBSCRIPTION: 2 plans 
-        <div id="tab-sub" style="display:none;">
-          <div class="row g-4 justify-content-center">
-
-             Monthly 
-            <div class="col-lg-4 col-md-6 d-flex fade-up delay-1">
-              <div class="glass-card pricing-card w-100">
-                <div class="pricing-name">Monthly Ritual</div>
-                <div class="pricing-price"><sup>৳</sup>390</div>
-                <div class="pricing-period">1 bar/month for a year — save 15%</div>
-                <div class="pricing-divider"></div>
-                <ul class="pricing-features">
-                  <li><i class="fa fa-check-circle"></i> 1 bar of your choice monthly. </li>
-                  <li><i class="fa fa-check-circle"></i> Swap variant each cycle</li>
-                  <li><i class="fa fa-check-circle"></i> Eco packaging every time</li>
-                  <li><i class="fa fa-check-circle"></i> Skip or cancel anytime</li>
-                  <li class="disabled"><i class="fa fa-times-circle"></i> Free shipping</li>
-                </ul>
-                <a href="https://wa.me/8801410753555?text=Hello%20Econur%2C%20I%20am%20interested%20in%20the%20Monthly%20Ritual%20subscription%20(%E2%9F%B3390%2Fbar).%20Please%20let%20me%20know%20how%20to%20proceed."
-                  class="btn-outline-eco w-100 text-center d-block">Subscribe Monthly</a>
-              </div>
-            </div>
-
-             Quarterly (Featured) 
-            <div class="col-lg-4 col-md-6 d-flex fade-up delay-2">
-              <div class="glass-card pricing-card featured w-100">
-                <div class="pricing-name">Quarterly Box</div>
-                <div class="pricing-price"><sup>৳</sup>960</div>
-                <div class="pricing-period">all 3 bars/quarter for a year — save 30%</div>
-                <div class="pricing-divider"></div>
-                <ul class="pricing-features">
-                  <li><i class="fa fa-check-circle"></i> All 3 bars every 3 months</li>
-                  <li><i class="fa fa-check-circle"></i> Premium gift box each drop</li>
-                  <li><i class="fa fa-check-circle"></i> Free nationwide shipping</li>
-                  <li><i class="fa fa-check-circle"></i> Early access to new blends</li>
-                  <li><i class="fa fa-check-circle"></i> Skip or cancel anytime</li>
-                </ul>
-                <a href="https://wa.me/8801410753555?text=Hello%20Econur%2C%20I%20am%20interested%20in%20the%20Quarterly%20Box%20subscription%20(all%203%20bars%20for%20%E2%9F%B3960%20every%203%20months).%20Please%20let%20me%20know%20how%20to%20proceed."
-                  class="btn-pricing-featured d-block">Subscribe Quarterly</a>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </section> -->
-
 
 
 
