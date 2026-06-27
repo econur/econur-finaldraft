@@ -644,7 +644,8 @@ async function submitOrder() {
     });
 
     if (!res.ok) {
-      console.error('Backend order processing error:', await res.text());
+      const errBody = await res.text();
+      console.error(`Backend order error [${res.status} ${res.statusText}]:`, errBody || '(empty body)');
     }
   } catch (err) {
     console.error('Order request error:', err);
