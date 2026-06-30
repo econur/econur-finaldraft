@@ -15,7 +15,7 @@ const PRODUCTS = [
     ingredients: ['Neem', 'Activated Charcoal', 'Tea Tree EO'],
     price: 229,
     category: 'face',
-    pageUrl: 'active-defense.html',
+    pageUrl: 'soaps/active-defense.html',
     waLink: 'https://wa.me/8801410753555?text=Hello%20Econur%2C%20I%20would%20like%20to%20buy%20Active%20Defense%20Bar'
   },
   {
@@ -29,7 +29,7 @@ const PRODUCTS = [
     ingredients: ['Licorice', 'Wild Turmeric', 'Honey'],
     price: 229,
     category: 'face',
-    pageUrl: 'licorice-brightening.html',
+    pageUrl: 'soaps/licorice-brightening.html',
     waLink: 'https://wa.me/8801410753555?text=Hello%20Econur%2C%20I%20would%20like%20to%20buy%20Licorice%20Brightening%20Bar'
   },
   {
@@ -43,7 +43,7 @@ const PRODUCTS = [
     ingredients: ['Moringa', 'Neem', 'Green Tea'],
     price: 229,
     category: 'face',
-    pageUrl: 'herbifresh.html',
+    pageUrl: 'soaps/herbifresh.html',
     waLink: 'https://wa.me/8801410753555?text=Hello%20Econur%2C%20I%20would%20like%20to%20buy%20Herbifresh%20Bar'
   },
   {
@@ -57,7 +57,7 @@ const PRODUCTS = [
     ingredients: ['Olive Oil', 'Kaolin Clay', 'Oat Milk'],
     price: 259,
     category: 'baby',
-    pageUrl: 'olivelle.html',
+    pageUrl: 'soaps/olivelle.html',
     waLink: 'https://wa.me/8801410753555?text=Hello%20Econur%2C%20I%20would%20like%20to%20buy%20Olivelle%20Bar'
   },
   {
@@ -71,7 +71,7 @@ const PRODUCTS = [
     ingredients: ['Ground Coffee', 'Almond Oil', 'Milk'],
     price: 229,
     category: 'body',
-    pageUrl: 'caffiend.html',
+    pageUrl: 'soaps/caffiend.html',
     waLink: 'https://wa.me/8801410753555?text=Hello%20Econur%2C%20I%20would%20like%20to%20buy%20Caffiend%20Bar'
   }
 ];
