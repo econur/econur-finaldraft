@@ -45,8 +45,13 @@ body {
   font-family: var(--font-body);
   background: var(--pale-2);
   color: var(--text-dark);
-  overflow-x: hidden;
-  touch-action: pan-y;
+  overflow-x: clip; /* clip instead of hidden to preserve touch scroll behavior */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Utility: lock body scroll when overlays are open */
+body.no-scroll {
+  overflow: hidden;
 }
 
 h1,
@@ -1266,6 +1271,8 @@ section {
 
   .cart-drawer {
     width: 100vw;
+    max-width: 100vw;
+    box-shadow: none; /* no shadow needed when full-width */
   }
 }
 
@@ -1293,16 +1300,18 @@ section {
   position: fixed;
   top: 0;
   right: 0;
+  bottom: 0;
   width: 100%;
-  /* Better than 100vw */
   max-width: 420px;
-  height: 100%;
+  height: 100vh;
+  height: 100dvh; /* dynamic viewport – accounts for mobile browser chrome */
   background: var(--white);
   z-index: 2001;
   display: flex;
   flex-direction: column;
   transform: translateX(110%);
   transition: transform 0.42s cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: transform; /* GPU-composited slide for smooth animation */
   box-shadow: -20px 0 80px rgba(6, 78, 59, 0.15);
 }
 
@@ -1311,6 +1320,7 @@ section {
 }
 
 .cart-drawer-header {
+  flex-shrink: 0;     /* never collapse – always visible at top */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1351,8 +1361,11 @@ section {
 }
 
 .cart-items-list {
-  flex: 1;
+  flex: 1 1 0%;       /* take all remaining space between header & footer */
+  min-height: 0;      /* critical: allows flex child to shrink below content size */
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch; /* momentum scroll on iOS */
+  overscroll-behavior: contain;      /* prevents pull-to-refresh / background scroll bleed */
   padding: 16px 24px;
 }
 
@@ -1495,7 +1508,9 @@ section {
 }
 
 .cart-footer {
+  flex-shrink: 0;     /* never collapse – always visible at bottom */
   padding: 18px 24px 24px;
+  padding-bottom: max(24px, env(safe-area-inset-bottom)); /* safe area for iPhones with home indicator */
   border-top: 1px solid rgba(16, 185, 129, 0.12);
   background: var(--pale-2);
 }

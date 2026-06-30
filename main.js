@@ -432,13 +432,23 @@ function updateCartUI() {
 function openCart() {
   document.getElementById('cartOverlay').classList.add('open');
   document.getElementById('cartDrawer').classList.add('open');
-  document.body.style.overflow = 'hidden';
+
+  // Lock body scroll – preserve scroll position
+  const scrollY = window.scrollY;
+  document.body.classList.add('no-scroll');
+  document.body.style.top = `-${scrollY}px`;
+  document.body.dataset.scrollY = scrollY;
 }
 
 function closeCart() {
   document.getElementById('cartOverlay').classList.remove('open');
   document.getElementById('cartDrawer').classList.remove('open');
-  document.body.style.overflow = '';
+
+  // Restore body scroll
+  document.body.classList.remove('no-scroll');
+  const scrollY = parseInt(document.body.dataset.scrollY || '0', 10);
+  document.body.style.top = '';
+  window.scrollTo(0, scrollY);
 }
 function triggerCartShake() {
   const fab = document.getElementById('cartFab');

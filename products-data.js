@@ -13,7 +13,7 @@ const PRODUCTS = [
     imgAlt: 'Active Defense Bar — Neem and Activated Charcoal natural soap',
     desc: 'Deep-cleansing bar for oily, acne-prone skin. Controls oil &amp; breakouts without over-drying — powered by nature\'s most potent purifiers.',
     ingredients: ['Neem', 'Activated Charcoal', 'Tea Tree EO'],
-    price: 299,
+    price: 229,
     category: 'face',
     pageUrl: 'active-defense.html',
     waLink: 'https://wa.me/8801410753555?text=Hello%20Econur%2C%20I%20would%20like%20to%20buy%20Active%20Defense%20Bar'
@@ -27,7 +27,7 @@ const PRODUCTS = [
     imgAlt: 'Licorice Brightening Bar — Wild Turmeric and Honey natural soap',
     desc: 'Brightening bar for normal &amp; combination skin. Fades tanning, dark spots and pigmentation while soothing redness — with licorice, wild turmeric and honey.',
     ingredients: ['Licorice', 'Wild Turmeric', 'Honey'],
-    price: 299,
+    price: 229,
     category: 'face',
     pageUrl: 'licorice-brightening.html',
     waLink: 'https://wa.me/8801410753555?text=Hello%20Econur%2C%20I%20would%20like%20to%20buy%20Licorice%20Brightening%20Bar'
@@ -41,7 +41,7 @@ const PRODUCTS = [
     imgAlt: 'Herbifresh Bar — Moringa, Neem and Green Tea natural soap',
     desc: 'Herbal antibacterial bar for normal &amp; combination skin. Moringa and neem cleanse deeply while oats gently exfoliate for fresh, calm skin.',
     ingredients: ['Moringa', 'Neem', 'Green Tea'],
-    price: 299,
+    price: 229,
     category: 'face',
     pageUrl: 'herbifresh.html',
     waLink: 'https://wa.me/8801410753555?text=Hello%20Econur%2C%20I%20would%20like%20to%20buy%20Herbifresh%20Bar'
@@ -55,7 +55,7 @@ const PRODUCTS = [
     imgAlt: 'Olivelle Bar — Olive Oil and Oat Milk natural soap for babies',
     desc: 'Ultra-mild bar for babies &amp; sensitive skin. Rich olive oil deeply nourishes and soothes — gentle enough for the most delicate skin.',
     ingredients: ['Olive Oil', 'Kaolin Clay', 'Oat Milk'],
-    price: 299,
+    price: 259,
     category: 'baby',
     pageUrl: 'olivelle.html',
     waLink: 'https://wa.me/8801410753555?text=Hello%20Econur%2C%20I%20would%20like%20to%20buy%20Olivelle%20Bar'
@@ -69,7 +69,7 @@ const PRODUCTS = [
     imgAlt: 'Caffiend Bar — Ground Coffee and Almond Oil natural soap',
     desc: 'Energizing scrub bar for combination &amp; mildly oily skin. Ground coffee lifts away oil and impurities while gently exfoliating for fresh, revitalized skin.',
     ingredients: ['Ground Coffee', 'Almond Oil', 'Milk'],
-    price: 299,
+    price: 229,
     category: 'body',
     pageUrl: 'caffiend.html',
     waLink: 'https://wa.me/8801410753555?text=Hello%20Econur%2C%20I%20would%20like%20to%20buy%20Caffiend%20Bar'
